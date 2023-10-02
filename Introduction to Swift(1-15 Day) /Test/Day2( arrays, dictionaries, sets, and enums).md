@@ -93,9 +93,10 @@ enum CustomResult {
 
 let result = CustomResult.failure(errorCode: 500, errorMessage: "Internal Server Error")
 print(result)
+```
 
 ### Enumerations Associated Values
-
+```swift
 // Used to match data
 enum Days : Int {
     case monday = 2
@@ -105,15 +106,5 @@ enum Days : Int {
 }
 let today = Days(rawValue: 3)
 print(today) // Optional(Days.tuesday)
-
-
-
-
-
-
-
-
-
-
-
+```
 
