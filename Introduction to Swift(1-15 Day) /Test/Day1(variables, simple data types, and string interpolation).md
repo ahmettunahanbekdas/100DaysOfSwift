@@ -69,3 +69,31 @@ name = "Ahmet" // But you can do this
 number = “Ahmet” // You can't do this. Because variable type is an integer.
 number = 10 // But you can do this
 ```
+
+### Multi-line strings
+
+```swift
+
+var str1 = """
+This goes
+over multiple
+lines
+"""
+//This goes
+ over multiple
+ lines
+
+var str2 = """
+This goes \
+over multiple \
+lines
+"""
+//This goes over multiple lines
+```
+
+
+
+
+
+
+
