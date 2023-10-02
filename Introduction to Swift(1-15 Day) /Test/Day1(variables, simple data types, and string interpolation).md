@@ -1,4 +1,4 @@
-# Day1 (Variables) 👨🏻‍💻
+# Day 1 (Variables) 👨🏻‍💻
 
 ## Usage ⚒️
 
