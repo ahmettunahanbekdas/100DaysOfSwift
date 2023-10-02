@@ -1,5 +1,8 @@
 # 👨🏻‍💻 Day 1 (Variables) 
 
+The variable corresponds to holding data in programming languages.
+
+
 ## ⚒️ Usage 
 
 ### String and Integer
