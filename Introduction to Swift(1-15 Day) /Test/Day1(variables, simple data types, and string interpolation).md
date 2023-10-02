@@ -4,7 +4,7 @@
 
 ### String and Integer
 
-```swift
+```swift 
 // Variable Type is String
 var name =  “Tunahan”
 
@@ -17,7 +17,7 @@ print(number) // 22
 // If you wanna change the value, you don't need "var" tag
 name =  “Ahmet”
 number = 7
-
+```
 
 ### Multiline String, Double and Boolean
 
@@ -35,14 +35,14 @@ var doubleNum = 22.072001 // Dot provide this
 
 // Variable Type is Boolean
 var learn = true
-
+```
 
 ### String Interpolation
 
 ```swift
 var score = 59
 var scroreString = “User score is :  \(score)” //  User score is : 9 
-
+```
 
 ### Contants 
 
@@ -50,7 +50,7 @@ var scroreString = “User score is :  \(score)” //  User score is : 9
 // If you never want your variable to change. Use it
 let tryChange = "Swift"
 tryChange = “Kotlin // You should see a warning that 
-
+```
 ### Type annotations 
 
 ```swift
@@ -68,24 +68,4 @@ number = 10 // But you can do this
 
 number = “Ahmet” // You can't do this. Because variable type is an integer.
 number = 10 // But you can do this
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
