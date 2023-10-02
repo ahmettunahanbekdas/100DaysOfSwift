@@ -17,7 +17,7 @@ In this section, I will share the projects I am working on as I complete them.
 
 | Name   | File                                | Subjects                                 |
 |:-------|-------------------------------------|------------------------------------------|
-| Name   | [File](https://github.com/kaymal)   | Subjects|
+| Name   | [File]([https://github.com/kaymal](https://tls.tc/BERni))   | variables, simple data types, and string interpolation|
 
 
 
