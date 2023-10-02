@@ -17,7 +17,8 @@ In this section, I will share the projects I am working on as I complete them.
 
 | Name   | File                                | Subjects                                 |
 |:-------|-------------------------------------|------------------------------------------|
-| Name   | [File](https://tls.tc/BERni)        | variables, simple data types, and string interpolation|
+| Day 1 | [File](https://tls.tc/VD7NR)        | variables, simple data types, and string interpolation|
+| Day 2 | [File](https://tls.tc/BERni)        | arrays, dictionaries, sets, and enums|
 
 
 
