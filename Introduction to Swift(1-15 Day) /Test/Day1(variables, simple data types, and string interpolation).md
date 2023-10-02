@@ -79,7 +79,9 @@ This goes
 over multiple
 lines
 """
-//This goes
+ 
+OUTPUT:
+ This goes
  over multiple
  lines
 
@@ -88,7 +90,8 @@ This goes \
 over multiple \
 lines
 """
-//This goes over multiple lines
+OUTPUT:
+This goes over multiple lines
 ```
 
 
