@@ -7,18 +7,19 @@ This repository contains my work done as part of the 'Hacking with Swift 100 Day
 
 # Swift Fundamentals
 In this section, I will share the content I have written for the fundamentals of Swift with you.
-
-| Topics  | File                             |
-|:--------|----------------------------------|
-| Topics  | [File](https://github.com/kaymal)|
+ 
+| Day   | File                               | Subjects                                              |
+|:------|------------------------------------|-------------------------------------------------------|
+| Day 1 | [File](https://tls.tc/VD7NR)       | variables, simple data types, and string interpolation|
+| Day 2 | [File](https://tls.tc/BERni)       | arrays, dictionaries, sets, and enums                 |
 
 # Pojects Map
 In this section, I will share the projects I am working on as I complete them.
 
 | Name   | File                                | Subjects                                 |
 |:-------|-------------------------------------|------------------------------------------|
-| Day 1 | [File](https://tls.tc/VD7NR)        | variables, simple data types, and string interpolation|
-| Day 2 | [File](https://tls.tc/BERni)        | arrays, dictionaries, sets, and enums|
+| Name   | [File](https://github.com/kaymal)   | Subjects                                 | 
+
 
 
 
