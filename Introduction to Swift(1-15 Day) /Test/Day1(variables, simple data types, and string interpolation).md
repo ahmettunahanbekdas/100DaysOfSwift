@@ -1,6 +1,6 @@
-# Day 1 (Variables) 👨🏻‍💻
+# 👨🏻‍💻 Day 1 (Variables) 
 
-## Usage ⚒️
+## ⚒️ Usage 
 
 ### String and Integer
 
