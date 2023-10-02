@@ -24,3 +24,5 @@ In this section, I will share the projects I am working on as I complete them.
 ---
 
 I share every day of the challenge on my [Twitter](https://twitter.com/tunahanbekdass) account. If you want to join this challenge and become a colleague, you can send a message.
+
+<img src="https://c.tenor.com/sWEUdV5LQdkAAAAC/yes-apple.gif">
