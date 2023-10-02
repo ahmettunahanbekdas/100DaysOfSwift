@@ -62,8 +62,8 @@ var myDouble : Double = 22.07
 
 // This avoids misuse of the variable
 
-number = "Ateş" // You can't do this. Because variable type is an integer.
-number = 10 // But you can do this
+number = "22" // You can't do this. Because variable type is an integer.
+name = "Ahmet" // But you can do this
 
 
 number = “Ahmet” // You can't do this. Because variable type is an integer.
