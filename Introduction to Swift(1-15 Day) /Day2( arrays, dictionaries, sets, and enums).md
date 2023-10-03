@@ -107,4 +107,82 @@ enum Days : Int {
 let today = Days(rawValue: 3)
 print(today) // Optional(Days.tuesday)
 ```
+## 🤏🏻 Tips 
+
+### Arrays
+
+```swift
+// The index of arrays starts from 0. So the index of the first object is 0.
+let player1 = "Tunahan"
+let player2 = "Hediye"
+let player3 = "Tolga"
+let player4 = "Arif"
+
+let players = [player1 , player2 , player3 , player4]
+//                0         1         2         3
+
+print(players[0]) // Mehmet
+print(players[1]) // Sait
+print(players[4]) // This line does not give an error but will cause the program to generate a fatal error. +
+// + Because the 4th object is not in the list.
+```
+
+### Sets
+```swift
+let cityName = Set(["Tekirdağ", "New York", "Cairo"])
+```
+
+
+### Tuples
+
+```swift
+// Tuple types cannot be changed
+var person = (name: "Tunahan", job: "Developer")
+var person = (name: "Tunahan", age :22) // You can't do this. As long as this line exists, you will get an error.
+```
+
+```swift
+// But its values can be changed
+var person = (name: "Tunahan", age: 22)
+print(person.1) // 22
+
+person.age = 23
+print(person.1) // 23
+```
+
+### Empty Collections
+
+```swift
+// You will add objects to your array later
+var persons = [String]() // Create a empty list with type filter.
+persons.append("Tunahan") // It works fine
+persons.append(1) // Xcode warns you and won't let you do this
+```
+
+```swift
+var anyCity = [Any]() // If the variable type is unknown or unimportant, accept any.
+// All lines works fine
+anyObject.append(59)
+anyObject.append("Tekirdağ")
+anyObject.append(true)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
