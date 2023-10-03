@@ -30,7 +30,7 @@ print(cars2) // [BMW,Mercedes,AUDI]
 
 ### Tuples 
 ```swift
-let user = (name: Tunahan, age: 22)
+let user = (name: "Tunahan", age: 22)
 print(user.0) //Tunahan
 print(user.age) //22
 ```
