@@ -12,6 +12,7 @@ In this section, I will share the content I have written for the fundamentals of
 |:------|------------------------------------|-------------------------------------------------------|
 | Day 1 | [File](https://tls.tc/VD7NR)       | variables, simple data types, and string interpolation|
 | Day 2 | [File](https://tls.tc/BERni)       | arrays, dictionaries, sets, and enums                 |
+| Day 3 | [File](https://tls.tc/RbjNc)       | operators and conditions                              |
 
 # Pojects Map
 In this section, I will share the projects I am working on as I complete them.
