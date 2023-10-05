@@ -6,7 +6,7 @@ Loops are frequently employed to carry out repetitive tasks.
 
 ## ⚒️ Usage 
 
-# For Loops
+### For Loops
 
 ```swift
 let count 3...5
@@ -23,7 +23,7 @@ for month in months {
 }
 
 ```
-# Repeat Loops
+### Repeat Loops
 
 ```swift
 
