@@ -101,7 +101,8 @@ while true{
 }
 ```
 
-## Tips 🤔💭
+## 🤏🏻 Tips 
+
 I wanted to avoid too much complexity as most of the hints are related to its use. So hints are hidden in usages.
 
 ### For Loops
