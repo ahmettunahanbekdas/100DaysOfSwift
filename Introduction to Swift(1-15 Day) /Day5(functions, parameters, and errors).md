@@ -142,7 +142,7 @@ print(num1) // 30
 ```
 
 
-### 📖 Summary
+## 📖 Summary
 
 1. Functions let us re-use code without repeating ourselves.
 2. Functions can accept parameters – just tell Swift the type of each parameter.
