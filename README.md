@@ -15,6 +15,8 @@ In this section, I will share the content I have written for the fundamentals of
 | Day 3 | [File](https://tls.tc/RbjNc)       | operators and conditions                              |
 | Day 4 | [File](https://tls.tc/gCYhF)       | loops, loops, and more loops                          |
 | Day 5 | [File](https://tls.tc/lm7Rz)       | functions, parameters, and errors                     |
+| Day 6 | [File](https://tls.tc/a472B)       | closures part one                                     |
+ 
 
 # Pojects Map
 In this section, I will share the projects I am working on as I complete them.
@@ -25,7 +27,7 @@ In this section, I will share the projects I am working on as I complete them.
 
 
 
-
+https://tls.tc/a472B
 ---
 
 I share every day of the challenge on my [Twitter](https://twitter.com/tunahanbekdass) account. If you want to join this challenge and become a colleague, you can send a message.
