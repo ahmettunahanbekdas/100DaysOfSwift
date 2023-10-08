@@ -1,7 +1,7 @@
 # 👨🏻‍💻 Day 7
 
 ## 📖Closures-part two 
-Part 2 of Closures
+Part two of Closures
 
 ## ⚒️ Usage 
 
