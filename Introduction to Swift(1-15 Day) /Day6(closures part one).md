@@ -1,9 +1,9 @@
 # 👨🏻‍💻 Day 6
 
-## Closures-part one 📖
+## 📖 Closures-part one 
 It is a special operation similar to the assignment but functionalizing.
 
-## Usage 🔨
+## ⚒️  Usage 
 
 ### Basic Closures
 ```swift
