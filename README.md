@@ -16,7 +16,8 @@ In this section, I will share the content I have written for the fundamentals of
 | Day 4 | [File](https://tls.tc/gCYhF)       | loops, loops, and more loops                          |
 | Day 5 | [File](https://tls.tc/lm7Rz)       | functions, parameters, and errors                     |
 | Day 6 | [File](https://tls.tc/a472B)       | closures part one                                     |
- 
+| Day 7 | [File](https://tls.tc/lIOgf)       | closures part two                                     |
+
 
 # Pojects Map
 In this section, I will share the projects I am working on as I complete them.
