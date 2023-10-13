@@ -17,6 +17,8 @@ In this section, I will share the content I have written for the fundamentals of
 | Day 5 | [File](https://tls.tc/lm7Rz)       | functions, parameters, and errors                     |
 | Day 6 | [File](https://tls.tc/a472B)       | closures part one                                     |
 | Day 7 | [File](https://tls.tc/lIOgf)       | closures part two                                     |
+| Day 8 | [File](https://tls.tc/NVeN2)       | structs, properties, and methods                      |
+
 
 
 # Pojects Map
