@@ -60,7 +60,7 @@ class AppleDev : Developer{
 }
 
 let tunahan = AppleDev()
-mehmet.startLearn() // Learn any lang
+tunahan.startLearn() // Learn any lang
 ```
 ```swift
 class AppleDev : Developer{
