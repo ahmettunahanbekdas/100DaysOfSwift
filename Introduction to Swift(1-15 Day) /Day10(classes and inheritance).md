@@ -88,7 +88,7 @@ final class Person {
     }
 }
 
-let mehmet = Person(id: 0, name: "Tunahan", surname: "Bekdaş")
+let tunahan = Person(id: 0, name: "Tunahan", surname: "Bekdaş")
 
 // If you try 
 class SubPerson : Person{ // Inheritance from a final class 'Person'. You can't
