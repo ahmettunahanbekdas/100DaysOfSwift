@@ -1,7 +1,7 @@
 # 👨🏻‍💻 Day 10
 
 ## 📖 Classes 
-
+At first, classes seem very similar to structs because we use them to create new data types with properties and methods. However, they introduce a new, important, and complex feature called inheritance – the ability to make one class build on the foundations of another.
 
 ##  ⚒️ Usage 
 
