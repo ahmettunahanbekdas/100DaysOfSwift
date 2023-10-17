@@ -139,7 +139,7 @@ struct User: Identifiable { // So look at this struct
 let twostraws = User(id: "twostraws")
 twostraws.identify() // So that the extension of that inheritance can be used in the objects of this structure.
 ```
-### 🤏🏻 Summary
+## 🤏🏻 Summary
 1. Protocols describe what methods and properties a conforming type must have, but don’t provide the implementations of those methods.
 2. You can build protocols on top of other protocols, similar to classes.
 3. Extensions let you add methods and computed properties to specific types such as Int.
