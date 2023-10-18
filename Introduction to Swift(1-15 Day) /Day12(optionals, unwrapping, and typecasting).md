@@ -1,5 +1,9 @@
 
-# 👨🏻‍💻 Day 12 
+
+
+
+
+# 👨🏻‍💻 Day 12
 
 ## 📖 Optionals
 In the presence of empty values, options can save our lives. We can say that it is used to determine the value to be assigned instead of empty data.
