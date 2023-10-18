@@ -6,8 +6,6 @@ In the presence of empty values, options can save our lives. We can say that it 
 ### Handling missing data
 
 ```swift
-//  --- Handling missing data
-
 
 // Here, we added a question mark to the end of our data type and
 // said that this value may be empty in our data.
