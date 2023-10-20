@@ -38,5 +38,6 @@ https://tls.tc/a472B
 ---
 
 I share every day of the challenge on my [Twitter](https://twitter.com/tunahanbekdass) account. If you want to join this challenge and become a colleague, you can send a message.
+[Medium Account](https://medium.com/@tunahanbekdas) 
 
 <img src="https://c.tenor.com/sWEUdV5LQdkAAAAC/yes-apple.gif">
