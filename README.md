@@ -28,9 +28,9 @@ In this section, I will share the content I have written for the fundamentals of
 
 | Day   | File                               | Subjects                                              |
 |:------|------------------------------------|-------------------------------------------------------|
-| Day 1 | [File](https://tls.tc/VlfCm)       |Variables and Constants, Types of Data, Operators, String Interpolation, Arrays, Dictionaries, Conditional Statements, Loops, Switch Case|
-| Day 2 | [File](https://tls.tc/k7S9t)       | arrays, dictionaries, sets, and enums                 |
-| Day 2 | [File](https://tls.tc/k7S9t)       | arrays, dictionaries, sets, and enums                 |
+| Day 13 | [File](https://tls.tc/VlfCm)       |Variables and Constants, Types of Data, Operators, String Interpolation, Arrays, Dictionaries, Conditional Statements, Loops, Switch Case|
+| Day 14 | [File](https://tls.tc/k7S9t)       | arrays, dictionaries, sets, and enums                 |
+| Day 15 | [File](https://tls.tc/k7S9t)       | arrays, dictionaries, sets, and enums                 |
 
 # Pojects Map
 In this section, I will share the projects I am working on as I complete them.
