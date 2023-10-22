@@ -243,11 +243,10 @@ for i in 0..<people.count {
 }
 ```
 
-
+```swift
 var result = 0
 var total = 0
 
-```swift
 for i in 1...20 {
     for z in 20...30{
         print("\(i) x \(z) = \(i * z)")
