@@ -29,7 +29,7 @@ In this section, I will share the content I have written for the fundamentals of
 | Day      | File                               | Subjects                                              |
 |:---------|------------------------------------|----------------------------------------------------------------------------------------------------|
 | Day 13   | [File](https://tls.tc/VTK68)       | Variables and Constants, Types of Data, Operators, String Interpolation, Arrays, Dictionaries, Conditional Statements, Loops, Switch Case|
-| Day 14   | [File]()       | Functions, Optionals, Optional chaining, Enumaretion, Struct, Classes and Structs vs Classes                      |
+| Day 14   | [File](https://tls.tc/TjsBC)       | Functions, Optionals, Optional chaining, Enumaretion, Struct, Classes and Structs vs Classes                      |
 | Day 15   | [File]()       | Properties, Static properties and methods, Access control, Polymorphism and typecasting, Closures                 |
 
 
