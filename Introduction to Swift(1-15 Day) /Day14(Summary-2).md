@@ -83,7 +83,7 @@ func getHaterStatus(weather: weatherType) -> String? {
 getHaterStatus(weather: .wind(speed: 12))
 ```
 
-## Struct ⚠️
+## Struct 
 ```swift
 struct user {
     var name : String
@@ -117,11 +117,121 @@ tunahan.fullName()
 print(tunahanCop.name)
 tunahanCop.fullName()
 ```
+## Classes 
+```swift
+class User {
+    var name: String
+    var surname: String
+    var age: Int?
+    
+    init(name: String, surname: String, age: Int? ) {
+        self.name = name
+        self.surname = surname
+        self.age = age
+    }
+    func fullName() {
+        print(name + " " + surname)
+    }
+}
 
+var tunahan = User(name: "Tunahan", surname: "Bekdaş", age: 22)
 
+tunahan.name
+tunahan.surname
+tunahan.fullName()
 
+class Person: User, Identifiable {
+    var id = UUID()
+    
+    override func fullName() {
+        print("My id \(id), name is \(name), surname is \(surname)")
+    }
+}
 
+var tunahan2 = Person(name: "Tunahan", surname: "Bekdaş", age: 22)
+tunahan2.fullName()
+```
+## Struct VS Classes
 
+### Structures have an initializer. You have to create your own for Classes
+
+```swift
+struct StructUser {
+    var name: String
+}
+let user1 = StructUser(name: "Struct User")
+```
+
+```swift
+class ClassUser {
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+}
+
+let user2 = ClassUser(name: "Class User")
+```
+
+### Structure is a value type. Class is a reference type.
+
+### If we copy "user1"
+```swift
+let user1 = Suser(name: "User1")
+var user1Copy = user1
+
+user1Copy.name = "User1Copy"
+
+print(user1.name) // User1
+print(user1Copy.name) // User1Copy
+```
+### But If we copy "user2"
+```swift
+var user1Copy = user1
+user1Copy.name = "x"
+
+user1.name
+user1Copy.name
+
+var user2Copy = user2
+user2Copy.name = "y"
+
+user2.name
+user2Copy.name
+```
+<img src="https://miro.medium.com/max/940/1*N4CTsUuCT8mu7k2YlADqxQ.gif">
+
+### Classes can inherit. Structures can't.
+
+```swift
+We can easily use the class properties we created earlier in classes.We can add property on it and we get a new class type.
+
+class Car {
+    var name: String
+    var model: Int
+    var color: String
+    var hp: Int
+    
+    init(name: String, model: Int, color: String, hp: Int) {
+        self.name = name
+        self.model = model
+        self.color = color
+        self.hp = hp
+    }
+}
+
+class ClassicCar: Car {
+    var price: Double
+    
+    init(name: String, model: Int, color: String, hp: Int, price: Double) {
+         self.price = price
+         super.init(name: name, model: model, color: color, hp: hp)
+    }
+}
+
+var mustang69 = ClassicCar(name: "Ford", model: 1969, color: "Black", hp: 300, price: 230.800)
+```
 
 
 
