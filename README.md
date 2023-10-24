@@ -30,7 +30,7 @@ In this section, I will share the content I have written for the fundamentals of
 |:---------|------------------------------------|----------------------------------------------------------------------------------------------------|
 | Day 13   | [File](https://tls.tc/VTK68)       | Variables and Constants, Types of Data, Operators, String Interpolation, Arrays, Dictionaries, Conditional Statements, Loops, Switch Case|
 | Day 14   | [File](https://tls.tc/aZIOo)       | Functions, Optionals, Optional chaining, Enumaretion, Struct, Classes and Structs vs Classes                      |
-| Day 15   | [File]()       | Properties, Static properties and methods, Access control, Polymorphism and typecasting, Closures                 |
+| Day 15   | [File](https://tls.tc/pviai)       | Properties, Static properties and methods, Access control, Polymorphism and typecasting, Closures                 |
 
 
 # Pojects Map
