@@ -1,4 +1,4 @@
-# 👨🏻‍💻 Day 1 (Variables) 
+# 👨🏻‍💻 Day 1 
 
 The variable corresponds to holding data in programming languages.
 

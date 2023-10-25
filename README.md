@@ -10,8 +10,28 @@ In this section, I will share the content I have written for the fundamentals of
  
 | Day   | File                               | Subjects                                              |
 |:------|------------------------------------|-------------------------------------------------------|
-| Day 1 | [File](https://tls.tc/VD7NR)       | variables, simple data types, and string interpolation|
-| Day 2 | [File](https://tls.tc/BERni)       | arrays, dictionaries, sets, and enums                 |
+| Day 1 | [File](https://tls.tc/VlfCm)       | variables, simple data types, and string interpolation|
+| Day 2 | [File](https://tls.tc/k7S9t)       | arrays, dictionaries, sets, and enums                 |
+| Day 3 | [File](https://tls.tc/RbjNc)       | operators and conditions                              |
+| Day 4 | [File](https://tls.tc/gCYhF)       | loops, loops, and more loops                          |
+| Day 5 | [File](https://tls.tc/lm7Rz)       | functions, parameters, and errors                     |
+| Day 6 | [File](https://tls.tc/a472B)       | closures part one                                     |
+| Day 7 | [File](https://tls.tc/lIOgf)       | closures part two                                     |
+| Day 8 | [File](https://tls.tc/NVeN2)       | structs, properties, and methods                      |
+| Day 9 | [File](https://tls.tc/AEoid)       |  access control, static properties, and laziness      |
+| Day 10| [File](https://tls.tc/9n5Y7)       |  classes and inheritance                              |
+| Day 11| [File](https://tls.tc/y3eFb)       |  protocols, extensions, and protocol extensions       |
+| Day 12| [File](https://tls.tc/U6ooT)       |  optionals, unwrapping, and typecasting               |
+
+
+# Swift Fundamentals Summary 
+
+| Day      | File                               | Subjects                                              |
+|:---------|------------------------------------|----------------------------------------------------------------------------------------------------|
+| Day 13   | [File](https://tls.tc/VTK68)       | Variables and Constants, Types of Data, Operators, String Interpolation, Arrays, Dictionaries, Conditional Statements, Loops, Switch Case|
+| Day 14   | [File](https://tls.tc/aZIOo)       | Functions, Optionals, Optional chaining, Enumaretion, Struct, Classes and Structs vs Classes                      |
+| Day 15   | [File](https://tls.tc/pviai)       | Properties, Static properties and methods, Access control, Polymorphism and typecasting, Closures                 |
+
 
 # Pojects Map
 In this section, I will share the projects I am working on as I complete them.
@@ -26,5 +46,7 @@ In this section, I will share the projects I am working on as I complete them.
 ---
 
 I share every day of the challenge on my [Twitter](https://twitter.com/tunahanbekdass) account. If you want to join this challenge and become a colleague, you can send a message.
+
+Visit my [Medium Account](https://medium.com/@tunahanbekdas) 
 
 <img src="https://c.tenor.com/sWEUdV5LQdkAAAAC/yes-apple.gif">
