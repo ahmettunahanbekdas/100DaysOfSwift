@@ -15,13 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var wrongTypeLabel: UILabel!
     
-    var result: Int
-    
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
