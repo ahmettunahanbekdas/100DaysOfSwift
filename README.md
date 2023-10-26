@@ -36,9 +36,10 @@ In this section, I will share the content I have written for the fundamentals of
 # Pojects Map
 In this section, I will share the projects I am working on as I complete them.
 
-| Name   | File                                | Subjects                                 |
-|:-------|-------------------------------------|------------------------------------------|
-| Name   | [File](https://github.com/kaymal)   | Subjects                                 | 
+| Project Name       | Project File                        | Subjects                                 |
+|:-------------------|-------------------------------------|------------------------------------------|
+| ChangeElon         | [File](https://github.com/kaymal)   | Basic Skils                              | 
+| Basic Calculator   | [File](https://github.com/kaymal)   | Basic Skils                              | 
 
 
 
