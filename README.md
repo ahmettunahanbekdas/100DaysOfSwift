@@ -37,14 +37,14 @@ In this section, I will share the content I have written for the fundamentals of
 In this section, I will share the projects I am working on as I complete them.
 
 |Project   | Project Name       | Project File                                                                                       | Subjects                               |
-|:---------|-------------------------------------------------------------------------------------------------------------------------|                                        |
+|:---------|-------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
 |Project 1 | ChangeElon         | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%202-%20ChangeElon)   | Basic Skils                            | 
 |Project 2 | Basic Calculator   | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%201-%20Calculator)   | Basic Skils                            | 
 
 
 
 
----
+
 
 I share every day of the challenge on my [Twitter](https://twitter.com/tunahanbekdass) account. If you want to join this challenge and become a colleague, you can send a message.
 
