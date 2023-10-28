@@ -36,10 +36,14 @@ In this section, I will share the content I have written for the fundamentals of
 # Pojects Map
 In this section, I will share the projects I am working on as I complete them.
 
-| Project   | Project Name       | Project File                                                                                       | Subjects       |
-|:---------|:-------------------|:----------------------------------------------------------------------------------------------------|--------------|
-| Project 1 | ChangeElon         | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%202-%20ChangeElon)   | Basic Skills   |
-| Project 2 | Basic Calculator   | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%201-%20Calculator)   | Basic Skills   |
+| Project   | Project Name       | Project File                                                                                        | Subjects     |
+|:---------|:-------------------|:-----------------------------------------------------------------------------------------------------|--------------|
+| Project 1 | ChangeElon         | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%202-%20ChangeElon)    | Basic Skills |
+| Project 2 | Basic Calculator   | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%201-%20Calculator)    | Basic Skills |
+| Project 3 | Project Layout     | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%203-%20ProjectLayout) | Layout       |
+| Project 4 | ObjectWithCode     | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%204-%20ObjectWithCode)| Code Design  |
+| Project 5 | BirthdayNoteTaker  | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%205-%20BirthdayNoteTaker)| User Defaults |
+| Project 6 | SegueApp           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%206-%20SegueApp)| Segue |
 
 
 
