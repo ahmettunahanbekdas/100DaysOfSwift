@@ -5,7 +5,8 @@
 
 
 ## Layout ✅
-<img width="1440" alt="Ekran Resmi 2023-10-27 11 18 15" src="https://github.com/ahmettunahanbekdas/100DaysOfSwift/assets/97003033/923db19f-2ae7-44b4-a8c8-fecb27b714b5">
+
+![Ekran Resmi 2023-10-29 02 04 17](https://github.com/ahmettunahanbekdas/100DaysOfSwift/assets/97003033/43aa4720-afc4-4b35-9462-96a31f8a0cd5)
 
 
 
