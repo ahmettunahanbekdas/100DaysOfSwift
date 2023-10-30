@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var userName = ""
-
+    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordagainTextField: UITextField!
@@ -20,8 +20,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    
     @IBAction func signupButton(_ sender: Any) {
         // Kullanıcının girdiği şifreleri al
         let password1 = passwordTextField.text
@@ -31,12 +31,21 @@ class ViewController: UIViewController {
         if password1 == password2 {
             userName = usernameTextField.text ?? "İsim boş geçildi"
             performSegue(withIdentifier: "toSecondVC", sender: nil)
+            
         } else {
             // Şifreler aynı değilse uyarı göster
             let alert = UIAlertController(title: "Hata", message: "Şifreler uyuşmuyor. Lütfen aynı şifreyi giriniz.", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Tamam", style: .default, handler: nil)
             alert.addAction(okAction)
             self.present(alert, animated: true)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSecondVC" {
+            if let SecondViewController = segue.destination as? SecondViewController {
+                SecondViewController.userNames = usernameTextField.text ?? "default value"
+            }
         }
     }
 }
