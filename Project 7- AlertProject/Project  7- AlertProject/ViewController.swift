@@ -32,22 +32,23 @@ class ViewController: UIViewController {
 
         // Kullanıcı adı boş mu diye kontrol et
         if username?.isEmpty == true {
-            let usernameAlert = UIAlertController(title: "Hata", message: "Kullanıcı adı boş geçilemez.", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Tamam", style: .cancel, handler: nil)
-            usernameAlert.addAction(okAction)
-            self.present(usernameAlert, animated: true)
-        } else if password1 == password2 {
-            // Kullanıcı adı boş değilse ve şifreler aynıysa işlem devam edebilir
-            userName = username ?? "İsim boş geçildi"
-            performSegue(withIdentifier: "toSecondVC", sender: nil)
+            makeAlert(tittle: "Error", message: "Username field cannot be empty", okActionTittle: "Okay")
+        } else if password1 != password2 {
+            makeAlert(tittle: "Error", message: "Passwords do not match", okActionTittle: "Okay")
+        } else if  password1?.isEmpty == true && password2?.isEmpty == true {
+            makeAlert(tittle: "Error", message: "Password field cannot be empty", okActionTittle: "Okay")
         } else {
-            // Kullanıcı adı boş değilse ama şifreler aynı değilse uyarı göster
-            let alert = UIAlertController(title: "Hata", message: "Şifreler uyuşmuyor. Lütfen aynı şifreyi giriniz.", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Tamam", style: .cancel, handler:  nil)
-            alert.addAction(okAction)
-            self.present(alert, animated: true)
+            performSegue(withIdentifier: "toSecondVC", sender: nil)
         }
            
+    }
+    
+    func makeAlert(tittle: String, message: String, okActionTittle:String) {
+        // Kullanıcı adı boş değilse ama şifreler aynı değilse uyarı göster
+        let alert = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: okActionTittle, style: .cancel, handler:  nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -58,4 +59,5 @@ class ViewController: UIViewController {
         }
     }
 }
+
 
