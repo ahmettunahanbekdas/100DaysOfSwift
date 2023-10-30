@@ -1,4 +1,4 @@
-# Calculator 🧮
+# Calculator 
 
 In this app, I created a simple calculator that performs the four basic arithmetic operations. When an incorrect type is entered, the application tells you in which field you made a mistake.
 
