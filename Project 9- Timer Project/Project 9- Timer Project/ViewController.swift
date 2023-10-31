@@ -9,12 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    var counter = 0
     var timer = Timer()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+   
+    @IBAction func startButton(_ sender: Any) {
+        timer.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerFunc), userInfo: nil, repeats: true)
     }
-
-
+    
+    @IBAction func cancelButton(_ sender: Any) {
+        timer.invalidate()
+    }
+    
+    @objc func timerFunc() {
+        counter += 1
+        timeLabel.text = "TIME  \(counter)"
+        print(counter)
+    }
 }
-
