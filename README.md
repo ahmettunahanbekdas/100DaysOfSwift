@@ -44,6 +44,10 @@ In this section, I will share the projects I am working on as I complete them.
 | Project 4 | ObjectWithCode     | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%204-%20ObjectWithCode)| Code Design  |
 | Project 5 | BirthdayNoteTaker  | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%205-%20BirthdayNoteTaker)| User Defaults |
 | Project 6 | SegueApp           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%206-%20SegueApp)| Segue |
+| Project 7 | AlertProject       | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%207-%20AlertProject)| Alert |
+| Project 8 | SegueApp           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%208-%20GestureRecognizerApp)| GestureRecognizer |
+| Project 9 | TimerApp           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%209-%20Timer%20Project)| Timer Function |
+
 
 
 
