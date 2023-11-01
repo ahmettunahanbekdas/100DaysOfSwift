@@ -1,5 +1,5 @@
 
-## GestureRecognizer
+##GestureRecognizer
 
 - UITapGestureRecognizer
 
