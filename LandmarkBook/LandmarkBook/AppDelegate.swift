@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Project 11- LandMarkBook
+//  LandmarkBook
 //
 //  Created by Ahmet Tunahan Bekdaş on 2.11.2023.
 //
