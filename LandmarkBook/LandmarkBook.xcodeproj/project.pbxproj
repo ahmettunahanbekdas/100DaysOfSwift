@@ -13,6 +13,7 @@
 		0E5AB3232AF41B5100A2118C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5AB3212AF41B5100A2118C /* Main.storyboard */; };
 		0E5AB3252AF41B5200A2118C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5AB3242AF41B5200A2118C /* Assets.xcassets */; };
 		0E5AB3282AF41B5200A2118C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5AB3262AF41B5200A2118C /* LaunchScreen.storyboard */; };
+		0E5AB3302AF45CC000A2118C /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AB32F2AF45CC000A2118C /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0E5AB3242AF41B5200A2118C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E5AB3272AF41B5200A2118C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E5AB3292AF41B5200A2118C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E5AB32F2AF45CC000A2118C /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				0E5AB31B2AF41B5100A2118C /* AppDelegate.swift */,
 				0E5AB31D2AF41B5100A2118C /* SceneDelegate.swift */,
 				0E5AB31F2AF41B5100A2118C /* ViewController.swift */,
+				0E5AB32F2AF45CC000A2118C /* DetailsViewController.swift */,
 				0E5AB3212AF41B5100A2118C /* Main.storyboard */,
 				0E5AB3242AF41B5200A2118C /* Assets.xcassets */,
 				0E5AB3262AF41B5200A2118C /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				0E5AB3202AF41B5100A2118C /* ViewController.swift in Sources */,
 				0E5AB31C2AF41B5100A2118C /* AppDelegate.swift in Sources */,
 				0E5AB31E2AF41B5100A2118C /* SceneDelegate.swift in Sources */,
+				0E5AB3302AF45CC000A2118C /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

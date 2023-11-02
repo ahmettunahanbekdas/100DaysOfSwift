@@ -7,39 +7,60 @@
 
 import UIKit
 
-// ViewController adında bir sınıf tanımlanıyor.
-// UIViewController, UITableViewDelegate ve UITableViewDataSource protokollerini uyguluyor.
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    // Storyboard'da bağlanmış bir UITableView öğesini temsil eden bir outlet.
     @IBOutlet weak var tableView: UITableView!
     
-    // Uygulama başladığında çalışan fonksiyon.
+    var historians = [String]()
+    var historiansImages = [UIImage]()
+    var chosenName = ""
+    var chosenImage = UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Tablo görünümünün delegesini ve veri kaynağını bu sınıfa ayarlar.
         tableView.delegate = self
         tableView.dataSource = self
-    }
-    
-    // Tablo görünümünde kaç satır gösterileceğini belirleyen fonksiyon.
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30 // Şu an için her zaman 30 satır döndürülüyor.
-    }
-    
-    // Her hücrenin içeriğini ve görünümünü yapılandıran fonksiyon.
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell() // Bir UITableViewCell örneği oluşturuluyor.
-
-        // Hücrenin metin içeriğini özelleştiriyoruz.
-        var content = cell.defaultContentConfiguration()
- //     cell.textLabel?.text = "Text V1"
-        content.text = "Main Text" // Ana metin
-        content.secondaryText  = "Secondary Text" // İkincil metin
-        cell.contentConfiguration = content
         
-        return cell // Hücre döndürülüyor.
+        historians.append("Halil İnalcık")
+        historians.append("İlber Ortaylı")
+        historians.append("Murat Bardakçı")
+        
+        historiansImages.append(UIImage(named: "halilinalcık")!)
+        historiansImages.append(UIImage(named: "ilberortaylı")!)
+        historiansImages.append(UIImage(named: "muratbardakcı")!)
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return historians.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        
+        var content = cell.defaultContentConfiguration()
+        content.text = historians[indexPath.row]
+        cell.contentConfiguration = content
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        chosenName = historians[indexPath.row]
+        chosenImage = historiansImages[indexPath.row]
+        performSegue(withIdentifier: "toSecondVC", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSecondVC"{
+            let destinationVC = segue.destination as! DetailsViewController
+            destinationVC.selectedName = chosenName
+            destinationVC.selectedImages = chosenImage
+            
+        }
     }
 }
 
