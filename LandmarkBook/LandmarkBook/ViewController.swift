@@ -36,7 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var content = cell.defaultContentConfiguration()
  //     cell.textLabel?.text = "Text V1"
         content.text = "Main Text" // Ana metin
-        content.secondaryText = "Secondary Text" // İkincil metin
+        content.secondaryText  = "Secondary Text" // İkincil metin
         cell.contentConfiguration = content
         
         return cell // Hücre döndürülüyor.
