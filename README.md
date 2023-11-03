@@ -21,6 +21,7 @@ In this section, I will share the projects I am working on as I complete them.
 | Project 8 | SegueApp           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%208-%20GestureRecognizerApp)| GestureRecognizer|
 | Project 9 | TimerApp           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%209-%20Timer%20Project)     | Timer |
 | Project 10 | CatchElonGame     | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2010-%20CatchElon)          | Timer, User Defaults, Alert, GestureRecognizer|
+| Project 11 | Historian Book           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2011-%20HistorianBook%20)            | TableView, Alert, Segue       |
 
 
 
