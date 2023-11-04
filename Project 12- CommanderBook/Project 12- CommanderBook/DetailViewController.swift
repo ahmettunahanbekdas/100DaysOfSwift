@@ -7,23 +7,20 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+class DetailViewController: UIViewController {
+ 
     @IBOutlet weak var commanderName: UILabel!
     @IBOutlet weak var commanderImage: UIImageView!
     @IBOutlet weak var commanderAbout: UILabel!
+     
+    var selectedCommander : Commander?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        commanderName.text = selectedCommander?.name
+        commanderImage.image = selectedCommander?.image
+        commanderAbout.text = selectedCommander?.about
     }
 
- 
 }
