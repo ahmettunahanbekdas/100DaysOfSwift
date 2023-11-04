@@ -11,6 +11,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     var commanderArray = [Commander]()
+    var chosenCommander : Commander?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,13 +44,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         var content = cell.defaultContentConfiguration()
-        content.text = commanderArray[indexPath.row].name 
+        content.text = commanderArray[indexPath.row].name
         cell.contentConfiguration = content
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toDetailVC ", sender: nil)
+        chosenCommander = commanderArray[indexPath.row]
+        performSegue(withIdentifier: "toDetailVC", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailVC" {
+            let destinationVC = segue.destination as! DetailViewController
+            destinationVC.selectedCommander = chosenCommander
+        }
     }
 }
 
