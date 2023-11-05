@@ -15,6 +15,8 @@
 		0E59A55C2AF76DA10051A4F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E59A55A2AF76DA10051A4F4 /* LaunchScreen.storyboard */; };
 		0E59A5672AF7761E0051A4F4 /* CutomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E59A5652AF7761E0051A4F4 /* CutomTableViewCell.swift */; };
 		0E59A5682AF7761E0051A4F4 /* CutomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E59A5662AF7761E0051A4F4 /* CutomTableViewCell.xib */; };
+		0E59A56A2AF780EA0051A4F4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E59A5692AF780EA0051A4F4 /* DetailViewController.swift */; };
+		0E59A56C2AF785B20051A4F4 /* MansModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E59A56B2AF785B20051A4F4 /* MansModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		0E59A55D2AF76DA10051A4F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E59A5652AF7761E0051A4F4 /* CutomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutomTableViewCell.swift; sourceTree = "<group>"; };
 		0E59A5662AF7761E0051A4F4 /* CutomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CutomTableViewCell.xib; sourceTree = "<group>"; };
+		0E59A5692AF780EA0051A4F4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0E59A56B2AF785B20051A4F4 /* MansModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MansModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +67,9 @@
 				0E59A54F2AF76DA00051A4F4 /* AppDelegate.swift */,
 				0E59A5512AF76DA00051A4F4 /* SceneDelegate.swift */,
 				0E59A5532AF76DA00051A4F4 /* ViewController.swift */,
+				0E59A5692AF780EA0051A4F4 /* DetailViewController.swift */,
 				0E59A5652AF7761E0051A4F4 /* CutomTableViewCell.swift */,
+				0E59A56B2AF785B20051A4F4 /* MansModel.swift */,
 				0E59A5552AF76DA00051A4F4 /* Main.storyboard */,
 				0E59A55A2AF76DA10051A4F4 /* LaunchScreen.storyboard */,
 				0E59A5662AF7761E0051A4F4 /* CutomTableViewCell.xib */,
@@ -145,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E59A56C2AF785B20051A4F4 /* MansModel.swift in Sources */,
 				0E59A5542AF76DA00051A4F4 /* ViewController.swift in Sources */,
 				0E59A5502AF76DA00051A4F4 /* AppDelegate.swift in Sources */,
+				0E59A56A2AF780EA0051A4F4 /* DetailViewController.swift in Sources */,
 				0E59A5672AF7761E0051A4F4 /* CutomTableViewCell.swift in Sources */,
 				0E59A5522AF76DA00051A4F4 /* SceneDelegate.swift in Sources */,
 			);
