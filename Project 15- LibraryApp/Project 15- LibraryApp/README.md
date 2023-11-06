@@ -14,3 +14,10 @@
 
 
 3.1 AddPhotoImage görseli yerleştirildi 
+3.2 UIPicker sınıfı kullanılarak Galerimizi eriştik 
+3.3 ImageView nesnemizde ki Image objesine seçtiğimiz görseli ile 
+
+
+4.1 Veri saklama işlemlerine başlayacağız 
+4.2 app delegate de do try catch bulunan contexte ulaşacağız
+4.3 appDelegate ulaşabilmek için detailVC içersinde bir değişkene atamamız gerekiyor

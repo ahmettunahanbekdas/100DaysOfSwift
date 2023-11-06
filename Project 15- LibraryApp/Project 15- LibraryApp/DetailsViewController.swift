@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -18,7 +19,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
         
 // MARK: - Recognizer
-        // Klavye Kapamak için tıklama olayını oluşturduk
+        // Klavye Kapamak alanı
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap) // ekrana ekledik
         
@@ -28,7 +29,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
            imageView.addGestureRecognizer(tapGestureRecognizer) // tıklama olayını resme ekledik
     }
     
-    // MARK: - Funtions
+    // MARK: - Functions
     
     // selector ile klavye kapama fonksiyonumuz
     @objc func dismissKeyboard() {
@@ -51,6 +52,33 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func saveButton(_ sender: Any) {
-        print("tapped")
+        let appDelagate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelagate.persistentContainer.viewContext
+        
+        let newBook = NSEntityDescription.insertNewObject(forEntityName: "Books", into: context)
+        newBook.setValue(nameText.text, forKey: "name")
+        newBook.setValue(writerText.text, forKey: "writer")
+        
+        if let pages = Int(pagesText.text!){
+            newBook.setValue(pages, forKey: "pages")
+        } else {
+            print("Pages Kısmına yanlış bir giriş yapıldı  ")
+        }
+         
+        newBook.setValue(UUID(), forKey: "id")
+        
+        let data = imageView.image?.jpegData(compressionQuality: 0.5 )
+        newBook.setValue(data, forKey: "image")
+        
+        do{
+            try context.save()
+            print("Succes")
+            print(newBook)
+            print(data!)
+        } catch {
+            print("Error")
+        }
+        
+       
     }
 }
