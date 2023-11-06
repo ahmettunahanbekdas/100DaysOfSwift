@@ -3,7 +3,7 @@
 -->
 # 👨🏻‍💻 Welcome to 100 Days Of Swift Challenge 
 
-This repository contains my work done as part of the 'Hacking with Swift 100 Day Challenge.' Throughout this challenge, I will be working on a new project or concept every day using the Swift programming language, with the additional goal of sharing my progress and knowledge with others.
+This repository contains my work. I will be working on a new project or concept every day using the Swift programming language, with the additional goal of sharing my progress and knowledge with others.
 
 
 # Pojects Map
