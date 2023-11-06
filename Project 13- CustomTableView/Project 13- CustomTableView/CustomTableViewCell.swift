@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CutomTableViewCell: UITableViewCell {
+class CustomTableViewCell: UITableViewCell {
 
 
     @IBOutlet weak var images: UIImageView!
