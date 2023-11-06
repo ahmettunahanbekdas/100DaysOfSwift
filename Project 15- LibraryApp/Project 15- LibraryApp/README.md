@@ -9,3 +9,7 @@
 
 
 2.1 NavigationController ın NavigationBarına Add Butonu ekledik ve Segue ile detail sayfasına yönlendirdik 
+2.2  UITapGestureRecognizer kullanarak kalvye kapama işlemini tamamladık
+
+
+
