@@ -13,3 +13,4 @@
 
 
 
+3.1 AddPhotoImage görseli yerleştirildi 
