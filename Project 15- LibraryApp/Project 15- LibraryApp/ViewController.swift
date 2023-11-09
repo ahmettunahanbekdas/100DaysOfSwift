@@ -21,11 +21,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if selectedBook != "" {
-            // CoreData
-        }else {
-            
-        }
         
         // 1. TableView için veri kaynağı ve delegeleri ayarlar
         tableView.delegate = self
@@ -107,7 +102,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         performSegue(withIdentifier: "toDetailsVC", sender: nil)
         
     }
-
+    
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
