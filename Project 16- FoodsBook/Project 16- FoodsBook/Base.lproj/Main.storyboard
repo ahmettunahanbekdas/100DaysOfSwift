@@ -82,12 +82,15 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdJ-kd-9DR">
-                                <rect key="frame" x="115" y="718.66666666666663" width="163" height="34.333333333333371"/>
+                                <rect key="frame" x="115" y="719" width="163" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34.333333333333371" id="4yh-Qa-frB"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="bwM-VB-yK1" eventType="touchUpInside" id="8sL-lV-LsG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j82-YJ-MZi"/>
@@ -110,7 +113,6 @@
                         <outlet property="calories" destination="Ioq-8z-L4w" id="Fxf-lA-lgR"/>
                         <outlet property="image" destination="SsU-oj-EeX" id="vSN-Wi-PGG"/>
                         <outlet property="name" destination="2O5-FB-Ahw" id="xv3-CB-U2I"/>
-                        <outlet property="saveButton" destination="xdJ-kd-9DR" id="C6V-00-zkw"/>
                         <outlet property="type" destination="Z6g-lt-2lf" id="bbL-LZ-RY4"/>
                     </connections>
                 </viewController>

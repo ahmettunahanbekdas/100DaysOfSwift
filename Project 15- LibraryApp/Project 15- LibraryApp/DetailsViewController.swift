@@ -95,6 +95,10 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         let context = appDelegate.persistentContainer.viewContext
         // 3. Yeni bir "Books" (Kitaplar) varlığı oluşturur ve bağlama ekler
         let newBook = NSEntityDescription.insertNewObject(forEntityName: "Books", into: context)
+        
+        
+        
+        
         // 4. Kitabın adını ve yazarını girilen metin alanlarından alır ve varlığa ekler
         newBook.setValue(nameText.text, forKey: "name")
         newBook.setValue(writerText.text, forKey: "writer")
@@ -109,6 +113,10 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         // 7. Görseli JPEG veri biçimine dönüştürür ve varlığa ekler
         let data = imageView.image?.jpegData(compressionQuality: 0.5)
         newBook.setValue(data, forKey: "image")
+        
+        
+        
+        
         // 8. Değişiklikleri kaydeder
         do {
             try context.save()
