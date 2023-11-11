@@ -85,26 +85,28 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
             // Yeni bir 'FoodItem' varlığı oluşturulur
             let foodItem = NSManagedObject(entity: entity, insertInto: managedContext) as! Foods
             
-            foodItem.setValue(name.text, forKey: "name")
-            foodItem.setValue(type.text, forKey: "type")
-            
+            foodItem.setValue(name.text, forKey: "name") // Kullanıcının girdiği ismi, "name" özelliğine atar.
+
+            foodItem.setValue(type.text, forKey: "type") // Kullanıcının girdiği tür bilgisini, "type" özelliğine atar.
+
             if let pages = Int(calories.text!) {
-                foodItem.setValue(pages, forKey: "calories")
+                foodItem.setValue(pages, forKey: "calories") // Kullanıcının girdiği kalori miktarını "calories" özelliğine atar.
             } else {
-                print("Pages Kısmına yanlış bir giriş yapıldı")
+                print("Pages Kısmına yanlış bir giriş yapıldı") // Eğer giriş bir sayıya dönüşemezse, hata mesajı yazdırır.
             }
-            
-            foodItem.setValue(UUID(), forKey: "id")
-            
-            let data = image.image?.jpegData(compressionQuality: 0.5)
-            foodItem.setValue(data, forKey: "image")
-            
+
+            foodItem.setValue(UUID(), forKey: "id") // Yeni bir UUID oluşturup, "id" özelliğine atar.
+
+            let data = image.image?.jpegData(compressionQuality: 0.5) // Resmi JPEG veri türüne dönüştürür.
+            foodItem.setValue(data, forKey: "image") // Resmi "image" özelliğine atar.
+
             do {
-                try managedContext.save()
-                print("Save Succes")
+                try managedContext.save() // Yapılan değişiklikleri kaydeder.
+                print("Save Success") // Başarılı bir şekilde kaydedildiğine dair mesaj yazdırır.
             } catch {
-                print("Save Eror")
+                print("Save Error") // Kaydetme sırasında bir hata olursa hata mesajı yazdırır.
             }
+
             
         }
         
