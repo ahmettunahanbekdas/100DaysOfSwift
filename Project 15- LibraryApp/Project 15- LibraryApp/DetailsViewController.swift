@@ -9,6 +9,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var writerText: UITextField!
     @IBOutlet weak var pagesText: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
     
     var chosenBook = ""
     var chosenID : UUID?
@@ -17,6 +18,9 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
         
         if chosenBook != ""{
+            
+            saveButton.isHidden = true
+            
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
             
@@ -40,6 +44,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
                         }
                         if let image = result.value(forKey: "image") as?  Data   {
                             imageView.image = UIImage(data:image)
+                        }else {
                         }
                     }
                 }
@@ -49,6 +54,11 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
             }
         }else{
             print("Error")
+            saveButton.isHidden = false
+            saveButton.isEnabled = false
+            nameText.text = ""
+            writerText.text = ""
+            pagesText.text = ""
         }
         
         
@@ -78,6 +88,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         picker.sourceType = .photoLibrary
         picker.allowsEditing = true
         present(picker, animated: true)
+        saveButton.isHidden = false
+        saveButton.isEnabled = true 
     }
     
     // Kullanıcının fotoğraf seçme işlemi tamamlandığında bu fonksiyon çağrılır.

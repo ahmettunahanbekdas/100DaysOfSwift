@@ -103,6 +103,7 @@
                         <outlet property="imageView" destination="tqU-YB-jQA" id="Gf9-Re-Lvi"/>
                         <outlet property="nameText" destination="Q7A-ts-XHU" id="f4m-QO-LPm"/>
                         <outlet property="pagesText" destination="leO-ds-9vU" id="RkI-Cf-Lfq"/>
+                        <outlet property="saveButton" destination="REf-T6-10A" id="dFf-I8-337"/>
                         <outlet property="writerText" destination="FR1-p4-U2V" id="TXd-Bc-3AY"/>
                     </connections>
                 </viewController>
