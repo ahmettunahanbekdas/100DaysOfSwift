@@ -50,7 +50,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
                     }
                     if let imageData = item.value(forKey: "image") as? Data {
                         if let image = UIImage(data: imageData) {
-                            self.image.image = image // Bu, UIImageView içindeki resmi günceller.
+                            self.image.image = image
                         }
                     }
                     
@@ -59,8 +59,6 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
             }catch{
                 
             }
-            
-            
         }
         
         // Klavye kapatma için oluşturulan Recognizer
@@ -150,4 +148,6 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
         
     }
+    
+    
 }
