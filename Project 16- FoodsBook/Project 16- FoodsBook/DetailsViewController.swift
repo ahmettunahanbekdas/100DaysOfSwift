@@ -17,6 +17,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var calories: UITextField!
     @IBOutlet weak var type: UITextField!
     
+    var chosenFood = ""
+    var chosenID : UUID?
     
     
     // MARK: - viewDidLoad()

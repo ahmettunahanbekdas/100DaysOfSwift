@@ -20,6 +20,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // CoreDatadan gelen verileri bir array içersine attım
     var foods:[NSManagedObject] = []
     
+    var foodsArray = [String]()
+    var foodsID = [UUID]()
+    
+    var selectedFood = ""
+    var selectedID : UUID!
+    
     // MARK: - viewDidLoad()
     
     override func viewDidLoad() {
@@ -30,10 +36,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Add butonu eklendi ve selector ile istenen fonksiyon çalıştırıldı.
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButton))
-        
-      
     }
-    
+
+    // MARK: - viewWillAppear()
     override func viewWillAppear(_ animated: Bool) {
         fetchCoreData()
     }
@@ -47,7 +52,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // Add butonuna tıklandığımda yapılan işlemin fonksiyonu.
     @objc func addButton() {
         performSegue(withIdentifier: "toDetailViewController", sender: nil)
-    } 
+    }
+    
+    
         func fetchCoreData() {
             // AppDelegate üzerinden CoreDataya erişildi
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
@@ -75,8 +82,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = UITableViewCell()
         // Örnek oluşturulurken kullanılacak hücre tanımlaması ve özellik atamaları burada yapılabilir
         let food = foods[indexPath.row]
-        cell.textLabel?.text = food.value(forKeyPath: "name") as? String
+        if let calories = food.value(forKeyPath: "calories") as? Int16 {
+            cell.textLabel?.text = "Calories: \(calories)"
+        } else {
+            cell.textLabel?.text = "Calories: N/A" // Eğer değer dönüşmezse bir varsayılan metin gösterilebilir
+        }
         return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let foodName = foods[indexPath.row].value(forKey: "name") as? String {
+            selectedFood = foodName
+        }
+        if let foodID = foods[indexPath.row].value(forKey: "id") as? UUID {
+            selectedID = foodID
+        }
+        performSegue(withIdentifier: "toDetailViewController", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailViewController" {
+            let destination = segue.destination as? DetailsViewController
+            destination?.chosenFood = selectedFood
+            destination?.chosenID = selectedID
+            
+        }
     }
     
     
