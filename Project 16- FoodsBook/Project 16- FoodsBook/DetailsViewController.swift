@@ -104,6 +104,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.dismiss(animated: true)
     }
     
+ 
     //MARK: - SAVE BUTTON
     
     // Save Button Tıklandığında fonksiyonlar
@@ -144,6 +145,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
                 print("Save Error") // Kaydetme sırasında bir hata olursa hata mesajı yazdırır.
             }
             
+            self.navigationController?.popViewController(animated: true)
+
             
         }
         

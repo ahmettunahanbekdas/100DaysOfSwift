@@ -41,12 +41,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: - viewWillAppear()
     override func viewWillAppear(_ animated: Bool) {
         fetchCoreData()
+        printFoodsData()
     }
     
     
     
     // MARK: - Funcitons()
     
+    func printFoodsData() {
+           for food in foods {
+               if let foodName = food.value(forKey: "name") as? String,
+                  let foodID = food.value(forKey: "id") as? UUID,
+                  let calories = food.value(forKey: "calories") as? Int16 {
+                   print("Food Name: \(foodName), ID: \(foodID), Calories: \(calories)")
+               }
+           }
+       }
     
     
     // Add butonuna tıklandığımda yapılan işlemin fonksiyonu.
@@ -92,6 +102,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.textLabel?.text = "Calories: N/A" // Eğer değer dönüşmezse bir varsayılan metin gösterilebilir
         }
         return cell
+        
     }
     
     
@@ -104,7 +115,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         performSegue(withIdentifier: "toDetailViewController", sender: nil)
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailViewController" {
             let destination = segue.destination as? DetailsViewController
@@ -113,6 +123,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         }
     }
+    
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -127,6 +138,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 
                 foods.remove(at: indexPath.row) // Diziden kaldır
                 tableView.deleteRows(at: [indexPath], with: .fade) // TableView'dan hücreyi kaldır
+                print("Delete")
                 
             } catch {
                 print("Error deleting food: \(error)")
