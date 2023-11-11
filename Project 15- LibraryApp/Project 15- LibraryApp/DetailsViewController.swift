@@ -115,8 +115,6 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         newBook.setValue(data, forKey: "image")
         
         
-        
-        
         // 8. Değişiklikleri kaydeder
         do {
             try context.save()

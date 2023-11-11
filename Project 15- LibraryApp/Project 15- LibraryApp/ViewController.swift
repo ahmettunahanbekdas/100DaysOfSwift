@@ -103,42 +103,40 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        // Sil butonuna basıldığında
         if editingStyle == .delete {
+            // AppDelegate içerisinden Core Data erişimi
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let context = appDelegate.persistentContainer.viewContext
+            let managedContext = appDelegate.persistentContainer.viewContext
             
-            let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Books")
+            // Silinecek kitabın ID'si
+            let bookToDelete = idArray[indexPath.row]
             
-            let idString = idArray[indexPath.row].uuidString
-            
-            fetchRequest.predicate = NSPredicate(format: "id = %@", idString)
-            fetchRequest.returnsObjectsAsFaults = false
+            // Core Data'dan ilgili kitabı silme isteği oluştur
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Books")
+            fetchRequest.predicate = NSPredicate(format: "id = %@", bookToDelete as CVarArg)
             
             do {
-                let results = try context.fetch(fetchRequest)
-                if results.count > 0 {
-                    for result in results as! [NSManagedObject]{
-                        
-                        if let id = result.value(forKey: "id") as? UUID {
-                            if id == idArray[indexPath.row] {
-                                context.delete(result)
-                                nameArray.remove(at: indexPath.row)
-                                idArray.remove(at: indexPath.row)
-                                tableView.reloadData()
-                                
-                                do{
-                                    try context.save()
-                                } catch {
-                                    print("Error ")
-                                }
-                                break
-                            }
-                        }
-                    }
+                // Fetch request'i çalıştırarak ilgili öğeyi al
+                let objects = try managedContext.fetch(fetchRequest)
+                // Silinen öğe Core Data'dan kaldırılır
+                for object in objects {
+                    managedContext.delete(object as! NSManagedObject)
                 }
+                // Değişiklikler kaydedilir
+                try managedContext.save()
             } catch {
-                print("Error")
+                // Silme işlemi sırasında hata oluşursa hata mesajı yazdır
+                print("Error deleting book: \(error)")
             }
+            
+            // TableView ve veri dizilerinden ilgili öğeyi kaldır
+            nameArray.remove(at: indexPath.row)
+            idArray.remove(at: indexPath.row)
+            // TableView'dan da öğeyi animasyonlu olarak kaldır
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
-}
+
+    }
+
