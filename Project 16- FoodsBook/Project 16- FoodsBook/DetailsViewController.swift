@@ -26,6 +26,43 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if chosenFood != "" {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let managedContext = appDelegate.persistentContainer.viewContext
+            
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Foods")
+            fetchRequest.returnsObjectsAsFaults = false
+            
+            let idString = chosenID?.uuidString
+            fetchRequest.predicate = NSPredicate(format: "id = %@", idString!)
+            
+            do{
+                let results = try managedContext.fetch(fetchRequest)
+                for item in results as! [NSManagedObject] {
+                    if let name = item.value(forKey: "name") as? String {
+                        self.name.text = name
+                    }
+                    if let type = item.value(forKey: "type") as? String {
+                        self.type.text = type
+                    }
+                    if let calories = item.value(forKey: "calories") as? Int {
+                        self.calories.text = String(calories)
+                    }
+                    if let imageData = item.value(forKey: "image") as? Data {
+                        if let image = UIImage(data: imageData) {
+                            self.image.image = image // Bu, UIImageView içindeki resmi günceller.
+                        }
+                    }
+                    
+                }
+                
+            }catch{
+                
+            }
+            
+            
+        }
+        
         // Klavye kapatma için oluşturulan Recognizer
         let tapView = UITapGestureRecognizer.init(target: self, action: #selector(tapView))
         view.addGestureRecognizer(tapView)
@@ -88,27 +125,27 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
             let foodItem = NSManagedObject(entity: entity, insertInto: managedContext) as! Foods
             
             foodItem.setValue(name.text, forKey: "name") // Kullanıcının girdiği ismi, "name" özelliğine atar.
-
+            
             foodItem.setValue(type.text, forKey: "type") // Kullanıcının girdiği tür bilgisini, "type" özelliğine atar.
-
+            
             if let pages = Int(calories.text!) {
                 foodItem.setValue(pages, forKey: "calories") // Kullanıcının girdiği kalori miktarını "calories" özelliğine atar.
             } else {
                 print("Pages Kısmına yanlış bir giriş yapıldı") // Eğer giriş bir sayıya dönüşemezse, hata mesajı yazdırır.
             }
-
+            
             foodItem.setValue(UUID(), forKey: "id") // Yeni bir UUID oluşturup, "id" özelliğine atar.
-
+            
             let data = image.image?.jpegData(compressionQuality: 0.5) // Resmi JPEG veri türüne dönüştürür.
             foodItem.setValue(data, forKey: "image") // Resmi "image" özelliğine atar.
-
+            
             do {
                 try managedContext.save() // Yapılan değişiklikleri kaydeder.
                 print("Save Success") // Başarılı bir şekilde kaydedildiğine dair mesaj yazdırır.
             } catch {
                 print("Save Error") // Kaydetme sırasında bir hata olursa hata mesajı yazdırır.
             }
-
+            
             
         }
         

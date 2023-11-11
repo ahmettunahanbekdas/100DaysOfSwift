@@ -43,12 +43,12 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
                         }
                     }
                 }
-             }
+            }
             catch {
-                print("Error")
+                print("Succes")
             }
         }else{
-            
+            print("Error")
         }
         
         
@@ -86,8 +86,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.dismiss(animated: true, completion: nil)
     }
     
-    // MARK: - Save Button Save CoreData 
-
+    // MARK: - Save Button Save CoreData
+    
     @IBAction func saveButton(_ sender: Any) {
         // 1. AppDelegate'e erişim sağlar
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
