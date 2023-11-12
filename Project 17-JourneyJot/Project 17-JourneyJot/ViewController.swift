@@ -8,18 +8,24 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     
+    var locationManager = CLLocationManager() // Lokasyon kontrolü için obje oluşturduk
+    
+     
     
     
     override func viewDidLoad() {
-        
-        mapView.delegate = self
-        
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        mapView.delegate = self // mapView delegate ekledik
+        locationManager.delegate = self // localtionManager delegate ekledik
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest // hangi keskinlikte konumu istediğimi belirtiriz keskinlik arttıkça pil kullanımı artar
+        locationManager.requestWhenInUseAuthorization() // Ne sıklıkla kullanıcının konumunu istiyoruz burada uygulamayı kullandığı esnada konum bilgisi alınır
+        locationManager.startUpdatingLocation() // Kullanıcının konumunu almaya başladık
+
     }
     
 
