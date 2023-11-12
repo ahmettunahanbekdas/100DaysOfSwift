@@ -10,10 +10,6 @@ import CoreData
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    
-    
-    
     // MARK: - @IBOutlet And Variables
     
     @IBOutlet weak var tableView: UITableView!
@@ -30,44 +26,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Add butonu eklendi ve selector ile istenen fonksiyon çalıştırıldı.
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButton))
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        // Add butonu eklendi ve selector ile istenen fonksiyon çalıştırıldı.
-        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButton))
     }
     
     // MARK: - viewWillAppear()
     override func viewWillAppear(_ animated: Bool) {
         fetchCoreData()
-        printFoodsData()
     }
-    
-    
     
     // MARK: - Funcitons()
     
-    func printFoodsData() {
-           for food in foods {
-               if let foodName = food.value(forKey: "name") as? String,
-                  let foodID = food.value(forKey: "id") as? UUID,
-                  let calories = food.value(forKey: "calories") as? Int16 {
-                   print("Food Name: \(foodName), ID: \(foodID), Calories: \(calories)")
-               }
-           }
-       }
-    
-    
     // Add butonuna tıklandığımda yapılan işlemin fonksiyonu.
     @objc func addButton() {
+        selectedFood = "" // Seçilen ürünü boş olarak ayarlar 
         performSegue(withIdentifier: "toDetailViewController", sender: nil)
     }
     
-    
     func fetchCoreData() {
-        
-        foodsID.removeAll(keepingCapacity: false) // Eski verileri temizle
+        foodsID.removeAll(keepingCapacity: false)
         foodsArray.removeAll(keepingCapacity: false)
         
         // AppDelegate üzerinden CoreDataya erişildi
@@ -85,26 +65,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    
     // TableView de listeleme işlemi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foods.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // TableView'da her bir hücreyi temsil eden UITableViewCell türünde bir örnek oluşturuyoruz
         let cell = UITableViewCell()
-        // Örnek oluşturulurken kullanılacak hücre tanımlaması ve özellik atamaları burada yapılabilir
         let food = foods[indexPath.row]
-        if let calories = food.value(forKeyPath: "calories") as? Int16 {
-            cell.textLabel?.text = "Calories: \(calories)"
+        if let name = food.value(forKeyPath: "name") as? String {
+            cell.textLabel?.text = name // İsimleri ekranda listeler
         } else {
-            cell.textLabel?.text = "Calories: N/A" // Eğer değer dönüşmezse bir varsayılan metin gösterilebilir
+            cell.textLabel?.text = "Name not available" // Eğer değer dönmezse varsayılan bir metin gösterilir
         }
         return cell
-        
     }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let foodName = foods[indexPath.row].value(forKey: "name") as? String {
@@ -123,7 +98,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         }
     }
-    
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -145,8 +119,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
     }
-    
-    
 }
     
     

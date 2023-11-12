@@ -16,6 +16,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var calories: UITextField!
     @IBOutlet weak var type: UITextField!
+    @IBOutlet weak var savebutton: UIButton!
     
     var chosenFood = ""
     var chosenID : UUID?
@@ -26,7 +27,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if chosenFood != "" {
+      if chosenFood != "" {
+          
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let managedContext = appDelegate.persistentContainer.viewContext
             
@@ -46,7 +48,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
                         self.type.text = type
                     }
                     if let calories = item.value(forKey: "calories") as? Int {
-                        self.calories.text = String(calories)
+                        self.calories.text = "\(calories) Calories"
                     }
                     if let imageData = item.value(forKey: "image") as? Data {
                         if let image = UIImage(data: imageData) {
@@ -57,8 +59,11 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
                 }
                 
             }catch{
-                
+                print("Error")
             }
+        }else {
+            savebutton.isHidden = true
+            savebutton.isEnabled = false
         }
         
         // Klavye kapatma için oluşturulan Recognizer
@@ -80,6 +85,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         view.endEditing(true)
     }
     
+
     // Resime tıklanınca çalışan fonksiyon
     @objc func tapImage() {
         // UIImagePickerController örneği oluşturulur
@@ -92,6 +98,9 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         imagePicker.allowsEditing = true
         // UIImagePickerController'ı ekranda gösterir
         present(imagePicker, animated: true, completion: nil)
+        
+        savebutton.isHidden = false
+        savebutton.isEnabled = true
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -109,28 +118,25 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     // Save Button Tıklandığında fonksiyonlar
     @IBAction func saveButton(_ sender: Any) {
-        // AppDelegate'e erişim sağlanır, Core Data Stack'e ulaşılır
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate   // AppDelegate'e erişim sağlanır, Core Data Stack'e ulaşılır
         else {
-            return
+            return print("Don't use CoreData")
         }
-        // CoreData'dan yönetilen bir bağlam elde edilir
-        let managedContext = appDelegate.persistentContainer.viewContext
         
-        
-        // Eğer 'FoodItem' adında bir varlık (entity) varsa, onunla ilgili bir bağlam oluşturulur
-        if let entity = NSEntityDescription.entity(forEntityName: "Foods", in: managedContext) {
-            // Yeni bir 'FoodItem' varlığı oluşturulur
-            let foodItem = NSManagedObject(entity: entity, insertInto: managedContext) as! Foods
+        let managedContext = appDelegate.persistentContainer.viewContext// CoreData'dan yönetilen bir bağlam elde edilir
+        if let entity = NSEntityDescription.entity(forEntityName: "Foods", in: managedContext) {// Eğer 'Foods' adında bir varlık (entity) varsa, onunla ilgili bir bağlam oluşturulur
+      
+            let foodItem = NSManagedObject(entity: entity, insertInto: managedContext) as! Foods     // Yeni bir 'FoodItem' varlığı oluşturulur
             
             foodItem.setValue(name.text, forKey: "name") // Kullanıcının girdiği ismi, "name" özelliğine atar.
             
             foodItem.setValue(type.text, forKey: "type") // Kullanıcının girdiği tür bilgisini, "type" özelliğine atar.
             
-            if let pages = Int(calories.text!) {
-                foodItem.setValue(pages, forKey: "calories") // Kullanıcının girdiği kalori miktarını "calories" özelliğine atar.
+            if let calories = Int(calories.text!) {
+                foodItem.setValue(calories, forKey: "calories") // Kullanıcının girdiği kalori miktarını "calories" özelliğine atar.
             } else {
-                print("Pages Kısmına yanlış bir giriş yapıldı") // Eğer giriş bir sayıya dönüşemezse, hata mesajı yazdırır.
+                print("Calories Kısmına yanlış bir giriş yapıldı") // Eğer giriş bir sayıya dönüşemezse, hata mesajı yazdırır.
             }
             
             foodItem.setValue(UUID(), forKey: "id") // Yeni bir UUID oluşturup, "id" özelliğine atar.
@@ -144,6 +150,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
             } catch {
                 print("Save Error") // Kaydetme sırasında bir hata olursa hata mesajı yazdırır.
             }
+            
+            
             
             self.navigationController?.popViewController(animated: true)
 

@@ -103,40 +103,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        // Sil butonuna basıldığında
         if editingStyle == .delete {
-            // AppDelegate içerisinden Core Data erişimi
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let managedContext = appDelegate.persistentContainer.viewContext
             
-            // Silinecek kitabın ID'si
+            // Silinecek kitabı seç
             let bookToDelete = idArray[indexPath.row]
             
-            // Core Data'dan ilgili kitabı silme isteği oluştur
-            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Books")
-            fetchRequest.predicate = NSPredicate(format: "id = %@", bookToDelete as CVarArg)
-            
-            do {
-                // Fetch request'i çalıştırarak ilgili öğeyi al
-                let objects = try managedContext.fetch(fetchRequest)
-                // Silinen öğe Core Data'dan kaldırılır
-                for object in objects {
-                    managedContext.delete(object as! NSManagedObject)
+            // Silinecek kitabı bul ve veritabanından kaldır
+            if let bookIndex = idArray.firstIndex(of: bookToDelete) {
+                nameArray.remove(at: bookIndex)
+                idArray.remove(at: bookIndex)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+                do {
+                    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Books")
+                    fetchRequest.predicate = NSPredicate(format: "id == %@", bookToDelete as CVarArg)
+                    let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+                    try managedContext.execute(deleteRequest)
+                } catch {
+                    print("Error deleting book: \(error)")
                 }
-                // Değişiklikler kaydedilir
-                try managedContext.save()
-            } catch {
-                // Silme işlemi sırasında hata oluşursa hata mesajı yazdır
-                print("Error deleting book: \(error)")
             }
-            
-            // TableView ve veri dizilerinden ilgili öğeyi kaldır
-            nameArray.remove(at: indexPath.row)
-            idArray.remove(at: indexPath.row)
-            // TableView'dan da öğeyi animasyonlu olarak kaldır
-            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
 
-    }
-
+}

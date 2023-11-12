@@ -48,7 +48,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SsU-oj-EeX">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addFood" translatesAutoresizingMaskIntoConstraints="NO" id="SsU-oj-EeX">
                                 <rect key="frame" x="15" y="113" width="363" height="273.66666666666669"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="363" id="4YU-i4-GW1"/>
@@ -82,7 +82,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdJ-kd-9DR">
-                                <rect key="frame" x="115" y="719" width="163" height="34"/>
+                                <rect key="frame" x="115" y="718.66666666666663" width="163" height="34.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34.333333333333371" id="4yh-Qa-frB"/>
                                 </constraints>
@@ -113,6 +113,7 @@
                         <outlet property="calories" destination="Ioq-8z-L4w" id="Fxf-lA-lgR"/>
                         <outlet property="image" destination="SsU-oj-EeX" id="vSN-Wi-PGG"/>
                         <outlet property="name" destination="2O5-FB-Ahw" id="xv3-CB-U2I"/>
+                        <outlet property="savebutton" destination="xdJ-kd-9DR" id="yPw-5H-nCD"/>
                         <outlet property="type" destination="Z6g-lt-2lf" id="bbL-LZ-RY4"/>
                     </connections>
                 </viewController>
@@ -140,6 +141,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addFood" width="1076" height="1076"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

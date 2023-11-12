@@ -48,7 +48,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addphoto" translatesAutoresizingMaskIntoConstraints="NO" id="tqU-YB-jQA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addBook" translatesAutoresizingMaskIntoConstraints="NO" id="tqU-YB-jQA">
                                 <rect key="frame" x="55" y="125.66666666666669" width="283" height="336"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="283" id="adX-hX-LGj"/>
@@ -131,7 +131,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="addphoto" width="500" height="500"/>
+        <image name="addBook" width="1110" height="1108"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
