@@ -23,13 +23,21 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         locationManager.desiredAccuracy = kCLLocationAccuracyBest // Konumun hassasiyetini belirtiyoruz; en yüksek hassasiyeti seçtik, pil tüketimi artabilir
         locationManager.requestWhenInUseAuthorization() // Uygulama kullanılırken konum bilgisine ihtiyaç duyduğumuzu belirtiyoruz
         locationManager.startUpdatingLocation() // Kullanıcının konumunu almaya başlıyoruz
+        
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(choseLocation(gestureRecoginer:)))
+        mapView.addGestureRecognizer(gestureRecognizer)
     }
+    
+    @objc func choseLocation(gestureRecoginer: UILongPressGestureRecognizer){
+        
+    }
+    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locations = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
         // Yeni konum bilgisini alıp, CLLocationCoordinate2D formatına dönüştürüyoruz
         
-        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         // MapView'da gösterilecek bölgenin genişliğini ve yüksekliğini belirlemek için bir MKCoordinateSpan oluşturuyoruz
         // Burada 0.1 değerleri, görüntülenen bölgenin enlem ve boylamındaki farklılık aralıklarını temsil eder
         
