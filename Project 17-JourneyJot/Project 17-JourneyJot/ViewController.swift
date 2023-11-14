@@ -24,8 +24,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         locationManager.requestWhenInUseAuthorization() // Uygulama kullanılırken konum bilgisine ihtiyaç duyduğumuzu belirtiyoruz
         locationManager.startUpdatingLocation() // Kullanıcının konumunu almaya başlıyoruz
         
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(choseLocation(gestureRecoginer:)))
-        mapView.addGestureRecognizer(gestureRecognizer)
+        let gestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(choseLocation(gestureRecoginer:)))
+        gestureRecognizer.minimumPressDuration = 3 // Kullanıcının minimum kaç saniye tıklaması gerektiği belirtilir.
+        mapView.addGestureRecognizer(gestureRecognizer) // mapView içersine ekleme işlemi geçekleştirildi
     }
     
     @objc func choseLocation(gestureRecoginer: UILongPressGestureRecognizer){
