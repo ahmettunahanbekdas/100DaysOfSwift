@@ -6,32 +6,6 @@
 This repository contains my work. I will be working on a new project or concept every day using the Swift programming language, with the additional goal of sharing my progress and knowledge with others.
 
 
-# Pojects Map
-In this section, I will share the projects I am working on as I complete them.
-
-| Project       | Project Name   | File                                                                                                      | Subjects     |
-|:----------|--------------------|-----------------------------------------------------------------------------------------------------------|--------------|
-| Project 1 | ChangeElon         | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%202-%20ChangeElon)          | Basic Skills |
-| Project 2 | BasicCalculator    | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%201-%20Calculator)          | Basic Skills |
-| Project 3 | ProjectLayout      | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%203-%20ProjectLayout)       | Layout       |
-| Project 4 | ObjectWithCode     | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%204-%20ObjectWithCode)      | Code Design  |
-| Project 5 | BirthdayNoteTaker  | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%205-%20BirthdayNoteTaker)   | User Defaults|
-| Project 6 | SegueApp           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%206-%20SegueApp)            | Segue        |
-| Project 7 | AlertProject       | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%207-%20AlertProject)        | Alert        |
-| Project 8 | SegueApp           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%208-%20GestureRecognizerApp)| GestureRecognizer|
-| Project 9 | TimerApp           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%209-%20Timer%20Project)     | Timer |
-| Project 10 | CatchElonGame     | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2010-%20CatchElon)          | Timer, User Defaults, Alert, GestureRecognizer|
-| Project 11 | Historian Book           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2011-%20HistorianBook%20)| TableView, Alert, Segue|
-| Project 12 | Commander Book    | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2012-%20CommanderBook)| TableView|
-| Project 13 | CustomTableView         | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2013-%20CustomTableView)| CustomTableView |
-| Project 14 | Friends Book           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2014-%20FriendsBook)| CustomTableView |
-| Project 15 | LibraryApp          | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2015-%20LibraryApp)| CoreData |
-| Project 15 | FoodsBook        | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2016-%20FoodsBook)| CoreData |
-| Project 15 | JourneyJot        | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2017-JourneyJot)| MapKit |
-
-
-
-
 # Swift Fundamentals
 In this section, I will share the content I have written for the fundamentals of Swift with you.
  
@@ -60,6 +34,33 @@ In this section, I will share the content I have written for the fundamentals of
 | Day 15   | [File](https://tls.tc/pviai)       | Properties, Static properties and methods, Access control, Polymorphism and typecasting, Closures                 |
 
 
+
+
+
+
+
+# Pojects Map
+In this section, I will share the projects I am working on as I complete them.
+
+| Project       | Project Name   | File                                                                                                      | Subjects     |
+|:----------|--------------------|-----------------------------------------------------------------------------------------------------------|--------------|
+| Project 1 | ChangeElon         | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%202-%20ChangeElon)          | Basic Skills |
+| Project 2 | BasicCalculator    | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%201-%20Calculator)          | Basic Skills |
+| Project 3 | ProjectLayout      | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%203-%20ProjectLayout)       | Layout       |
+| Project 4 | ObjectWithCode     | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%204-%20ObjectWithCode)      | Code Design  |
+| Project 5 | BirthdayNoteTaker  | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%205-%20BirthdayNoteTaker)   | User Defaults|
+| Project 6 | SegueApp           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%206-%20SegueApp)            | Segue        |
+| Project 7 | AlertProject       | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%207-%20AlertProject)        | Alert        |
+| Project 8 | SegueApp           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%208-%20GestureRecognizerApp)| GestureRecognizer|
+| Project 9 | TimerApp           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%209-%20Timer%20Project)     | Timer |
+| Project 10 | CatchElonGame     | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2010-%20CatchElon)          | Timer, User Defaults, Alert, GestureRecognizer|
+| Project 11 | Historian Book           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2011-%20HistorianBook%20)| TableView, Alert, Segue|
+| Project 12 | Commander Book    | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2012-%20CommanderBook)| TableView|
+| Project 13 | CustomTableView         | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2013-%20CustomTableView)| CustomTableView |
+| Project 14 | Friends Book           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2014-%20FriendsBook)| CustomTableView |
+| Project 15 | LibraryApp          | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2015-%20LibraryApp)| CoreData |
+| Project 15 | FoodsBook        | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2016-%20FoodsBook)| CoreData |
+| Project 15 | JourneyJot        | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2017-JourneyJot)| MapKit, CoreData |
 
 
 
