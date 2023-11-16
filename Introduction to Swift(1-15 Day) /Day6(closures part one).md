@@ -79,5 +79,7 @@ funcExample{
 
 You can access my article on Closures and Extensions from my [Medium account]().
 
+
+
  [File](https://medium.com/@tunahanbekdas/swift-protokol-ve-extends-2643f8cbf524)
 
