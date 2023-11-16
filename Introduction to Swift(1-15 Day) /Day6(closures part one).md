@@ -77,9 +77,6 @@ funcExample{
 
 ### Medium Article 🤯
 
-You can access my article on Closures and Extensions from my [Medium account]().
+You can access my article on Closures and Extensions from my [Medium account](https://medium.com/@tunahanbekdas/swift-protokol-ve-extends-2643f8cbf524).
 
-
-
- [File](https://medium.com/@tunahanbekdas/swift-protokol-ve-extends-2643f8cbf524)
 
