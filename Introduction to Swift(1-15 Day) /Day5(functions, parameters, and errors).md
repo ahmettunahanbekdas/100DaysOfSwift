@@ -154,6 +154,9 @@ print(num1) // 30
 8. You can use inout to change variables inside a function, but it’s usually better to return a new value.
 
 
+### Medium Article 🤯
+
+You can access my article on Closures and Extensions from my [Medium account](https://medium.com/@tunahanbekdas/swift-protokol-ve-extends-2643f8cbf524).
 
 
 
