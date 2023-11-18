@@ -10,6 +10,10 @@ import MapKit
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
+    
+    @IBOutlet weak var placeText: UITextField!
+    @IBOutlet weak var commentText: UITextField!
+    
     @IBOutlet weak var mapView: MKMapView!
     
     var locationManager = CLLocationManager() // Lokasyon kontrolü için obje oluşturduk
@@ -39,9 +43,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         // 4. Annotation'ın koordinatını dokunulan koordinata ayarlar
         annotation.coordinate = touchedCoordinates
         // 5. Annotation'ın başlığını belirler
-        annotation.title = "New Annotation"
+        annotation.title = placeText.text
         // 6. Annotation'ın alt başlığını belirler
-        annotation.subtitle = "JourneyJot"
+        annotation.subtitle = commentText.text
         // 7. Haritaya oluşturulan annotation'ı ekler
         self.mapView.addAnnotation(annotation)
     }
@@ -51,7 +55,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let locations = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
         // Yeni konum bilgisini alıp, CLLocationCoordinate2D formatına dönüştürüyoruz
         
-        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let span = MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
         // MapView'da gösterilecek bölgenin genişliğini ve yüksekliğini belirlemek için bir MKCoordinateSpan oluşturuyoruz
         // Burada 0.1 değerleri, görüntülenen bölgenin enlem ve boylamındaki farklılık aralıklarını temsil eder
         
@@ -61,5 +65,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView.setRegion(region, animated: true)
         // Oluşturduğumuz bölgeyi haritaya setRegion fonksiyonu ile belirterek haritada o bölgenin gösterilmesini sağlarız
     }
+    
+    @IBAction func saveButton(_ sender: Any) {
+    }
+    
 }
 

@@ -18,21 +18,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBv-hV-W99">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="194" width="393" height="558"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="bMv-Cu-CCe">
+                                <rect key="frame" x="30" y="79" width="333" height="95"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Place Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j3Y-bh-rMC">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cAH-uO-9sd">
+                                        <rect key="frame" x="0.0" y="61" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vji-2w-hHG">
+                                <rect key="frame" x="30" y="760" width="333" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Save Place"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ezi-3M-9ic"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="WBv-hV-W99" secondAttribute="bottom" id="5xT-TQ-gEg"/>
-                            <constraint firstItem="WBv-hV-W99" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8wd-9A-bsD"/>
-                            <constraint firstItem="WBv-hV-W99" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mxf-Y8-tST"/>
-                            <constraint firstItem="WBv-hV-W99" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fyX-1g-FW5"/>
+                            <constraint firstItem="WBv-hV-W99" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="B5v-w4-yfr"/>
+                            <constraint firstItem="WBv-hV-W99" firstAttribute="top" secondItem="bMv-Cu-CCe" secondAttribute="bottom" constant="20" id="CEM-wz-BPA"/>
+                            <constraint firstAttribute="bottom" secondItem="WBv-hV-W99" secondAttribute="bottom" constant="100" id="LZI-wq-U8B"/>
+                            <constraint firstItem="WBv-hV-W99" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j3Q-lQ-6UC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bMv-Cu-CCe" secondAttribute="trailing" constant="30" id="mi9-gK-UFg"/>
+                            <constraint firstItem="bMv-Cu-CCe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="uxb-12-O9w"/>
+                            <constraint firstItem="bMv-Cu-CCe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="wKz-gu-i3q"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="commentText" destination="cAH-uO-9sd" id="qNX-nX-52e"/>
                         <outlet property="mapView" destination="WBv-hV-W99" id="EGg-Lb-IIa"/>
+                        <outlet property="placeText" destination="j3Y-bh-rMC" id="ab4-VX-xWi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
