@@ -7,6 +7,8 @@
 
 import UIKit
 import MapKit
+import CoreLocation
+import CoreData
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
@@ -17,6 +19,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var mapView: MKMapView!
     
     var locationManager = CLLocationManager() // Lokasyon kontrolü için obje oluşturduk
+    
+    var chosenLongitude = Double()
+    var chosenLatitude = Double()
     
     
     override func viewDidLoad() {
@@ -39,6 +44,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         // 2. Haritadaki dokunulan noktayı koordinat sistemi üzerinde alır
         let touchedCoordinates = self.mapView.convert(touchPoint, toCoordinateFrom: self.mapView)
         // 3. Bir MKPointAnnotation örneği oluşturur
+        chosenLongitude = touchedCoordinates.longitude
+        chosenLatitude = touchedCoordinates.latitude
         let annotation = MKPointAnnotation()
         // 4. Annotation'ın koordinatını dokunulan koordinata ayarlar
         annotation.coordinate = touchedCoordinates
@@ -48,8 +55,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         annotation.subtitle = commentText.text
         // 7. Haritaya oluşturulan annotation'ı ekler
         self.mapView.addAnnotation(annotation)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
+    @objc func closeKeyboard() {
+        view.endEditing(true)
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locations = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
@@ -67,6 +80,26 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     }
     
     @IBAction func saveButton(_ sender: Any) {
+        
+        let appDelagete = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelagete.persistentContainer.viewContext
+        
+        let newPlace = NSEntityDescription.insertNewObject(forEntityName: "Places", into: context)
+        
+        newPlace.setValue(placeText.text, forKey: "title")
+        newPlace.setValue(commentText.text, forKey: "subtitle")
+        
+        newPlace.setValue(chosenLatitude, forKey: "latitude")
+        newPlace.setValue(chosenLongitude, forKey: "longitude")
+        
+        newPlace.setValue(UUID(), forKey: "id")
+        do {
+          try context.save()
+          print("Succes")
+        }catch{
+            print("Error")
+        }
+
     }
     
 }

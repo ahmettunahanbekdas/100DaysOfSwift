@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBv-hV-W99">
-                                <rect key="frame" x="0.0" y="194" width="393" height="558"/>
+                                <rect key="frame" x="0.0" y="194" width="393" height="546"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="bMv-Cu-CCe">
@@ -36,9 +36,11 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vji-2w-hHG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vji-2w-hHG">
                                 <rect key="frame" x="30" y="760" width="333" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="ZX5-zG-HpH"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Save Place"/>
                                 <connections>
@@ -49,13 +51,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="WBv-hV-W99" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="B5v-w4-yfr"/>
-                            <constraint firstItem="WBv-hV-W99" firstAttribute="top" secondItem="bMv-Cu-CCe" secondAttribute="bottom" constant="20" id="CEM-wz-BPA"/>
-                            <constraint firstAttribute="bottom" secondItem="WBv-hV-W99" secondAttribute="bottom" constant="100" id="LZI-wq-U8B"/>
-                            <constraint firstItem="WBv-hV-W99" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j3Q-lQ-6UC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bMv-Cu-CCe" secondAttribute="trailing" constant="30" id="mi9-gK-UFg"/>
-                            <constraint firstItem="bMv-Cu-CCe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="uxb-12-O9w"/>
-                            <constraint firstItem="bMv-Cu-CCe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="wKz-gu-i3q"/>
+                            <constraint firstItem="WBv-hV-W99" firstAttribute="top" secondItem="bMv-Cu-CCe" secondAttribute="bottom" constant="20" id="0Ri-iI-QKx"/>
+                            <constraint firstItem="bMv-Cu-CCe" firstAttribute="leading" secondItem="vji-2w-hHG" secondAttribute="leading" id="1sP-zW-EbZ"/>
+                            <constraint firstItem="bMv-Cu-CCe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="B5c-Ap-QWk"/>
+                            <constraint firstItem="bMv-Cu-CCe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="UpI-hJ-mDa"/>
+                            <constraint firstItem="bMv-Cu-CCe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WO5-Cy-h25"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vji-2w-hHG" secondAttribute="bottom" constant="19" id="a57-qA-Bye"/>
+                            <constraint firstItem="WBv-hV-W99" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cID-vI-Gpg"/>
+                            <constraint firstItem="WBv-hV-W99" firstAttribute="centerX" secondItem="vji-2w-hHG" secondAttribute="centerX" id="mGI-9V-B5H"/>
+                            <constraint firstItem="vji-2w-hHG" firstAttribute="top" secondItem="WBv-hV-W99" secondAttribute="bottom" constant="20" id="sz8-W3-5SO"/>
+                            <constraint firstItem="bMv-Cu-CCe" firstAttribute="trailing" secondItem="vji-2w-hHG" secondAttribute="trailing" id="zMG-4X-bAA"/>
                         </constraints>
                     </view>
                     <connections>
