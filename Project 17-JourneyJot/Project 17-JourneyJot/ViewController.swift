@@ -29,8 +29,21 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView.addGestureRecognizer(gestureRecognizer) // mapView içersine ekleme işlemi geçekleştirildi
     }
     
-    @objc func choseLocation(gestureRecoginer: UILongPressGestureRecognizer){
-        
+    @objc func choseLocation(gestureRecoginer: UILongPressGestureRecognizer) {
+        // 1. Uzun basma jestini algılandığı noktayı alır
+        let touchPoint = gestureRecoginer.location(in: self.mapView)
+        // 2. Haritadaki dokunulan noktayı koordinat sistemi üzerinde alır
+        let touchedCoordinates = self.mapView.convert(touchPoint, toCoordinateFrom: self.mapView)
+        // 3. Bir MKPointAnnotation örneği oluşturur
+        let annotation = MKPointAnnotation()
+        // 4. Annotation'ın koordinatını dokunulan koordinata ayarlar
+        annotation.coordinate = touchedCoordinates
+        // 5. Annotation'ın başlığını belirler
+        annotation.title = "New Annotation"
+        // 6. Annotation'ın alt başlığını belirler
+        annotation.subtitle = "JourneyJot"
+        // 7. Haritaya oluşturulan annotation'ı ekler
+        self.mapView.addAnnotation(annotation)
     }
     
     
