@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E3390222B114498008D135F /* LocationsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3390212B114498008D135F /* LocationsDetailView.swift */; };
 		0EB997B92B01190500D9CFE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB997B82B01190500D9CFE1 /* AppDelegate.swift */; };
 		0EB997BB2B01190500D9CFE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB997BA2B01190500D9CFE1 /* SceneDelegate.swift */; };
 		0EB997BD2B01190500D9CFE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB997BC2B01190500D9CFE1 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E3390212B114498008D135F /* LocationsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsDetailView.swift; sourceTree = "<group>"; };
 		0EB997B52B01190500D9CFE1 /* Project 17-JourneyJot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 17-JourneyJot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB997B82B01190500D9CFE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EB997BA2B01190500D9CFE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 		0EB997AC2B01190500D9CFE1 = {
 			isa = PBXGroup;
 			children = (
+				0E3390212B114498008D135F /* LocationsDetailView.swift */,
 				0EB997B72B01190500D9CFE1 /* Project 17-JourneyJot */,
 				0EB997B62B01190500D9CFE1 /* Products */,
 			);
@@ -143,6 +146,7 @@
 			files = (
 				0EB997C32B01190500D9CFE1 /* Project_17_JourneyJot.xcdatamodeld in Sources */,
 				0EB997BD2B01190500D9CFE1 /* ViewController.swift in Sources */,
+				0E3390222B114498008D135F /* LocationsDetailView.swift in Sources */,
 				0EB997B92B01190500D9CFE1 /* AppDelegate.swift in Sources */,
 				0EB997BB2B01190500D9CFE1 /* SceneDelegate.swift in Sources */,
 			);
