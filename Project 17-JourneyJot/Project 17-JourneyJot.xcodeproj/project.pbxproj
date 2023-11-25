@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E3390222B114498008D135F /* LocationsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3390212B114498008D135F /* LocationsDetailView.swift */; };
 		0EB997B92B01190500D9CFE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB997B82B01190500D9CFE1 /* AppDelegate.swift */; };
 		0EB997BB2B01190500D9CFE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB997BA2B01190500D9CFE1 /* SceneDelegate.swift */; };
 		0EB997BD2B01190500D9CFE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB997BC2B01190500D9CFE1 /* ViewController.swift */; };
@@ -18,8 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E3390212B114498008D135F /* LocationsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsDetailView.swift; sourceTree = "<group>"; };
-		0EB997B52B01190500D9CFE1 /* Project 17-JourneyJot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 17-JourneyJot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EB997B52B01190500D9CFE1 /* Project 17-JourneyJot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Project 17-JourneyJot.app"; path = "/Users/ahmettunahanbekdas/Documents/100DaysOfSwift/Project 17-JourneyJot/build/Debug-iphoneos/Project 17-JourneyJot.app"; sourceTree = "<absolute>"; };
 		0EB997B82B01190500D9CFE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EB997BA2B01190500D9CFE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0EB997BC2B01190500D9CFE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,18 +42,8 @@
 		0EB997AC2B01190500D9CFE1 = {
 			isa = PBXGroup;
 			children = (
-				0E3390212B114498008D135F /* LocationsDetailView.swift */,
 				0EB997B72B01190500D9CFE1 /* Project 17-JourneyJot */,
-				0EB997B62B01190500D9CFE1 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		0EB997B62B01190500D9CFE1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0EB997B52B01190500D9CFE1 /* Project 17-JourneyJot.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		0EB997B72B01190500D9CFE1 /* Project 17-JourneyJot */ = {
@@ -105,6 +93,7 @@
 				TargetAttributes = {
 					0EB997B42B01190500D9CFE1 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -117,7 +106,7 @@
 				Base,
 			);
 			mainGroup = 0EB997AC2B01190500D9CFE1;
-			productRefGroup = 0EB997B62B01190500D9CFE1 /* Products */;
+			productRefGroup = 0EB997AC2B01190500D9CFE1;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -146,7 +135,6 @@
 			files = (
 				0EB997C32B01190500D9CFE1 /* Project_17_JourneyJot.xcdatamodeld in Sources */,
 				0EB997BD2B01190500D9CFE1 /* ViewController.swift in Sources */,
-				0E3390222B114498008D135F /* LocationsDetailView.swift in Sources */,
 				0EB997B92B01190500D9CFE1 /* AppDelegate.swift in Sources */,
 				0EB997BB2B01190500D9CFE1 /* SceneDelegate.swift in Sources */,
 			);
@@ -293,6 +281,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6HT5X4W7TW;
@@ -311,6 +300,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ahmettunahanbekdas.Project-17-JourneyJot";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Project 17-JourneyJot-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,6 +312,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6HT5X4W7TW;
@@ -339,6 +331,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ahmettunahanbekdas.Project-17-JourneyJot";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Project 17-JourneyJot-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

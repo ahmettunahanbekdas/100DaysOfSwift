@@ -10,6 +10,34 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="1mY-FK-rHb">
+            <objects>
+                <viewController id="aBV-5E-Sp8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ic6-ya-W5w">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9g8-12-611">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zp1-si-jPS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9g8-12-611" firstAttribute="top" secondItem="zp1-si-jPS" secondAttribute="top" id="E84-Me-Gcc"/>
+                            <constraint firstItem="9g8-12-611" firstAttribute="leading" secondItem="zp1-si-jPS" secondAttribute="leading" id="KIq-AH-tIN"/>
+                            <constraint firstItem="zp1-si-jPS" firstAttribute="bottom" secondItem="9g8-12-611" secondAttribute="bottom" id="fcc-nh-OTB"/>
+                            <constraint firstItem="zp1-si-jPS" firstAttribute="trailing" secondItem="9g8-12-611" secondAttribute="trailing" id="pWG-x3-Q2O"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CLw-Ei-p7X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGX-sw-7DL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="275.57251908396944" y="3.5211267605633805"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_17_JourneyJot" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,7 +99,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1061.8320610687022" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FO6-L2-puY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hYn-RZ-QcJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QBP-GS-xPg">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aBV-5E-Sp8" kind="relationship" relationship="rootViewController" id="rMJ-Ps-GKh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pXH-8i-dvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-651.14503816793888" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
