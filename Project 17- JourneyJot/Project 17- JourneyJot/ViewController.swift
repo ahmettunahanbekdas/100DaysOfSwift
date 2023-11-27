@@ -11,6 +11,8 @@ import CoreLocation // Kullanıcı konumunu almak için kullanılır
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
+    @IBOutlet weak var nameText: UITextField!
+    @IBOutlet weak var commentText: UITextField!
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager() // Kullanıcının konumu ile ilgili işlemler yapmak için bu objeyi kullanmak gerekiyor
     
@@ -43,8 +45,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             // Yeni bir MKPointAnnotation nesnesi oluşturulur ve dokunulan koordinatlar atanır
             let annotation = MKPointAnnotation()
             annotation.coordinate = touchedCoordinates
-            annotation.title = "New Annotation Title"
-            annotation.subtitle = "New Annotation Subtitle"
+            annotation.title = nameText.text
+            annotation.subtitle = commentText.text
             
             // Oluşturulan annotation haritaya eklenir
             mapView.addAnnotation(annotation)
