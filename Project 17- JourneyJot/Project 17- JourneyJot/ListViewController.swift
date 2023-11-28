@@ -31,9 +31,13 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         getData()
     }
     
-    // MARK: - Functions
+   
+
     
-    // "+" butonuna basıldığında çağrılan fonksiyon
+    // MARK: - Functions -
+    
+    
+    //MARK: - "+" butonuna basıldığında çağrılan fonksiyon
     @objc func addButton() {
         // Ekleme işleminde name boş olucak
         chosenName = ""
@@ -41,12 +45,12 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         performSegue(withIdentifier: "toViewController", sender: nil)
     }
     
-    // UITableView'nin satır sayısını belirten fonksiyon
+    //MARK: - UITableView'nin satır sayısını belirten fonksiyon
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nameArray.count
     }
     
-    // UITableView'nin hücre içeriğini belirten fonksiyon
+    // MARK: - UITableView'nin hücre içeriğini belirten fonksiyon
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         // Hücrenin metin içeriği, nameArray dizisinden alınır
@@ -54,44 +58,53 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    // CoreData'den verileri çeker ve ilgili dizilere atar
-    func getData() {
+    // MARK: - CoreData'den verileri çeker ve ilgili dizilere atar
+     func getData() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
-        
+
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Places")
         fetchRequest.returnsObjectsAsFaults = false
-        
+
         do {
             let results = try context.fetch(fetchRequest)
             if results.count > 0 {
-                self.nameArray.removeAll(keepingCapacity: false)
-                self.idArray.removeAll(keepingCapacity: false)
-                
+                // Eski verileri temizle
+                nameArray.removeAll()
+                idArray.removeAll()
+
                 // CoreData'den alınan veriler dizilere atanır
                 for result in results as! [NSManagedObject] {
-                    if let name = result.value(forKey: "name") as? String {
+                    if let name = result.value(forKey: "name") as? String,
+                       let id = result.value(forKey: "id") as? UUID {
                         nameArray.append(name)
-                    }
-                    if let id = result.value(forKey: "id") as? UUID {
                         idArray.append(id)
                     }
-                    self.tableView.reloadData()
                 }
+                // TableView'ı güncelle
+                tableView.reloadData()
             }
         } catch {
             print("Error fetching data")
         }
     }
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Kullanıcı bir UITableViewCell'a tıkladığında bu fonksiyon tetiklenir.
+        // indexPath.row ile tıklanan hücrenin indeksinden nameArray ve idArray dizilerinde ilgili veriler alınır.
         chosenName = nameArray[indexPath.row]
         chosenId = idArray[indexPath.row]
+        // "toViewController" segue'sini tetikleyerek başka bir görünüme geçiş yapılır.
         performSegue(withIdentifier: "toViewController", sender: nil)
     }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toViewController"{
+        // Segue sırasında hedef görünüm kontrolcüsüne veri aktarımı için kullanılır.
+        // Eğer segue "toViewController" ise, hedef görünüm kontrolcüsünü alırız.
+        if segue.identifier == "toViewController" {
             let destinationVC = segue.destination as! ViewController
+            // chosenName ve chosenId değişkenlerini kullanarak, hedef görünüm kontrolcüsünün ilgili özelliklerini ayarlarız.
             destinationVC.selectedName = chosenName
             destinationVC.selectedId = chosenId
         }

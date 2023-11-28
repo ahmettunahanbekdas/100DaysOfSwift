@@ -15,16 +15,18 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var commentText: UITextField!
     @IBOutlet weak var mapView: MKMapView!
-    var locationManager = CLLocationManager() // Kullanıcının konumu ile ilgili işlemler yapmak için bu objeyi kullanmak gerekiyor
+    @IBOutlet weak var saveButton: UIButton!
+    var locationManager = CLLocationManager()
     
     var chosenLongitude = Double()
     var chosenLatitude = Double()
     
     var selectedName = ""
     var selectedId : UUID?
+
     
-    var annotationName = String()
-    var annotationComment = String()
+    var annotationName = ""
+    var annotationComment = ""
     var annotatoionLatitude = Double()
     var annotationLongitude = Double()
     
@@ -47,66 +49,82 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let tapView = UITapGestureRecognizer.init(target: self, action: #selector(closeKeyboard))
         view.addGestureRecognizer(tapView)
         
-       if selectedName != "" {
-            //CoreData
-           let appDelegate = UIApplication.shared.delegate as! AppDelegate
-           let context = appDelegate.persistentContainer.viewContext
-           
-           let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Places")
-           let idString = selectedId!.uuidString
-           fetchRequest.predicate = NSPredicate(format: "id = %@", idString)
-           fetchRequest.returnsObjectsAsFaults = false
-           
-           do{
-               let results = try context.fetch(fetchRequest)
-               if results.count > 0 {
-                   
-                   for result in results as! [NSManagedObject] {
-                       
-                       if let name = result.value(forKey: "name") as? String{
-                           annotationName = name
-                       }
-                       if let comment = result.value(forKey: "comment") as? String{
-                           annotationComment = comment
-                       }
-                       if let latitude = result.value(forKey: "latitude") as? Double{
-                           annotatoionLatitude = latitude
-                       }
-                       if let longitude = result.value(forKey: "longitude") as? Double{
-                           annotationLongitude = longitude
-                       }
-                       
-                       let annotation = MKPointAnnotation()
-                           annotation.title = annotationName
-                           annotation.subtitle = annotationComment
-                           let coordinate = CLLocationCoordinate2D(latitude: annotatoionLatitude, longitude: annotationLongitude)
-                           annotation.coordinate = coordinate
+        if selectedName != "" {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Places")
+            let idString = selectedId!.uuidString
+            fetchRequest.predicate = NSPredicate(format: "id = %@", idString)
+            fetchRequest.returnsObjectsAsFaults = false
+            
+            
+            do{
+                let results = try context.fetch(fetchRequest)
+                if results.count > 0 {
+                    
+                    for result in results as! [NSManagedObject] {
+                        
+                        if let name = result.value(forKey: "name") as? String{
+                            annotationName = name
+                        }
+                        if let comment = result.value(forKey: "comment") as? String{
+                            annotationComment = comment
+                        }
+                        if let latitude = result.value(forKey: "latitude") as? Double{
+                            annotatoionLatitude = latitude
+                        }
+                        if let longitude = result.value(forKey: "longitude") as? Double{
+                            annotationLongitude = longitude
+                        }
+                        
+                        let annotation = MKPointAnnotation()
+                        annotation.title = annotationName
+                        annotation.subtitle = annotationComment
+                        let cordinate = CLLocationCoordinate2D(latitude: annotatoionLatitude, longitude: annotationLongitude)
+                        annotation.coordinate = cordinate
                         
                         mapView.addAnnotation(annotation)
+                        nameText.text = annotationName
+                        commentText.text = annotationComment
+                        
+                        locationManager.stopUpdatingLocation()
+                        
+                        let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+                        let region = MKCoordinateRegion(center: cordinate, span: span)
+                        mapView.setRegion(region, animated: true)
                        
-                       nameText.text = annotationName
-                       commentText.text = annotationComment
-                   }
-               }
-           }catch{
-               print("Error")
-           }
-           
-       }else {
-           // Add new data
-       }
+                    }
+                }
+            }catch{
+                print("Error")
+            }
+            saveButton.isHidden = true
+        }else {
+
+        }
     }
     
-    // MARK: - Funcitons
     
+    
+    // MARK: - FUNCTIONS -
+    
+    
+    
+    // MARK: - KULLANICININ KONUMU
     // "didUpdateLocations" fonksiyonu güncellenen lokasyonları dizi içersinde verir
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locations = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude) // 0. Sırada ki kullanıcının kordinatları alındı
-        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005) // Kordinatlara yapılıcak olan zoom oranı ayarlandı
-        let region = MKCoordinateRegion(center: locations, span: span) // Kordinatlar ve zoom oranı birleştirilerek Regiona(Bölgeye) atandı
-        mapView.setRegion(region, animated: true) // Ayarlanan Region(Bölge) Haritamıza eklendi.
+        if selectedName == "" {
+            let locations = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude) // 0. Sırada ki kullanıcının kordinatları alındı
+            let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5) // Kordinatlara yapılıcak olan zoom oranı ayarlandı
+            let region = MKCoordinateRegion(center: locations, span: span) // Kordinatlar ve zoom oranı birleştirilerek Regiona(Bölgeye) atandı
+            mapView.setRegion(region, animated: true) // Ayarlanan Region(Bölge) Haritamıza eklendi.
+        } else {
+            
+        }
     }
-  
+    
+    // MARK: - ANNOTIONS EKLEME İŞLEMİ
     // Uzun basılı tutma hareketi algılandığında çağrılan bir fonksiyonu temsil eder
     @objc func chooseLocation(gestureRecognizer: UILongPressGestureRecognizer) {
         // Uzun basılı tutma hareketi başladığında yapılacak işlemler
@@ -131,13 +149,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     }
     
-    // Klave kapama fonksiyonudur ve çağrılır
+    // MARK: - KLAVYE KAPAMA FONKSİYONU
     @objc func closeKeyboard() {
         view.endEditing(true)
     }
-
-    // Alert Oluşturuldu
-    func makeAlert(tittle: String, message: String, okActionTittle:String) {
+    
+    
+    // MARK: - ALERT OLUŞTURULDU
+        func makeAlert(tittle: String, message: String, okActionTittle:String) {
         let alert = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: okActionTittle, style: .cancel, handler:  nil)
         alert.addAction(okAction)
@@ -145,7 +164,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     }
     
     // MARK: - SAVE BUTTON
-    
     // Veriler CoreDataya kaydetmek için kullanılan buttonun fonksiyonu
     @IBAction func saveButton(_ sender: Any) {
         // AppDelegate'e erişim sağlanır

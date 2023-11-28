@@ -73,7 +73,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Save"/>
                                 <connections>
-                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lap-PI-bG9"/>
+                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8di-8b-4ml"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -99,6 +99,7 @@
                         <outlet property="commentText" destination="s5E-m7-Ifv" id="nD2-Xz-w7c"/>
                         <outlet property="mapView" destination="HaF-aJ-piP" id="ifY-er-klG"/>
                         <outlet property="nameText" destination="Rxx-ZP-9hl" id="lAB-I2-SYS"/>
+                        <outlet property="saveButton" destination="2BZ-B4-Erz" id="8AI-BC-muk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
