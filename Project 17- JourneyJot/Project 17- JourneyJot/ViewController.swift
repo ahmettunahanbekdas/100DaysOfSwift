@@ -8,14 +8,17 @@
 import UIKit
 import MapKit
 import CoreLocation // Kullanıcı konumunu almak için kullanılır
+import CoreData
 
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIApplicationDelegate {
 
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var commentText: UITextField!
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager() // Kullanıcının konumu ile ilgili işlemler yapmak için bu objeyi kullanmak gerekiyor
     
+    var chosenLongitude = Double()
+    var chosenLatitude = Double()
     //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +54,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             // Harita üzerindeki dokunulan noktayı koordinatlara dönüştürür
             let touchedCoordinates = mapView.convert(touchedPoint, toCoordinateFrom: mapView)
             
+            chosenLatitude = touchedCoordinates.latitude
+            chosenLongitude = touchedCoordinates.longitude
+            
+            
             // Yeni bir MKPointAnnotation nesnesi oluşturulur ve dokunulan koordinatlar atanır
             let annotation = MKPointAnnotation()
             annotation.coordinate = touchedCoordinates
@@ -70,8 +77,49 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView.setRegion(region, animated: true) // Ayarlanan Region(Bölge) Haritamıza eklendi.
     }
     
+    func makeAlert(tittle: String, message: String, okActionTittle:String) {
+           let alert = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
+           let okAction = UIAlertAction(title: okActionTittle, style: .cancel, handler:  nil)
+           alert.addAction(okAction)
+           self.present(alert, animated: true)
+       }
     
     @IBAction func saveButton(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let newPlace = NSEntityDescription.insertNewObject(forEntityName: "Places", into: context)
+        
+        if nameText.text!.isEmpty{
+            makeAlert(tittle: "Error", message: "Name field cannot be empty", okActionTittle: "Okay")
+        }else {
+            newPlace.setValue(nameText.text, forKey: "name")
+
+        }
+        if commentText.text!.isEmpty{
+            makeAlert(tittle: "Error", message: "Comment field cannot be empty", okActionTittle: "Okay")
+        }else {
+            newPlace.setValue(commentText.text, forKey: "comment")
+        }
+         
+        
+          if chosenLatitude == 0.0 || chosenLongitude == 0.0 {
+              makeAlert(tittle: "Error", message: "Please select a location on the map", okActionTittle: "Okay")
+          } else {
+              newPlace.setValue(chosenLatitude, forKey: "latitude")
+              newPlace.setValue(chosenLongitude, forKey: "longitude")
+          }
+        
+        newPlace.setValue(UUID(), forKey: "id")
+        
+        do{
+            try context.save()
+            makeAlert(tittle: "Succes", message: "Location Be Save ", okActionTittle: "Okay")
+
+        }catch{
+            makeAlert(tittle: "Error", message: "Location Could Not Be Saved Try Again", okActionTittle: "Okay")
+        }
+     
         
     }
     
