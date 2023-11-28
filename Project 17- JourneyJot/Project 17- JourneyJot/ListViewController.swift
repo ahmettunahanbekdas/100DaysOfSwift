@@ -11,19 +11,24 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     
-   
-    
-
-    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButton))
+        
         tableView.delegate = self
         tableView.dataSource = self
         
     }
+    
+    // MARK: - Funcitons
+    
+    @objc func addButton(){
+        
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
