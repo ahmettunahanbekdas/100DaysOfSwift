@@ -114,27 +114,60 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     // MARK: - MKMapViewDelegate Methods
     
     // Pin görünümü için fonksiyon
+    // Bu fonksiyon, harita üzerindeki pin'lerin görünümünü özelleştirmek için kullanılır.
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        // Eğer annotation kullanıcının konumu ise, özel bir pin gösterilmez.
         if annotation is MKUserLocation {
             return nil
         }
         
+        // Kullanılacak pin'in tanımlayıcısı (identifier)
         let reuseId = "myAnnotation"
+        
+        // Daha önceden kullanılmış bir pin var mı kontrol edilir.
+        // Eğer yoksa, yeni bir MKMarkerAnnotationView oluşturulur.
         var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKMarkerAnnotationView
         
         if pinView == nil {
+            // Yeni pin oluşturulur ve gerekli özellikleri ayarlanır.
             pinView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-            pinView?.canShowCallout = true
-            pinView?.tintColor = .systemBlue
+            pinView?.canShowCallout = true  // Pin üzerine tıklanınca açıklama gösterilmesini sağlar.
+            pinView?.tintColor = .systemBlue  // Pin'in rengini belirler.
             
+            // Sağ üst köşede bir detay butonu eklenir.
             let button = UIButton(type: UIButton.ButtonType.detailDisclosure)
             pinView?.rightCalloutAccessoryView = button
         } else {
+            // Daha önce kullanılmış bir pin varsa, mevcut annotation'a atanır.
             pinView?.annotation = annotation
         }
-        
+        // Hazırlanan pin görünümü geri döndürülür.
         return pinView
     }
+
+    
+    // Pinin baloncuğunda çıkan detay simgesine tıklandığında oluşucak fonksiyon ve navigasyonu başlatıcak
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        let requestLocation = CLLocation(latitude: annotatoionLatitude, longitude: annotationLongitude)
+        
+        CLGeocoder().reverseGeocodeLocation(requestLocation) { (placemarks, error) in
+            
+            if let placemark = placemarks {
+                if placemark.count > 0 {
+                    
+                    let newPlacemark = MKPlacemark(placemark: placemark[0])
+                    let item = MKMapItem(placemark: newPlacemark)
+                    item.name = self.annotationName
+                    let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+                    item.openInMaps(launchOptions: launchOptions)
+                }
+            }
+        }
+    }
+    
+    
+
     
     // MARK: - Functions
     
@@ -205,7 +238,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         // Yeni mekan eklendiğinde, diğer ekranların bu değişiklikten haberdar olması için bir notifikasyon gönderiyoruz.
         NotificationCenter.default.post(name: NSNotification.Name("newPlace"), object: nil)
-        
         // Mekan eklendikten sonra, bu ekranı kapatıyoruz.
         navigationController?.popViewController(animated: true)
     }
