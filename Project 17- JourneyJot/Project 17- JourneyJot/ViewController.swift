@@ -60,7 +60,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let region = MKCoordinateRegion(center: locations, span: span) // Kordinatlar ve zoom oranı birleştirilerek Regiona(Bölgeye) atandı
         mapView.setRegion(region, animated: true) // Ayarlanan Region(Bölge) Haritamıza eklendi.
     }
-
+    
+    
+    @IBAction func saveButton(_ sender: Any) {
+        
+    }
+    
 }
 
 
