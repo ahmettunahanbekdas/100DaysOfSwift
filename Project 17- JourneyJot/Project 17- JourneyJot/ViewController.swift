@@ -29,9 +29,18 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let gesturRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(chooseLocation(gestureRecognizer:)))// Uzun basılı tutma hareketini algılamak için bir UILongPressGestureRecognizer öğesi oluşturuluyor.
         gesturRecognizer.minimumPressDuration = 2 // Uzun basılı tutma hareketinin algılanması için minimum basılma süresi belirleniyor (2 saniye)
         mapView.addGestureRecognizer(gesturRecognizer)  // Harita görünümüne oluşturulan uzun basılı tutma tanımlayıcısı ekleniyor.
+        
+        // Ekranın bir yerine tıklama yapıldığında ki hareketi algılar ve "closeKeyboard" fonksiyonunu çağırır
+        let tapView = UITapGestureRecognizer.init(target: self, action: #selector(closeKeyboard))
+        view.addGestureRecognizer(tapView)
     }
     
     // MARK: - Funcitons
+    
+    // Klave kapama fonksiyonudur ve çağrılır
+    @objc func closeKeyboard() {
+        view.endEditing(true)
+    }
     
     // Uzun basılı tutma hareketi algılandığında çağrılan bir fonksiyonu temsil eder
     @objc func chooseLocation(gestureRecognizer: UILongPressGestureRecognizer) {
