@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EA8E4A62B15BF57002FEDF1 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA8E4A52B15BF57002FEDF1 /* ListViewController.swift */; };
 		0EFB60AB2B13A02500320D87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFB60AA2B13A02500320D87 /* AppDelegate.swift */; };
 		0EFB60AD2B13A02500320D87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFB60AC2B13A02500320D87 /* SceneDelegate.swift */; };
 		0EFB60AF2B13A02500320D87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFB60AE2B13A02500320D87 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EA8E4A52B15BF57002FEDF1 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		0EFB60A72B13A02500320D87 /* Project 17- JourneyJot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 17- JourneyJot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFB60AA2B13A02500320D87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EFB60AC2B13A02500320D87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				0EFB60AA2B13A02500320D87 /* AppDelegate.swift */,
 				0EFB60AC2B13A02500320D87 /* SceneDelegate.swift */,
 				0EFB60AE2B13A02500320D87 /* ViewController.swift */,
+				0EA8E4A52B15BF57002FEDF1 /* ListViewController.swift */,
 				0EFB60B02B13A02500320D87 /* Main.storyboard */,
 				0EFB60B62B13A02600320D87 /* Assets.xcassets */,
 				0EFB60B82B13A02600320D87 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				0EFB60B52B13A02500320D87 /* Project_17__JourneyJot.xcdatamodeld in Sources */,
 				0EFB60AF2B13A02500320D87 /* ViewController.swift in Sources */,
 				0EFB60AB2B13A02500320D87 /* AppDelegate.swift in Sources */,
+				0EA8E4A62B15BF57002FEDF1 /* ListViewController.swift in Sources */,
 				0EFB60AD2B13A02500320D87 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
