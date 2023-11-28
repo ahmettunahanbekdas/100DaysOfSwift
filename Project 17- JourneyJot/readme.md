@@ -1,4 +1,4 @@
-## JournetJot
+## JournetJot
 
 This application is a mapKit app that allows users to save specific locations and review them later. The app utilizes Core Data to permanently store location information such as latitude, longitude, name, comments, etc. These details are listed in a TableView, providing users with easy access.
 
