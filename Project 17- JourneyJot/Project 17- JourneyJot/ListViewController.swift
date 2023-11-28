@@ -18,6 +18,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     var idArray = [UUID]()      // CoreData'den alınan "id" özelliklerini saklamak için dizi
     var chosenName = ""
     var chosenId: UUID?
+    var places : [NSManagedObject] = []
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -67,17 +68,17 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     @objc func getData() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
-
+        
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Places")
         fetchRequest.returnsObjectsAsFaults = false
-
+        
         do {
             let results = try context.fetch(fetchRequest)
             if results.count > 0 {
                 // Eski verileri temizle
                 nameArray.removeAll()
                 idArray.removeAll()
-
+                
                 // CoreData'den alınan veriler dizilere atanır
                 for result in results as! [NSManagedObject] {
                     if let name = result.value(forKey: "name") as? String,
@@ -93,7 +94,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             print("Error fetching data")
         }
     }
-
+    
     // UITableView'deki bir hücreye tıklandığında çağrılan fonksiyon
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Kullanıcı bir UITableViewCell'a tıkladığında bu fonksiyon tetiklenir.
@@ -103,7 +104,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         // "toViewController" segue'sini tetikleyerek başka bir görünüme geçiş yapılır.
         performSegue(withIdentifier: "toViewController", sender: nil)
     }
-
+    
     // Segue sırasında veri aktarımı için hazırlık fonksiyonu
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Segue "toViewController" ise, hedef görünüm kontrolcüsünü alırız.
@@ -112,6 +113,50 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             // chosenName ve chosenId değişkenlerini kullanarak, hedef görünüm kontrolcüsünün ilgili özelliklerini ayarlarız.
             destinationVC.selectedName = chosenName
             destinationVC.selectedId = chosenId
+        }
+    }
+    
+    // MARK: - Delete TableView Row
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+
+            // Güncelleme: places dizisinin elemanlarını CoreData'den çek
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Places")
+            fetchRequest.returnsObjectsAsFaults = false
+
+            do {
+                let results = try context.fetch(fetchRequest)
+                if results.count > 0 {
+                    places = results as! [NSManagedObject]
+                }
+            } catch {
+                print("Error fetching data")
+            }
+
+            // Güncelleme: IndexPath.row değerini kontrol et
+                let deletePlace = places[indexPath.row]
+
+                do {
+                    context.delete(deletePlace)
+                    try context.save()
+
+                    // Güncelleme: places dizisinden de elemanı kaldır
+                    places.remove(at: indexPath.row)
+
+                    // Güncelleme: nameArray ve idArray dizilerini de güncelle
+                    nameArray.remove(at: indexPath.row)
+                    idArray.remove(at: indexPath.row)
+
+                    // TableView'ı güncelle
+                    tableView.reloadData()
+
+                    print("Deleted Place")
+                } catch {
+                    print("Error deleting place: \(error)")
+                }
         }
     }
 }

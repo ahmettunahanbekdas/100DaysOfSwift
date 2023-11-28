@@ -144,7 +144,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         // Hazırlanan pin görünümü geri döndürülür.
         return pinView
     }
-
+    
     
     // Pinin baloncuğunda çıkan detay simgesine tıklandığında oluşucak fonksiyon ve navigasyonu başlatıcak
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
@@ -167,7 +167,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     }
     
     
-
+    
     
     // MARK: - Functions
     
@@ -242,4 +242,3 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         navigationController?.popViewController(animated: true)
     }
 }
-
