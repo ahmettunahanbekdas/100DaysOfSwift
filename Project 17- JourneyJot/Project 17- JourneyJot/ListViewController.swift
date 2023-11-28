@@ -1,3 +1,4 @@
+//
 //  ListViewController.swift
 //  Project 17- JourneyJot
 //
@@ -9,14 +10,16 @@ import CoreData
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
-    var nameArray = [String]()  // Veritabanından alınan "name" özelliklerini saklamak için dizi
-    var idArray = [UUID]()      // Veritabanından alınan "id" özelliklerini saklamak için dizi
+    
+    // MARK: - Properties
+    var nameArray = [String]()  // CoreData'den alınan "name" özelliklerini saklamak için dizi
+    var idArray = [UUID]()      // CoreData'den alınan "id" özelliklerini saklamak için dizi
     var chosenName = ""
-    var chosenId : UUID?
+    var chosenId: UUID?
     
-    
-    
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,26 +34,28 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         getData()
     }
     
-   
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Yeni bir mekan eklenirse, bu ekrana geri dönüldüğünde verileri güncellemek için notifikasyon dinleyicisi eklenir
+        NotificationCenter.default.addObserver(self, selector: #selector(getData), name: NSNotification.Name("newPlace"), object: nil)
+    }
     
-    // MARK: - Functions -
+    // MARK: - Functions
     
-    
-    //MARK: - "+" butonuna basıldığında çağrılan fonksiyon
+    // "+" butonuna basıldığında çağrılan fonksiyon
     @objc func addButton() {
-        // Ekleme işleminde name boş olucak
+        // Ekleme işleminde name boş olacak
         chosenName = ""
         // "toViewController" segue'si çağrılır
         performSegue(withIdentifier: "toViewController", sender: nil)
     }
     
-    //MARK: - UITableView'nin satır sayısını belirten fonksiyon
+    // UITableView'nin satır sayısını belirten fonksiyon
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nameArray.count
     }
     
-    // MARK: - UITableView'nin hücre içeriğini belirten fonksiyon
+    // UITableView'nin hücre içeriğini belirten fonksiyon
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         // Hücrenin metin içeriği, nameArray dizisinden alınır
@@ -58,8 +63,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    // MARK: - CoreData'den verileri çeker ve ilgili dizilere atar
-     func getData() {
+    // CoreData'den verileri çeker ve ilgili dizilere atar
+    @objc func getData() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
 
@@ -89,7 +94,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
 
-    
+    // UITableView'deki bir hücreye tıklandığında çağrılan fonksiyon
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Kullanıcı bir UITableViewCell'a tıkladığında bu fonksiyon tetiklenir.
         // indexPath.row ile tıklanan hücrenin indeksinden nameArray ve idArray dizilerinde ilgili veriler alınır.
@@ -99,9 +104,9 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         performSegue(withIdentifier: "toViewController", sender: nil)
     }
 
+    // Segue sırasında veri aktarımı için hazırlık fonksiyonu
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Segue sırasında hedef görünüm kontrolcüsüne veri aktarımı için kullanılır.
-        // Eğer segue "toViewController" ise, hedef görünüm kontrolcüsünü alırız.
+        // Segue "toViewController" ise, hedef görünüm kontrolcüsünü alırız.
         if segue.identifier == "toViewController" {
             let destinationVC = segue.destination as! ViewController
             // chosenName ve chosenId değişkenlerini kullanarak, hedef görünüm kontrolcüsünün ilgili özelliklerini ayarlarız.
@@ -110,3 +115,4 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
 }
+
