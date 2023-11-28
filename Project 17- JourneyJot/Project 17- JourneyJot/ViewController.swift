@@ -7,11 +7,11 @@
 
 import UIKit
 import MapKit
-import CoreLocation // Kullanıcı konumunu almak için kullanılır
+import CoreLocation 
 import CoreData
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIApplicationDelegate {
-
+    
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var commentText: UITextField!
     @IBOutlet weak var mapView: MKMapView!
@@ -19,9 +19,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     var chosenLongitude = Double()
     var chosenLatitude = Double()
+    
+    var selectedName = ""
+    var selectedId : UUID?
+    
     //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         mapView.delegate = self
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest // Kullanıcının konumunun netliğini belirler
@@ -36,15 +41,25 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         // Ekranın bir yerine tıklama yapıldığında ki hareketi algılar ve "closeKeyboard" fonksiyonunu çağırır
         let tapView = UITapGestureRecognizer.init(target: self, action: #selector(closeKeyboard))
         view.addGestureRecognizer(tapView)
+        
+       if selectedName != "" {
+            //CoreData
+          
+       }else {
+           // Add new data
+       }
     }
     
     // MARK: - Funcitons
     
-    // Klave kapama fonksiyonudur ve çağrılır
-    @objc func closeKeyboard() {
-        view.endEditing(true)
+    // "didUpdateLocations" fonksiyonu güncellenen lokasyonları dizi içersinde verir
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locations = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude) // 0. Sırada ki kullanıcının kordinatları alındı
+        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005) // Kordinatlara yapılıcak olan zoom oranı ayarlandı
+        let region = MKCoordinateRegion(center: locations, span: span) // Kordinatlar ve zoom oranı birleştirilerek Regiona(Bölgeye) atandı
+        mapView.setRegion(region, animated: true) // Ayarlanan Region(Bölge) Haritamıza eklendi.
     }
-    
+  
     // Uzun basılı tutma hareketi algılandığında çağrılan bir fonksiyonu temsil eder
     @objc func chooseLocation(gestureRecognizer: UILongPressGestureRecognizer) {
         // Uzun basılı tutma hareketi başladığında yapılacak işlemler
@@ -68,61 +83,68 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             mapView.addAnnotation(annotation)
         }
     }
+    
+    // Klave kapama fonksiyonudur ve çağrılır
+    @objc func closeKeyboard() {
+        view.endEditing(true)
+    }
 
-    // "didUpdateLocations" fonksiyonu güncellenen lokasyonları dizi içersinde verir
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locations = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude) // 0. Sırada ki kullanıcının kordinatları alındı
-        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005) // Kordinatlara yapılıcak olan zoom oranı ayarlandı
-        let region = MKCoordinateRegion(center: locations, span: span) // Kordinatlar ve zoom oranı birleştirilerek Regiona(Bölgeye) atandı
-        mapView.setRegion(region, animated: true) // Ayarlanan Region(Bölge) Haritamıza eklendi.
+    // Alert Oluşturuldu
+    func makeAlert(tittle: String, message: String, okActionTittle:String) {
+        let alert = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: okActionTittle, style: .cancel, handler:  nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true)
     }
     
-    func makeAlert(tittle: String, message: String, okActionTittle:String) {
-           let alert = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
-           let okAction = UIAlertAction(title: okActionTittle, style: .cancel, handler:  nil)
-           alert.addAction(okAction)
-           self.present(alert, animated: true)
-       }
+    // MARK: - SAVE BUTTON
     
+    // Veriler CoreDataya kaydetmek için kullanılan buttonun fonksiyonu
     @IBAction func saveButton(_ sender: Any) {
+        // AppDelegate'e erişim sağlanır
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        // CoreData'nin çalışma bağlamına erişim sağlanır
         let context = appDelegate.persistentContainer.viewContext
         
+        // Yeni bir "Places" nesnesi oluşturulur
         let newPlace = NSEntityDescription.insertNewObject(forEntityName: "Places", into: context)
         
-        if nameText.text!.isEmpty{
+        // Kullanıcının girdiği adı kontrol eder, boş ise hata mesajı gösterir
+        if nameText.text!.isEmpty {
             makeAlert(tittle: "Error", message: "Name field cannot be empty", okActionTittle: "Okay")
-        }else {
+        } else {
+            // Ad alanı boş değilse, yeni yer nesnesine ad atanır
             newPlace.setValue(nameText.text, forKey: "name")
-
         }
-        if commentText.text!.isEmpty{
+        
+        // Kullanıcının girdiği yorumu kontrol eder, boş ise hata mesajı gösterir
+        if commentText.text!.isEmpty {
             makeAlert(tittle: "Error", message: "Comment field cannot be empty", okActionTittle: "Okay")
-        }else {
+        } else {
+            // Yorum alanı boş değilse, yeni yer nesnesine yorum atanır
             newPlace.setValue(commentText.text, forKey: "comment")
         }
-         
         
-          if chosenLatitude == 0.0 || chosenLongitude == 0.0 {
-              makeAlert(tittle: "Error", message: "Please select a location on the map", okActionTittle: "Okay")
-          } else {
-              newPlace.setValue(chosenLatitude, forKey: "latitude")
-              newPlace.setValue(chosenLongitude, forKey: "longitude")
-          }
+        // Seçilen konumu kontrol eder, eğer konum seçilmemişse hata mesajı gösterir
+        if chosenLatitude == 0.0 || chosenLongitude == 0.0 {
+            makeAlert(tittle: "Error", message: "Please select a location on the map", okActionTittle: "Okay")
+        } else {
+            // Eğer konum seçilmişse, yeni yer nesnesine enlem ve boylam atanır
+            newPlace.setValue(chosenLatitude, forKey: "latitude")
+            newPlace.setValue(chosenLongitude, forKey: "longitude")
+        }
         
+        // Yeni yer nesnesine benzersiz bir kimlik (UUID) atanır
         newPlace.setValue(UUID(), forKey: "id")
         
-        do{
+        do {
+            // Değişiklikler CoreData'ye kaydedilir
             try context.save()
-            makeAlert(tittle: "Succes", message: "Location Be Save ", okActionTittle: "Okay")
-
-        }catch{
-            makeAlert(tittle: "Error", message: "Location Could Not Be Saved Try Again", okActionTittle: "Okay")
+            // Başarıyla kaydedildiğini belirten bir mesaj gösterilir
+            makeAlert(tittle: "Success", message: "Location successfully saved", okActionTittle: "Okay")
+        } catch {
+            // Hata durumunda, kullanıcıya bir hata mesajı gösterilir
+            makeAlert(tittle: "Error", message: "Location could not be saved. Please try again.", okActionTittle: "Okay")
         }
-     
-        
     }
-    
 }
-
-
