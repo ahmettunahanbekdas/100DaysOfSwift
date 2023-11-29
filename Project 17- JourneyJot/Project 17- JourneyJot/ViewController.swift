@@ -101,11 +101,16 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     }
     
+    
+    // MARK: - Functions
+
+    
+    
     // MARK: - CLLocationManagerDelegate Methods
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if selectedName == "" {
             let locations = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
-            let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+            let span = MKCoordinateSpan(latitudeDelta: 0.008, longitudeDelta: 0.008)
             let region = MKCoordinateRegion(center: locations, span: span)
             mapView.setRegion(region, animated: true)
         }
@@ -166,11 +171,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     }
     
-    
-    
-    
-    // MARK: - Functions
-    
+
     // Uzun basılı tutma gesture'ı ile konum seçme
     @objc func chooseLocation(gestureRecognizer: UILongPressGestureRecognizer) {
         if gestureRecognizer.state == .began {
@@ -242,3 +243,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         navigationController?.popViewController(animated: true)
     }
 }
+
+/*
+
+*/
