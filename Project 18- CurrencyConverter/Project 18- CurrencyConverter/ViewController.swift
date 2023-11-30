@@ -9,8 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    // MARK: - IBOutlets
-    // Storyboard'da arayüz öğeleriyle ilişkilendirilen değişkenler
     @IBOutlet weak var cadLabel: UILabel!
     @IBOutlet weak var chfLabel: UILabel!
     @IBOutlet weak var gbpLabel: UILabel!
@@ -20,29 +18,25 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // ViewController yüklenirken çağrılan metod
     }
     
-    // MARK: - IBAction
-    // "Get Rates" butonuna basıldığında çağrılacak metod
+    // Request & Session = Veriyi alacağımız bağlantıya gitme işlemi
+    // Response & Data = Burada ki Response veya Datayı alma işlemi
+    // Parsing & JSON Serialization = Datayı işleme işlemi
+    
     @IBAction func getRatesButton(_ sender: Any) {
-        
-        // Request & Session = Veriyi alacağımız bağlantıya gitme işlemi
-        // Response & Data = Burada ki Response veya Datayı alma işlemi
-        // Parsing & JSON Serialization = Datayı işleme işlemi
         
         // 1 Request & Session
         
         // API'den veri almak için HTTP isteği yapma işlemi
-        
         //  URL'yi tanımlama
         let url = URL(string: "https://raw.githubusercontent.com/atilsamancioglu/CurrencyData/main/currency.json")
         
         //  URLSession: Tüm ağ isteklerinin yapıldığı ana nokta
-        let session = URLSession.shared
+        
         
         //  URLSessionDataTask: Asenkron veri alma işlemi
-        let task = session.dataTask(with: url!) { data, response, error in
+        let task = URLSession.shared.dataTask(with: url!) { data, response, error in
             
             // Hata kontrolü
             if error != nil {
@@ -58,7 +52,6 @@ class ViewController: UIViewController {
                     do {
                         
                         // 2 Response & Data
-                        // Veriyi işleme işlemi
                         
                         // JSON veriyi çözümleme
                         let jsonResponse = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! Dictionary <String, Any>
@@ -67,7 +60,6 @@ class ViewController: UIViewController {
                         DispatchQueue.main.async {
                             // Alınan JSON veriyi yazdırma
                             if let rates = jsonResponse["rates"] as? [String : Any]{
-                              //  print(rates)
                                 
                                 if let cad = rates["CAD"] as? Double{
                                     self.cadLabel.text = "CAD : \(cad)"
@@ -91,14 +83,13 @@ class ViewController: UIViewController {
                         }
                         
                     } catch {
-                        // JSON çözümleme hatası
                         print("Data Error")
                     }
                 }
             }
         }
         
-        //  Asenkron işlemi başlatma
+        // İşlemi başlatma
         task.resume()
     }
 }
