@@ -61,6 +61,7 @@ In this section, I will share the projects I am working on as I complete them.
 | Project 15 | LibraryApp          | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2015-%20LibraryApp)| CoreData |
 | Project 16 | FoodsBook        | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2016-%20FoodsBook)| CoreData |
 | Project 17 | JourneyJot        | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2017-%20JourneyJot)| MapKit, CoreData |
+| Project 18 | Currency Converter  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2018-%20CurrencyConverter)| JSON, API |
 
 
 
