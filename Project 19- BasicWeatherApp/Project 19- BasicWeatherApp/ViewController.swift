@@ -2,31 +2,35 @@ import UIKit
 import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
-
+    
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var feelLabel: UILabel!
     @IBOutlet weak var windyLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    
+    
     var locationManager = CLLocationManager()
     var api = "8fd636941fefae14223ab9d35b83ac5c"
-    var latitude = ""
-    var logitude = ""
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Basic Weather App"
-
+        
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
-        
-        
     }
-
+    
     @IBAction func getButton(_ sender: Any) {
         // 1.Request & Session
         if let location = locationManager.location {
             let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(location.coordinate.latitude)&lon=\(location.coordinate.longitude)&appid=\(api)")
+            
             
             let session = URLSession.shared
             
@@ -56,7 +60,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                                         self.windyLabel.text = String(windy)
                                     }
                                 }
-                            }
+                                
+                                if let sys = jsonResponse?["sys"] as? [String:Any] {
+                                    if let country = sys["country"] as? String{
+                                        self .countryLabel.text = "Country: \(country)"
+                                    }
+                                }
+                                
+                                if let city = jsonResponse?["name"] as? String {
+                                    self.cityLabel.text = "City: \(city)"
+                                    }
+                                }
                         } catch {
                             print("Error Response")
                         }
@@ -68,18 +82,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             print("Location not available yet.")
         }
     }
-
-   
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last {
-            // Kullanıcının son konumu
-            let latitude = location.coordinate.latitude
-            let longitude = location.coordinate.longitude
-
-            
-            
-        }
-    }
+    
+    
+    
+    
 }
+
+
 
