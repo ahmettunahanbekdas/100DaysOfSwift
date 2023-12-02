@@ -8,7 +8,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var windyLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
-    
+    @IBOutlet weak var weatherLabel: UILabel!
     
     var locationManager = CLLocationManager()
     var api = "8fd636941fefae14223ab9d35b83ac5c"
@@ -24,6 +24,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
+        
     }
     
     @IBAction func getButton(_ sender: Any) {
@@ -49,10 +50,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                             DispatchQueue.main.async {
                                 if let main = jsonResponse?["main"] as? [String:Any] {
                                     if let temp = main["temp"] as? Double {
-                                        self.tempLabel.text = String(temp)
+                                        let tempCelsius = temp - 273.15
+                                        self.tempLabel.text = String(format: "%.2f", tempCelsius)
                                     }
                                     if let feelsTemp = main["feels_like"] as? Double {
-                                        self.feelLabel.text = String(feelsTemp)
+                                        let feelsTempCelsius = feelsTemp - 273.15
+                                        self.feelLabel.text = String(format: "%.2f", feelsTempCelsius)
                                     }
                                 }
                                 if let wind = jsonResponse?["wind"] as? [String:Any] {
@@ -70,6 +73,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                                 if let city = jsonResponse?["name"] as? String {
                                     self.cityLabel.text = "City: \(city)"
                                     }
+                                
+                                if let weatherArray = jsonResponse?["weather"] as? [[String: Any]],
+                                    let weather = weatherArray.first {
+                                    if let main = weather["main"] as? String {
+                                        print(main)
+                                        self.weatherLabel.text = main
+                                    }
+                                }
+
                                 }
                         } catch {
                             print("Error Response")
