@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     @IBAction func getRatesButton(_ sender: Any) {
         
-        // 1 Request & Session
+        // 1 & Session
         
         // API'den veri almak için HTTP isteği yapma işlemi
         //  URL'yi tanımlama
