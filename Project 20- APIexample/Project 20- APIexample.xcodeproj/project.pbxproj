@@ -61,11 +61,11 @@
 				0E687B0C2B1B9E170079DD78 /* AppDelegate.swift */,
 				0E687B0E2B1B9E170079DD78 /* SceneDelegate.swift */,
 				0E687B102B1B9E170079DD78 /* ViewController.swift */,
+				0E687B202B1BA60C0079DD78 /* Post.swift */,
 				0E687B122B1B9E170079DD78 /* Main.storyboard */,
 				0E687B152B1B9E190079DD78 /* Assets.xcassets */,
 				0E687B172B1B9E190079DD78 /* LaunchScreen.storyboard */,
 				0E687B1A2B1B9E190079DD78 /* Info.plist */,
-				0E687B202B1BA60C0079DD78 /* Post.swift */,
 			);
 			path = "Project 20- APIexample";
 			sourceTree = "<group>";
