@@ -8,10 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    
-    
-    
+
     private var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -87,7 +84,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         // Hücreyi doldur
         cell.textLabel?.text = post.title
         cell.detailTextLabel?.text = post.body
-        
+    
         return cell
     }
 }
