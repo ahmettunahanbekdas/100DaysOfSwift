@@ -18,6 +18,9 @@
 		0E1DA5F02B1E2E5D00F16D07 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1DA5EF2B1E2E5D00F16D07 /* FirebaseAuth */; };
 		0E1DA5F22B1E2E5D00F16D07 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1DA5F12B1E2E5D00F16D07 /* FirebaseFirestore */; };
 		0E1DA5F42B1E2E5D00F16D07 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1DA5F32B1E2E5D00F16D07 /* FirebaseStorage */; };
+		0E5803C92B1E76D1007BFAA3 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5803C82B1E76D1007BFAA3 /* FeedViewController.swift */; };
+		0E5803CB2B1E76E2007BFAA3 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5803CA2B1E76E2007BFAA3 /* UploadViewController.swift */; };
+		0E5803CD2B1E76F6007BFAA3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5803CC2B1E76F6007BFAA3 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		0E1DA5E22B1E2D5000F16D07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E1DA5E42B1E2D5000F16D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E1DA5EA2B1E2DD700F16D07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0E5803C82B1E76D1007BFAA3 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		0E5803CA2B1E76E2007BFAA3 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		0E5803CC2B1E76F6007BFAA3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,9 @@
 				0E1DA5D62B1E2D4F00F16D07 /* AppDelegate.swift */,
 				0E1DA5D82B1E2D4F00F16D07 /* SceneDelegate.swift */,
 				0E1DA5DA2B1E2D4F00F16D07 /* ViewController.swift */,
+				0E5803C82B1E76D1007BFAA3 /* FeedViewController.swift */,
+				0E5803CA2B1E76E2007BFAA3 /* UploadViewController.swift */,
+				0E5803CC2B1E76F6007BFAA3 /* SettingsViewController.swift */,
 				0E1DA5DC2B1E2D4F00F16D07 /* Main.storyboard */,
 				0E1DA5DF2B1E2D5000F16D07 /* Assets.xcassets */,
 				0E1DA5E12B1E2D5000F16D07 /* LaunchScreen.storyboard */,
@@ -160,8 +169,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E1DA5DB2B1E2D4F00F16D07 /* ViewController.swift in Sources */,
+				0E5803CB2B1E76E2007BFAA3 /* UploadViewController.swift in Sources */,
 				0E1DA5D72B1E2D4F00F16D07 /* AppDelegate.swift in Sources */,
+				0E5803C92B1E76D1007BFAA3 /* FeedViewController.swift in Sources */,
 				0E1DA5D92B1E2D4F00F16D07 /* SceneDelegate.swift in Sources */,
+				0E5803CD2B1E76F6007BFAA3 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

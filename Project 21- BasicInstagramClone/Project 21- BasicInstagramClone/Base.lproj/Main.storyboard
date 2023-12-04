@@ -75,6 +75,7 @@
                             <constraint firstItem="Wja-Zm-qIx" firstAttribute="top" secondItem="EJ0-YN-eyv" secondAttribute="bottom" constant="65" id="y2P-VK-1LT"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="L3h-Z0-UlI"/>
                     <connections>
                         <outlet property="emailTextField" destination="9je-PI-xxi" id="afw-ax-vog"/>
                         <outlet property="passwordTextField" destination="EJ0-YN-eyv" id="XV0-vT-ArB"/>
@@ -83,12 +84,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="314" y="-37"/>
+            <point key="canvasLocation" x="-659" y="-37"/>
         </scene>
         <!--Upload-->
         <scene sceneID="Yzq-9y-Nnp">
             <objects>
-                <viewController id="UHB-Vb-AcG" sceneMemberID="viewController">
+                <viewController id="UHB-Vb-AcG" customClass="UploadViewController" customModule="Project_21__BasicInstagramClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zrd-GK-6gZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,28 +100,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jFm-Uf-Sib" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1992" y="-37"/>
+            <point key="canvasLocation" x="1779" y="741"/>
         </scene>
         <!--Settings-->
         <scene sceneID="yH1-ml-hfS">
             <objects>
-                <viewController id="d50-yY-vOL" sceneMemberID="viewController">
+                <viewController id="d50-yY-vOL" customClass="SettingsViewController" customModule="Project_21__BasicInstagramClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f1S-FJ-nxk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dB-KH-2QR">
+                                <rect key="frame" x="159" y="409" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                <connections>
+                                    <action selector="logOutButton:" destination="d50-yY-vOL" eventType="touchUpInside" id="ABY-kK-ht8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Hij-c9-MD5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="s.square.fill" catalog="system" id="2bu-yl-jRz"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toViewController" modalPresentationStyle="fullScreen" id="zmj-hZ-wui"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xu5-GI-9uQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2028" y="695"/>
+            <point key="canvasLocation" x="404" y="741"/>
         </scene>
         <!--Feed-->
         <scene sceneID="Y72-ae-hEH">
             <objects>
-                <viewController id="uOG-L1-gPp" sceneMemberID="viewController">
+                <viewController id="uOG-L1-gPp" customClass="FeedViewController" customModule="Project_21__BasicInstagramClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yq1-d4-Awn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFW-rA-XOC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1992" y="-675"/>
+            <point key="canvasLocation" x="1088" y="741"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lcM-Jw-hJ4">
