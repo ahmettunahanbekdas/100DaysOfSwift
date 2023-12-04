@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     
-
+    
     
     private var tableView: UITableView = {
         let tableView = UITableView()
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     }()
     
     private var posts: [Post] = []
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +34,8 @@ class ViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        fetcDataAPI()
     }
     
     func fetcDataAPI() {
@@ -57,38 +59,34 @@ class ViewController: UIViewController {
             
             
             do{
-                let decodeData = try JSONDecoder().decode([Post], from: data)
-            }catch{
+                let decodeData = try JSONDecoder().decode([Post].self, from: data)
+                self.posts = decodeData
                 
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }catch{
+                print("\(error)")
             }
             
-        }
-        
-        
-        
-        
-        
+        } .resume()
     }
-    
-    
-    
-    
-    
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
         
-        let post = "Test"
+        let post = posts[indexPath.row]
         
         // Hücreyi doldur
-        cell.textLabel?.text = post
+        cell.textLabel?.text = post.title
+        cell.detailTextLabel?.text = post.body
         
         return cell
     }
