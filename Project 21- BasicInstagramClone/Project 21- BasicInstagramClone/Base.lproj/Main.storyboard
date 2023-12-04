@@ -99,7 +99,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jFm-Uf-Sib" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1992" y="316"/>
+            <point key="canvasLocation" x="1992" y="-37"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="yH1-ml-hfS">
+            <objects>
+                <viewController id="d50-yY-vOL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f1S-FJ-nxk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Hij-c9-MD5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="s.square.fill" catalog="system" id="2bu-yl-jRz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xu5-GI-9uQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2028" y="695"/>
         </scene>
         <!--Feed-->
         <scene sceneID="Y72-ae-hEH">
@@ -115,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFW-rA-XOC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1992" y="-342"/>
+            <point key="canvasLocation" x="1992" y="-675"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lcM-Jw-hJ4">
@@ -130,6 +146,7 @@
                     <connections>
                         <segue destination="uOG-L1-gPp" kind="relationship" relationship="viewControllers" id="beM-1q-WqX"/>
                         <segue destination="UHB-Vb-AcG" kind="relationship" relationship="viewControllers" id="sq1-gy-O1n"/>
+                        <segue destination="d50-yY-vOL" kind="relationship" relationship="viewControllers" id="VlQ-yP-6Bd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSV-ff-HkN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -139,6 +156,7 @@
     </scenes>
     <resources>
         <image name="f.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="s.square.fill" catalog="system" width="128" height="114"/>
         <image name="u.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
