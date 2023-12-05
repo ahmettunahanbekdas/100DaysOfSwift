@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     
     }
 
     @IBAction func signInButton(_ sender: Any) {
@@ -22,8 +23,10 @@ class ViewController: UIViewController {
             Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { authData, error in
                 if  error != nil {
                     self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
+                    print("sign in error")
                 }else {
                     self.performSegue(withIdentifier: "toFeedViewController", sender: nil)
+                    print("sign in user")
                 }
             }
         }else {

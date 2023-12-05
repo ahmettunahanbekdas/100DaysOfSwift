@@ -111,10 +111,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dB-KH-2QR">
-                                <rect key="frame" x="159" y="409" width="75" height="35"/>
+                                <rect key="frame" x="118" y="398" width="156" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Log Out"/>
                                 <connections>
                                     <action selector="logOutButton:" destination="d50-yY-vOL" eventType="touchUpInside" id="ABY-kK-ht8"/>
                                 </connections>
@@ -130,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xu5-GI-9uQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="404" y="741"/>
+            <point key="canvasLocation" x="403.81679389312973" y="740.84507042253529"/>
         </scene>
         <!--Feed-->
         <scene sceneID="Y72-ae-hEH">
@@ -151,7 +151,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="lcM-Jw-hJ4">
             <objects>
-                <tabBarController id="KCV-uB-5EI" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="KCV-uB-5EI" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="PF0-ty-ZVG"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2vr-jE-ZLS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
