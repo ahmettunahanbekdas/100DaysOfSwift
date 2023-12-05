@@ -63,6 +63,8 @@ In this section, I will share the projects I am working on as I complete them.
 | Project 17 | JourneyJot        | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2017-%20JourneyJot)| MapKit, CoreData |
 | Project 18 | Currency Converter  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2018-%20CurrencyConverter)| JSON, API |
 | Project 19 | Basic Weather App  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2019-%20BasicWeatherApp)| JSON, API, Location|
+| Project 20 | Basic Weather App  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2020-%20APIexample)| JSON, API|
+| Project 21 | Instagram Clone  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2021-%20BasicInstagramClone)| Firebase,Swift Package Manager|
 
 
 
