@@ -10,14 +10,22 @@ import Firebase
 
 class ViewController: UIViewController {
 
+    //MARK: - @IBOutlets
+
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    
+    //MARK: - viewDidLoad
+
     override func viewDidLoad() {
         super.viewDidLoad()
      
     }
 
+    
+    //MARK: - signInButton
+    
     @IBAction func signInButton(_ sender: Any) {
         if emailTextField.text != "" && passwordTextField.text != "" {
             Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { authData, error in
@@ -35,6 +43,8 @@ class ViewController: UIViewController {
     }
     
     
+    //MARK: - signUpButton
+
     @IBAction func signUpButton(_ sender: Any) {
         if emailTextField.text != "" && passwordTextField.text != "" {
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { authData, error in

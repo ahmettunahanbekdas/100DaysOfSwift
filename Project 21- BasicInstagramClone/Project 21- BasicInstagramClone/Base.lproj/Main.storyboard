@@ -94,19 +94,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iGV-Dp-Ju9">
-                                <rect key="frame" x="16" y="115" width="361" height="319"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iGV-Dp-Ju9">
+                                <rect key="frame" x="16" y="153" width="361" height="319"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="319" id="B7Z-UU-PGO"/>
+                                    <constraint firstAttribute="width" constant="361" id="Px7-bx-0KR"/>
+                                </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUW-sq-V8B">
-                                <rect key="frame" x="41" y="474" width="311" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUW-sq-V8B">
+                                <rect key="frame" x="41" y="512" width="311" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cv6-7d-gzX">
-                                <rect key="frame" x="118" y="559" width="156" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cv6-7d-gzX">
+                                <rect key="frame" x="118" y="597" width="156" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="Ecy-j4-R0B"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Share "/>
                                 <connections>
@@ -117,6 +121,18 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pan-Dk-nxV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pan-Dk-nxV" firstAttribute="bottom" secondItem="Cv6-7d-gzX" secondAttribute="bottom" constant="115" id="04Y-Ui-6iC"/>
+                            <constraint firstItem="iGV-Dp-Ju9" firstAttribute="centerX" secondItem="aUW-sq-V8B" secondAttribute="centerX" id="EyA-pA-sAI"/>
+                            <constraint firstItem="iGV-Dp-Ju9" firstAttribute="leading" secondItem="zrd-GK-6gZ" secondAttribute="leadingMargin" id="HIT-ct-G5k"/>
+                            <constraint firstItem="Cv6-7d-gzX" firstAttribute="top" secondItem="aUW-sq-V8B" secondAttribute="bottom" constant="51" id="HwS-qD-u2N"/>
+                            <constraint firstItem="iGV-Dp-Ju9" firstAttribute="top" secondItem="pan-Dk-nxV" secondAttribute="top" constant="94" id="OGM-xd-z9x"/>
+                            <constraint firstItem="aUW-sq-V8B" firstAttribute="top" secondItem="iGV-Dp-Ju9" secondAttribute="bottom" constant="40" id="Zad-os-CYK"/>
+                            <constraint firstItem="iGV-Dp-Ju9" firstAttribute="trailing" secondItem="zrd-GK-6gZ" secondAttribute="trailingMargin" id="aWb-RT-BEs"/>
+                            <constraint firstItem="Cv6-7d-gzX" firstAttribute="leading" secondItem="pan-Dk-nxV" secondAttribute="leading" constant="118" id="osc-tu-v8s"/>
+                            <constraint firstItem="aUW-sq-V8B" firstAttribute="centerX" secondItem="Cv6-7d-gzX" secondAttribute="centerX" id="pFg-9S-u9q"/>
+                            <constraint firstItem="aUW-sq-V8B" firstAttribute="leading" secondItem="pan-Dk-nxV" secondAttribute="leading" constant="41" id="wb0-fF-Jht"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="u.circle.fill" catalog="system" id="2r0-F5-gYF"/>
                     <connections>
