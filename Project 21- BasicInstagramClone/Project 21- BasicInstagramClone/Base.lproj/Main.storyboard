@@ -93,14 +93,40 @@
                     <view key="view" contentMode="scaleToFill" id="zrd-GK-6gZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iGV-Dp-Ju9">
+                                <rect key="frame" x="16" y="115" width="361" height="319"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUW-sq-V8B">
+                                <rect key="frame" x="41" y="474" width="311" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cv6-7d-gzX">
+                                <rect key="frame" x="118" y="559" width="156" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Share "/>
+                                <connections>
+                                    <action selector="logOutButton:" destination="d50-yY-vOL" eventType="touchUpInside" id="alG-ZL-e7S"/>
+                                    <action selector="shareButton:" destination="UHB-Vb-AcG" eventType="touchUpInside" id="FE8-oe-CHJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pan-Dk-nxV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="u.circle.fill" catalog="system" id="2r0-F5-gYF"/>
+                    <connections>
+                        <outlet property="commentTextField" destination="aUW-sq-V8B" id="yYp-tl-svb"/>
+                        <outlet property="imageView" destination="iGV-Dp-Ju9" id="gJE-ZF-QrL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jFm-Uf-Sib" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1779" y="741"/>
+            <point key="canvasLocation" x="1777.8625954198474" y="740.84507042253529"/>
         </scene>
         <!--Settings-->
         <scene sceneID="yH1-ml-hfS">

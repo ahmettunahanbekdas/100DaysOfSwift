@@ -7,23 +7,39 @@
 
 import UIKit
 
-class UploadViewController: UIViewController {
+class UploadViewController: UIViewController, UIImagePickerControllerDelegate , UINavigationControllerDelegate {
 
+    @IBOutlet weak var commentTextField: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let tapImage = UITapGestureRecognizer.init(target: self, action: #selector(tapImage))
+        imageView.addGestureRecognizer(tapImage)
+        imageView.isUserInteractionEnabled = true
+    
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func shareButton(_ sender: Any) {
+        
     }
-    */
+    
+    @objc func tapImage(){
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickerImage = info[.originalImage] as? UIImage{
+            imageView.image = pickerImage
+        }
+        self.dismiss(animated: true)
+    }
 
 }
