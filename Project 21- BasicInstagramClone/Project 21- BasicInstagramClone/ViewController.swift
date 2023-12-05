@@ -18,15 +18,23 @@ class ViewController: UIViewController {
     }
 
     @IBAction func signInButton(_ sender: Any) {
-        
-        
+        if emailTextField.text != "" && passwordTextField.text != "" {
+            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { authData, error in
+                if  error != nil {
+                    self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
+                }else {
+                    self.performSegue(withIdentifier: "toFeedViewController", sender: nil)
+                }
+            }
+        }else {
+            makeAlert(title: "Error", message: "Please Enter Email and Password")
+        }
     }
     
     
     @IBAction func signUpButton(_ sender: Any) {
         if emailTextField.text != "" && passwordTextField.text != "" {
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { authData, error in
-                 
                 if error != nil {
                     self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
                 }else{
