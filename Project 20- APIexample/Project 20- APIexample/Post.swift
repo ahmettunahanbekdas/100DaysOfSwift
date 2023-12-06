@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - Post
 struct Post: Codable {
     var userId: Int
     var id: Int

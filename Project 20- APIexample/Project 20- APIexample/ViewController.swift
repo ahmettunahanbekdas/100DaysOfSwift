@@ -7,21 +7,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController {
+    
+    // MARK: - tableView
+    // UITableView öğesi için private bir örnek oluşturuluyor.
     private var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
     
+    // MARK: - posts[]
+    // Post türündeki verileri içeren dizi.
     private var posts: [Post] = []
     
-    
+    // MARK: - viewDidLoad
+    // ViewController'ın yüklenmesi tamamlandığında çağrılan fonksiyon.
     override func viewDidLoad() {
         super.viewDidLoad()
+        // tableView öğesini view'e ekleniyor ve constraint'leri ayarlanıyor.
         view.addSubview(tableView)
-        
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -29,19 +35,23 @@ class ViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
         
+        // tableView'in dataSource ve delegate'i ViewController olarak ayarlanıyor.
         tableView.dataSource = self
         tableView.delegate = self
         
+        // API'den veri çekmek için fonksiyon çağrılıyor.
         fetcDataAPI()
     }
     
+    // MARK: - fetcDataAPI
+    // JSONPlaceholder API'den veri çeken fonksiyon.
     func fetcDataAPI() {
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts")
-        else {
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else {
             print("Fetch JSON Error")
             return
         }
         
+        // URLSession ile API çağrısı yapılıyor.
         URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
             guard let self = self else { return }
             
@@ -54,38 +64,37 @@ class ViewController: UIViewController {
                 return
             }
             
-            
-            do{
+            do {
+                // JSON verisi Post türündeki nesnelere dönüştürülüyor.
                 let decodeData = try JSONDecoder().decode([Post].self, from: data)
                 self.posts = decodeData
                 
+                // Ana thread üzerinde tableView yeniden yükleniyor.
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
-            }catch{
+            } catch {
                 print("\(error)")
             }
-            
-        } .resume()
+        }.resume()
     }
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+    // MARK: - ViewController: UITableViewDataSource, UITableViewDelegate
+    // UITableView için gerekli dataSource ve delegate fonksiyonlarını uygulayan extension.
+    extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
-        let post = posts[indexPath.row]
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            // Tabloda gösterilecek hücre sayısı, 'posts' dizisinin eleman sayısı kadar.
+            return posts.count
+        }
         
-        // Hücreyi doldur
-        cell.textLabel?.text = post.title
-        cell.detailTextLabel?.text = post.body
-    
-        return cell
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            // Her bir hücre için veriler atanıyor.
+            let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+            let post = posts[indexPath.row]
+            cell.textLabel?.text = post.title
+            cell.detailTextLabel?.text = post.body
+            return cell
+        }
     }
-}
-
