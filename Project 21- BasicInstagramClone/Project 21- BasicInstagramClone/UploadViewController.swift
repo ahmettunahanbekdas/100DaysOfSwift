@@ -64,23 +64,35 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate , 
             
             imageReference.putData(data, metadata: nil) { metaData, error in
                 
-                if let error = error {
-                    self.makeAlert(title: "Error", message: error.localizedDescription)
-                } else {
+                if  error == nil {
+                    
                     imageReference.downloadURL { url, error in
-                        if let error = error {
-                            print(error.localizedDescription)
-                        }else{
-                            if let imageUrl = url?.absoluteString {
-                                print("Image URL:", imageUrl)
-                            } else {
-                                print("Error: Image URL is nil")
-                            }
+                        if error == nil {
+                            
+                            let imageUrl = url?.absoluteString
+                            
+                            
+                            // Firestore Database
+                            
+                            let firestoreDatabase = Firestore.firestore()
+                            var firesotreReferance: DocumentReference
+                            
+                            let firestorePosts = ["imageUrl" : imageUrl!, "postBy" : Auth.auth().currentUser!.email!, "postComment" : self.commentTextField.text! , "date":"date", "like":0] as [String:Any]
+                            
+                            
+                            
+                            firesotreReferance = firestoreDatabase.collection("Posts").addDocument(data: firestorePosts, completion: { error in
+                                if error !=  nil {
+                                    self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
+                                }
+                            })
                         }
+                        
                     }
                 }
             }
         }
     }
 }
+
 
