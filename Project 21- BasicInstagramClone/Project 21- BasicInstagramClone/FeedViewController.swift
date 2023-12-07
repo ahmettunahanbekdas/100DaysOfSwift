@@ -18,7 +18,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var userCommentArray = [String]()
     var userLikeArray = [Int]()
     var userImageArray = [String]()
-    
+    var documentIDArray = [String]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -40,7 +40,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func getFireStoreData() {
         let fireStoreDataBase = Firestore.firestore()
         
-        fireStoreDataBase.collection("Posts").order(by: "date", descending: true).addSnapshotListener { snapShot, error in
+        fireStoreDataBase.collection("Posts").order(by: "date", descending: true).addSnapshotListener { [self] snapShot, error in
             if error != nil {
                 print("DATABASE IS EMPTY")
             }else {
@@ -54,6 +54,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     
                     for document in snapShot!.documents {
                         
+                         let documentID = document.documentID
+                            self.documentIDArray.append(documentID)
+                        print(documentIDArray)
                         if let postedBy = document.get("postBy") as? String{
                             self.userEmailArray.append(postedBy)
                         }
@@ -90,6 +93,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.userView.text = userEmailArray[indexPath.row]
         cell.likeCountLabel.text = String(userLikeArray[indexPath.row])
         cell.customImageView.sd_setImage(with: URL(string: self.userImageArray[indexPath.row]))
+        cell.documentIDLabel.text = documentIDArray[indexPath.row]
         return cell
     }
     

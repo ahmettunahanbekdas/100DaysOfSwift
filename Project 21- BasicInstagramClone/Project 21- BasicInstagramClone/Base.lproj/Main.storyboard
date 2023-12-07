@@ -239,6 +239,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJx-D9-05V">
+                                                    <rect key="frame" x="331" y="39" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="WcG-UF-rTf" firstAttribute="top" secondItem="gVc-RH-Wac" secondAttribute="bottom" constant="9" id="Azb-fg-69U"/>
@@ -260,6 +267,7 @@
                                         <connections>
                                             <outlet property="commentLabel" destination="gVc-RH-Wac" id="Q2V-lc-bRY"/>
                                             <outlet property="customImageView" destination="CMP-mB-mS5" id="SKS-lO-uJT"/>
+                                            <outlet property="documentIDLabel" destination="mJx-D9-05V" id="9ME-Dh-c6w"/>
                                             <outlet property="likeCountLabel" destination="WcG-UF-rTf" id="Ipv-nc-nZk"/>
                                             <outlet property="userView" destination="jxm-6X-sLi" id="BM5-uF-Z3P"/>
                                         </connections>
