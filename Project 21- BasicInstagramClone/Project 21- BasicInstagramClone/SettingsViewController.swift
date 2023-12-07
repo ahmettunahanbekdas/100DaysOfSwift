@@ -9,9 +9,9 @@ import UIKit
 import FirebaseAuth
 
 class SettingsViewController: UIViewController {
-
+    
     // MARK: - viewDidLoad
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -20,12 +20,10 @@ class SettingsViewController: UIViewController {
     @IBAction func logOutButton(_ sender: Any) {
         do {
             try Auth.auth().signOut()
-            // Kullanıcı başarıyla çıkış yaptıysa, belirlediğiniz başka bir sayfaya yönlendirme işlemi yapabilirsiniz.
             performSegue(withIdentifier: "toViewController", sender: nil)
             print("Log Out Succes")
         } catch let signOutError as NSError {
             print("Çıkış yaparken hata oluştu: \(signOutError.localizedDescription)")
-            // Hata durumunda kullanıcıya bir bildirim veya başka bir geri bildirim yapabilirsiniz.
         }
     }
 }

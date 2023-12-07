@@ -80,7 +80,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate , 
                         return
                     }
                     
-                                   
+                    
                     if self.commentTextField.text == "" {
                         self.makeAlert(title: "Error", message: "Please Enter Comment")
                         return

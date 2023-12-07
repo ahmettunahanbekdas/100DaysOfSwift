@@ -10,7 +10,10 @@ import Firebase
 import SDWebImage
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-   
+    
+    
+    //MARK: - @IBOutlet and Variables
+    
     var userEmailArray = [String]()
     var userCommentArray = [String]()
     var userLikeArray = [Int]()
@@ -19,19 +22,25 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    //MARK: - viewDidLoad()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         
         getFireStoreData()
-
+        
     }
+    
+    
+    //MARK: - getFireStoreData()
     
     func getFireStoreData() {
         let fireStoreDataBase = Firestore.firestore()
         
-        fireStoreDataBase.collection("Posts").addSnapshotListener { snapShot, error in
+        fireStoreDataBase.collection("Posts").order(by: "date", descending: true).addSnapshotListener { snapShot, error in
             if error != nil {
                 print("DATABASE IS EMPTY")
             }else {
@@ -41,7 +50,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     self.userCommentArray.removeAll(keepingCapacity: false)
                     self.userLikeArray.removeAll(keepingCapacity: false)
                     self.userImageArray.removeAll(keepingCapacity: false)
-
+                    
                     
                     for document in snapShot!.documents {
                         
@@ -62,12 +71,18 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             }
         }
-
+        
     }
+    
+    
+    //MARK: - numberOfRowsInSection
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userEmailArray.count
     }
+    
+    
+    //MARK: - cellForRowAt
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FeedCell
@@ -77,5 +92,5 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.customImageView.sd_setImage(with: URL(string: self.userImageArray[indexPath.row]))
         return cell
     }
-
+    
 }

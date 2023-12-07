@@ -8,27 +8,30 @@
 import UIKit
 
 class FeedCell: UITableViewCell {
-
-
+    
+    
+    //MARK: - @IBOutlet
+    
     @IBOutlet weak var customImageView: UIImageView!
     @IBOutlet weak var userView: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var likeCountLabel: UILabel!
-
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-
+        
     }
     
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        
+    }
+    
+    
+    //MARK: - likeButton
     
     @IBAction func likeButton(_ sender: Any) {
-               print("Tapped Like")
+        print("Tapped Like")
     }
     
-
 }
