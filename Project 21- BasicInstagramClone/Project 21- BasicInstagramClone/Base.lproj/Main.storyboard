@@ -195,6 +195,10 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CMP-mB-mS5">
                                                     <rect key="frame" x="25" y="74" width="348" height="300.66666666666669"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="348" id="3za-j1-zmX"/>
+                                                        <constraint firstAttribute="height" constant="300.67000000000002" id="73j-5B-23u"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxm-6X-sLi">
                                                     <rect key="frame" x="25" y="33" width="348" height="33"/>

@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
@@ -35,8 +36,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print("DATABASE IS EMPTY")
             }else {
                 if snapShot?.isEmpty != true && snapShot != nil {
+                    
+                    self.userEmailArray.removeAll(keepingCapacity: false)
+                    self.userCommentArray.removeAll(keepingCapacity: false)
+                    self.userLikeArray.removeAll(keepingCapacity: false)
+                    self.userImageArray.removeAll(keepingCapacity: false)
+
+                    
                     for document in snapShot!.documents {
-                   //     let documentID = document.documentID
                         
                         if let postedBy = document.get("postBy") as? String{
                             self.userEmailArray.append(postedBy)
@@ -46,6 +53,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                         }
                         if let postLike = document.get("like") as? Int {
                             self.userLikeArray.append(postLike)
+                        }
+                        if let postImage = document.get("imageUrl") as? String{
+                            self.userImageArray.append(postImage)
                         }
                     }
                     self.tableView.reloadData()
@@ -64,7 +74,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.commentLabel.text = userCommentArray[indexPath.row]
         cell.userView.text = userEmailArray[indexPath.row]
         cell.likeCountLabel.text = String(userLikeArray[indexPath.row])
-        cell.customImageView.image = UIImage(named: "addPhoto")
+        cell.customImageView.sd_setImage(with: URL(string: self.userImageArray[indexPath.row]))
         return cell
     }
 

@@ -19,6 +19,7 @@
 		0E1DA5F02B1E2E5D00F16D07 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1DA5EF2B1E2E5D00F16D07 /* FirebaseAuth */; };
 		0E1DA5F22B1E2E5D00F16D07 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1DA5F12B1E2E5D00F16D07 /* FirebaseFirestore */; };
 		0E1DA5F42B1E2E5D00F16D07 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1DA5F32B1E2E5D00F16D07 /* FirebaseStorage */; };
+		0E51AA472B22241700B0A9A5 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 0E51AA462B22241700B0A9A5 /* SDWebImageSVGCoder */; };
 		0E5803C92B1E76D1007BFAA3 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5803C82B1E76D1007BFAA3 /* FeedViewController.swift */; };
 		0E5803CB2B1E76E2007BFAA3 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5803CA2B1E76E2007BFAA3 /* UploadViewController.swift */; };
 		0E5803CD2B1E76F6007BFAA3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5803CC2B1E76F6007BFAA3 /* SettingsViewController.swift */; };
@@ -48,6 +49,7 @@
 				0E1DA5EE2B1E2E5D00F16D07 /* FirebaseAnalytics in Frameworks */,
 				0E1DA5F42B1E2E5D00F16D07 /* FirebaseStorage in Frameworks */,
 				0E1DA5F02B1E2E5D00F16D07 /* FirebaseAuth in Frameworks */,
+				0E51AA472B22241700B0A9A5 /* SDWebImageSVGCoder in Frameworks */,
 				0E1DA5F22B1E2E5D00F16D07 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,6 +113,7 @@
 				0E1DA5EF2B1E2E5D00F16D07 /* FirebaseAuth */,
 				0E1DA5F12B1E2E5D00F16D07 /* FirebaseFirestore */,
 				0E1DA5F32B1E2E5D00F16D07 /* FirebaseStorage */,
+				0E51AA462B22241700B0A9A5 /* SDWebImageSVGCoder */,
 			);
 			productName = "Project 21- BasicInstagramClone";
 			productReference = 0E1DA5D32B1E2D4F00F16D07 /* Project 21- BasicInstagramClone.app */;
@@ -142,6 +145,7 @@
 			mainGroup = 0E1DA5CA2B1E2D4F00F16D07;
 			packageReferences = (
 				0E1DA5EC2B1E2E5D00F16D07 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				0E51AA452B22241700B0A9A5 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */,
 			);
 			productRefGroup = 0E1DA5D42B1E2D4F00F16D07 /* Products */;
 			projectDirPath = "";
@@ -413,6 +417,14 @@
 				kind = branch;
 			};
 		};
+		0E51AA452B22241700B0A9A5 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSVGCoder.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -435,6 +447,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0E1DA5EC2B1E2E5D00F16D07 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		0E51AA462B22241700B0A9A5 /* SDWebImageSVGCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E51AA452B22241700B0A9A5 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */;
+			productName = SDWebImageSVGCoder;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
