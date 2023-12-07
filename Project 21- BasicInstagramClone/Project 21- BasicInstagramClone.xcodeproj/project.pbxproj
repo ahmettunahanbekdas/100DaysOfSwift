@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E144DB32B21F2480071EB86 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E144DB22B21F2480071EB86 /* FeedCell.swift */; };
 		0E1DA5D72B1E2D4F00F16D07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1DA5D62B1E2D4F00F16D07 /* AppDelegate.swift */; };
 		0E1DA5D92B1E2D4F00F16D07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1DA5D82B1E2D4F00F16D07 /* SceneDelegate.swift */; };
 		0E1DA5DB2B1E2D4F00F16D07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1DA5DA2B1E2D4F00F16D07 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E144DB22B21F2480071EB86 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		0E1DA5D32B1E2D4F00F16D07 /* Project 21- BasicInstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 21- BasicInstagramClone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E1DA5D62B1E2D4F00F16D07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E1DA5D82B1E2D4F00F16D07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				0E5803C82B1E76D1007BFAA3 /* FeedViewController.swift */,
 				0E5803CA2B1E76E2007BFAA3 /* UploadViewController.swift */,
 				0E5803CC2B1E76F6007BFAA3 /* SettingsViewController.swift */,
+				0E144DB22B21F2480071EB86 /* FeedCell.swift */,
 				0E1DA5DC2B1E2D4F00F16D07 /* Main.storyboard */,
 				0E1DA5DF2B1E2D5000F16D07 /* Assets.xcassets */,
 				0E1DA5E12B1E2D5000F16D07 /* LaunchScreen.storyboard */,
@@ -168,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E144DB32B21F2480071EB86 /* FeedCell.swift in Sources */,
 				0E1DA5DB2B1E2D4F00F16D07 /* ViewController.swift in Sources */,
 				0E5803CB2B1E76E2007BFAA3 /* UploadViewController.swift in Sources */,
 				0E1DA5D72B1E2D4F00F16D07 /* AppDelegate.swift in Sources */,
