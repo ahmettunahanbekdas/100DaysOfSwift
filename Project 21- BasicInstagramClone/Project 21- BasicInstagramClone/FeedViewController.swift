@@ -6,27 +6,66 @@
 //
 
 import UIKit
+import Firebase
 
-class FeedViewController: UIViewController {
-
+class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
+    var userEmailArray = [String]()
+    var userCommentArray = [String]()
+    var userLikeArray = [Int]()
+    var userImageArray = [String]()
     
-    @IBOutlet weak var TableView: UITableView!
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        getFireStoreData()
 
-        // Do any additional setup after loading the view.
     }
     
+    func getFireStoreData() {
+        let fireStoreDataBase = Firestore.firestore()
+        
+        fireStoreDataBase.collection("Posts").addSnapshotListener { snapShot, error in
+            if error != nil {
+                print("DATABASE IS EMPTY")
+            }else {
+                if snapShot?.isEmpty != true && snapShot != nil {
+                    for document in snapShot!.documents {
+                   //     let documentID = document.documentID
+                        
+                        if let postedBy = document.get("postBy") as? String{
+                            self.userEmailArray.append(postedBy)
+                        }
+                        if let postComment = document.get("postComment") as? String{
+                            self.userCommentArray.append(postComment)
+                        }
+                        if let postLike = document.get("like") as? Int {
+                            self.userLikeArray.append(postLike)
+                        }
+                    }
+                    self.tableView.reloadData()
+                }
+            }
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return userEmailArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FeedCell
+        cell.commentLabel.text = userCommentArray[indexPath.row]
+        cell.userView.text = userEmailArray[indexPath.row]
+        cell.likeCountLabel.text = String(userLikeArray[indexPath.row])
+        cell.customImageView.image = UIImage(named: "addPhoto")
+        return cell
+    }
 
 }

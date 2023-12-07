@@ -107,7 +107,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate , 
                     self.makeAlert(title: "Succes", message: "")
                     self.imageView.image = UIImage(named: "addPhoto")
                     self.commentTextField.text = ""
-                    self.tabBarController?.selectedIndex = 0
+                    self.tabBarController?.selectedIndex = 1
                 }
             }
         }
