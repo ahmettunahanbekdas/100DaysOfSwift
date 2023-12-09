@@ -130,9 +130,6 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         // 8. Değişiklikleri kaydeder
         do {
             try context.save()
-            print("Başarılı")
-            print(newBook)
-            print(data!)
         } catch {
             print("Hata")
         }

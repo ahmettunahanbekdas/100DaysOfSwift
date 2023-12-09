@@ -10,6 +10,8 @@ import CoreData
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // MARK: - @IBOutlet and Variables
+
     @IBOutlet weak var tableView: UITableView!
     
     var nameArray = [String]()
@@ -18,6 +20,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var selectedBook = ""
     var selectedID : UUID?
     
+    // MARK: - viewDidLoad
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,12 +36,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         getData()
     }
     
+    // MARK: - viewWillAppear
+
     override func viewWillAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(getData), name: NSNotification.Name(rawValue: "Created New Object"), object: nil)
     }
     
     
-    
+    // MARK: - getData
+
     // 3. Veritabanından kitap verilerini almak için kullanılan fonksiyon
     @objc func getData() {
         

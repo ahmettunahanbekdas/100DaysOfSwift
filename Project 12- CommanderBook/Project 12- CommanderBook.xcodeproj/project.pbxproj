@@ -60,15 +60,15 @@
 		0EFEE5922AF6BDCE00033126 /* Project 12- CommanderBook */ = {
 			isa = PBXGroup;
 			children = (
-				0EFEE5932AF6BDCE00033126 /* AppDelegate.swift */,
 				0EFEE5952AF6BDCE00033126 /* SceneDelegate.swift */,
+				0EFEE5932AF6BDCE00033126 /* AppDelegate.swift */,
 				0EFEE5972AF6BDCE00033126 /* ViewController.swift */,
 				0EFEE5A72AF6C02200033126 /* DetailViewController.swift */,
+				0EFEE5AB2AF6C4F800033126 /* CommanderModel.swift */,
 				0EFEE5992AF6BDCE00033126 /* Main.storyboard */,
 				0EFEE59E2AF6BDCF00033126 /* LaunchScreen.storyboard */,
 				0EFEE59C2AF6BDCF00033126 /* Assets.xcassets */,
 				0EFEE5A12AF6BDCF00033126 /* Info.plist */,
-				0EFEE5AB2AF6C4F800033126 /* CommanderModel.swift */,
 			);
 			path = "Project 12- CommanderBook";
 			sourceTree = "<group>";

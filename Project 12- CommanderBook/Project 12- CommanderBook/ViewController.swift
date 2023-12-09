@@ -8,6 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    // MARK: - @IBOutlet and Variables
+
     @IBOutlet weak var tableView: UITableView!
     
     var commanderArray = [Commander]()
