@@ -33,11 +33,9 @@ In this section, I will share the content I have written for the fundamentals of
 
 
 # Courses Pojects Map
-## iOS 17 & Swift 5: Başlangıçtan İleri Seviyeye Mobil Uygulama | Atıl Samancıoğlu
-
-
 In this section, I will share the projects I am working on as I complete them.
 
+## iOS 17 & Swift 5: Başlangıçtan İleri Seviyeye Mobil Uygulama | Atıl Samancıoğlu
 | Project   | Project Name       | File                                                                                                      | Subjects     |  
 |:----------|--------------------|-----------------------------------------------------------------------------------------------------------|--------------|
 | Project 1 | ChangeElon         | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%202-%20ChangeElon)          | Basic Skills |
