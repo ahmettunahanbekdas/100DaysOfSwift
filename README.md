@@ -9,13 +9,13 @@ This repository contains my work. I will be working on a new project or concept 
 # Swift Fundamentals
 ###In this section, I will share the content I have written for the fundamentals of Swift with you.
 
-| Days | Subjects                                        | File                                                                                                                                                        |
-|------|-----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Days | Subjects                   | File                                |                                            
+|------|----------------------------|--------------------------------------|
 |Day 1| Variables, Simple Data Types, and String interpolation | [File](https://tls.tc/VlfCm) |
-| Day 2  | Arrays, Dictionaries, Sets, and Enums           | [File](https://tls.tc/k7S9t) |
-| Day 3  | Operators and Conditions                       | [File](https://tls.tc/RbjNc) |
-| Day 4  | Loops, loops, and more loops                   | [File](https://tls.tc/gCYhF) |
-| Day 5 | Functions, Parameters, and Errors               | [File](https://tls.tc/lm7Rz) |
+|Day 2| Arrays, Dictionaries, Sets, and Enums           | [File](https://tls.tc/k7S9t) |
+|Day 3| Operators and Conditions                       | [File](https://tls.tc/RbjNc) |
+|Day 4| Loops, loops, and more loops                   | [File](https://tls.tc/gCYhF) |
+|Day 5| Functions, Parameters, and Errors               | [File](https://tls.tc/lm7Rz) |
 | Day 6  | Closures part one                              | [File](https://tls.tc/a472B) |
 | Day 7  | Closures part two                              | [File](https://tls.tc/lIOgf) |
 | Day 8  | Structs, Properties, and Methods               | [File](https://tls.tc/NVeN2) |
