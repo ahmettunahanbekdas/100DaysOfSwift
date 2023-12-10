@@ -11,7 +11,7 @@ This repository contains my work. I will be working on a new project or concept 
 
 | Days | Subjects                                        | File                                                                                                                                                        |
 |------|-----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Day 1  ✅| Variables, Simple Data Types, and String interpolation | [File](https://tls.tc/VlfCm) |
+|Day 1| Variables, Simple Data Types, and String interpolation | [File](https://tls.tc/VlfCm) |
 | Day 2  | Arrays, Dictionaries, Sets, and Enums           | [File](https://tls.tc/k7S9t) |
 | Day 3  | Operators and Conditions                       | [File](https://tls.tc/RbjNc) |
 | Day 4  | Loops, loops, and more loops                   | [File](https://tls.tc/gCYhF) |
