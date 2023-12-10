@@ -11,22 +11,23 @@ This repository contains my work. I will be working on a new project or concept 
 
 
 | Day   | File                         | Subjects                                              |
-|:------|------------------------------| ------------------------------------------------------|
+| ------|------------------------------| ------------------------------------------------------|
 | Day 1 | [File](https://tls.tc/VlfCm) | Variables, Simple Data Types, and String Interpolation|
-| Day 2 | [File](https://tls.tc/k7S9t) | Arrays, Dictionaries, Sets, and Enums |
-| Day 3 | [File](https://tls.tc/RbjNc) | Operators and Conditions |
-| Day 4 | [File](https://tls.tc/gCYhF) | Loops, Loops, and More Loops |
-| Day 5 | [File](https://tls.tc/lm7Rz) | Functions, Parameters, and Errors |
-| Day 6 | [File](https://tls.tc/a472B) | Closures Part One |
-| Day 7 | [File](https://tls.tc/lIOgf) | Closures Part Two |
-| Day 8 | [File](https://tls.tc/NVeN2) | Structs, Properties, and Methods |
-| Day 9 | [File](https://tls.tc/AEoid) | Access Control, Static Properties, and Laziness |
-| Day 10| [File](https://tls.tc/9n5Y7) | Classes and Inheritance |
-| Day 11| [File](https://tls.tc/y3eFb) | Protocols, Extensions, and Protocol Extensions |
-| Day 12| [File](https://tls.tc/U6ooT) | Optionals, Unwrapping, and Typecasting |
+| Day 2 | [File](https://tls.tc/k7S9t) | Arrays, Dictionaries, Sets, and Enums                  |
+| Day 3 | [File](https://tls.tc/RbjNc) | Operators and Conditions                               |
+| Day 4 | [File](https://tls.tc/gCYhF) | Loops, Loops, and More Loops                            |
+| Day 5 | [File](https://tls.tc/lm7Rz) | Functions, Parameters, and Errors                      |
+| Day 6 | [File](https://tls.tc/a472B) | Closures Part One                                      |
+| Day 7 | [File](https://tls.tc/lIOgf) | Closures Part Two                                      |
+| Day 8 | [File](https://tls.tc/NVeN2) | Structs, Properties, and Methods                       |
+| Day 9 | [File](https://tls.tc/AEoid) | Access Control, Static Properties, and Laziness        |
+| Day 10| [File](https://tls.tc/9n5Y7) | Classes and Inheritance                               |
+| Day 11| [File](https://tls.tc/y3eFb) | Protocols, Extensions, and Protocol Extensions        |
+| Day 12| [File](https://tls.tc/U6ooT) | Optionals, Unwrapping, and Typecasting                 |
 | Day 13| [File](https://tls.tc/VTK68) | Variables and Constants, Types of Data, Operators, String Interpolation, Arrays, Dictionaries, Conditional Statements, Loops, Switch Case |
 | Day 14| [File](https://tls.tc/aZIOo) | Functions, Optionals, Optional Chaining, Enumeration, Struct, Classes, and Structs vs Classes |
 | Day 15| [File](https://tls.tc/pviai) | Properties, Static Properties and Methods, Access Control, Polymorphism and Typecasting, Closures |
+
 
 
 
