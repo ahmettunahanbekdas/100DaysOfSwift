@@ -12,12 +12,12 @@ In this section, I will share the content I have written for the fundamentals of
 | Day    | File                               | Subjects                                              |
 |:-------|------------------------------------|-------------------------------------------------------|
 | Day 1  | [File](https://tls.tc/VlfCm)       | variables, simple data types, and string interpolation| 
-| Day 2  | [File](https://tls.tc/k7S9t)       | arrays, dictionaries, sets, and enums                 |
-| Day 3 | [File](https://tls.tc/RbjNc)       | operators and conditions                              |
-| Day 4 | [File](https://tls.tc/gCYhF)       | loops, loops, and more loops                          |
-| Day 5 | [File](https://tls.tc/lm7Rz)       | functions, parameters, and errors                     |
-| Day 6 | [File](https://tls.tc/a472B)       | closures part one                                     |
-| Day 7 | [File](https://tls.tc/lIOgf)       | closures part two                                     |
+| Day 2   | [File](https://tls.tc/k7S9t)       | arrays, dictionaries, sets, and enums                 |
+| Day 3   | [File](https://tls.tc/RbjNc)       | operators and conditions                              |
+| Day 4   | [File](https://tls.tc/gCYhF)       | loops, loops, and more loops                          |
+| Day 5   | [File](https://tls.tc/lm7Rz)       | functions, parameters, and errors                     |
+| Day 6   | [File](https://tls.tc/a472B)       | closures part one                                     |
+| Day 7   | [File](https://tls.tc/lIOgf)       | closures part two                                     |
 | Day 8 | [File](https://tls.tc/NVeN2)       | structs, properties, and methods                      |
 | Day 9 | [File](https://tls.tc/AEoid)       |  access control, static properties, and laziness      |
 | Day 10| [File](https://tls.tc/9n5Y7)       |  classes and inheritance                              |
