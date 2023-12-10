@@ -44,27 +44,27 @@ In this section, I will share the projects I am working on as I complete them.
 
 | Project   | Project Name       | File                                                                                                      | Subjects     |  Course      | 
 |:----------|--------------------|-----------------------------------------------------------------------------------------------------------|--------------|--------------|
-| Project 1 | ChangeElon         | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%202-%20ChangeElon)          | Basic Skills |Atıl Samancıoğlu-Udemy|
-| Project 2 | BasicCalculator    | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%201-%20Calculator)          | Basic Skills |
-| Project 3 | ProjectLayout      | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%203-%20ProjectLayout)       | Layout       |
-| Project 4 | ObjectWithCode     | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%204-%20ObjectWithCode)      | Code Design  |
-| Project 5 | BirthdayNoteTaker  | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%205-%20BirthdayNoteTaker)   | User Defaults|
-| Project 6 | SegueApp           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%206-%20SegueApp)            | Segue        |
-| Project 7 | AlertProject       | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%207-%20AlertProject)        | Alert        |
+| Project 1 | ChangeElon         | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%202-%20ChangeElon)          | Basic Skills |Atıl Samancıoğlu Udemy|
+| Project 2 | BasicCalculator    | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%201-%20Calculator)          | Basic Skills |Atıl Samancıoğlu Udemy|
+| Project 3 | ProjectLayout      | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%203-%20ProjectLayout)       | Layout       |Atıl Samancıoğlu Udemy|
+| Project 4 | ObjectWithCode     | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%204-%20ObjectWithCode)      | Code Design  |Atıl Samancıoğlu Udemy|
+| Project 5 | BirthdayNoteTaker  | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%205-%20BirthdayNoteTaker)   | User Defaults|Atıl Samancıoğlu Udemy|
+| Project 6 | SegueApp           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%206-%20SegueApp)            | Segue        |Atıl Samancıoğlu Udemy|
+| Project 7 | AlertProject       | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%207-%20AlertProject)        | Alert        |Atıl Samancıoğlu Udemy|
 | Project 8 | SegueApp           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%208-%20GestureRecognizerApp)| GestureRecognizer|
-| Project 9 | TimerApp           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%209-%20Timer%20Project)     | Timer |
-| Project 10 | CatchElonGame     | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2010-%20CatchElon)          | Timer, User Defaults, Alert, GestureRecognizer|
-| Project 11 | Historian Book           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2011-%20HistorianBook%20)| TableView, Alert, Segue|
-| Project 12 | Commander Book    | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2012-%20CommanderBook)| TableView|
-| Project 13 | CustomTableView         | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2013-%20CustomTableView)| CustomTableView |
-| Project 14 | Friends Book           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2014-%20FriendsBook)| CustomTableView |
-| Project 15 | LibraryApp          | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2015-%20LibraryApp)| CoreData |
-| Project 16 | FoodsBook        | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2016-%20FoodsBook)| CoreData |
-| Project 17 | JourneyJot        | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2017-%20JourneyJot)| MapKit, CoreData |
-| Project 18 | Currency Converter  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2018-%20CurrencyConverter)| JSON, API |
-| Project 19 | Basic Weather App  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2019-%20BasicWeatherApp)| JSON, API, Location|
-| Project 20 | Basic Weather App  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2020-%20APIexample)| JSON, API|
-| Project 21 | Instagram Clone  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2021-%20BasicInstagramClone)| Firebase,Swift Package Manager|
+| Project 9 | TimerApp           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%209-%20Timer%20Project)     | Timer |Atıl Samancıoğlu Udemy|
+| Project 10 | CatchElonGame     | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2010-%20CatchElon)          | Timer, User Defaults, Alert, GestureRecognizer|Atıl Samancıoğlu Udemy|
+| Project 11 | Historian Book           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2011-%20HistorianBook%20)| TableView, Alert, Segue|Atıl Samancıoğlu Udemy|
+| Project 12 | Commander Book    | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2012-%20CommanderBook)| TableView|Atıl Samancıoğlu Udemy|
+| Project 13 | CustomTableView         | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2013-%20CustomTableView)| CustomTableView |Atıl Samancıoğlu Udemy|
+| Project 14 | Friends Book           | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2014-%20FriendsBook)| CustomTableView |Atıl Samancıoğlu Udemy|
+| Project 15 | LibraryApp          | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2015-%20LibraryApp)| CoreData |Atıl Samancıoğlu Udemy|
+| Project 16 | FoodsBook        | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2016-%20FoodsBook)| CoreData |Atıl Samancıoğlu Udemy|
+| Project 17 | JourneyJot        | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2017-%20JourneyJot)| MapKit, CoreData |Atıl Samancıoğlu Udemy|
+| Project 18 | Currency Converter  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2018-%20CurrencyConverter)| JSON, API |Atıl Samancıoğlu Udemy|
+| Project 19 | Basic Weather App  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2019-%20BasicWeatherApp)| JSON, API, Location|Atıl Samancıoğlu Udemy|
+| Project 20 | Basic Weather App  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2020-%20APIexample)| JSON, API|Atıl Samancıoğlu Udemy|
+| Project 21 | Instagram Clone  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2021-%20BasicInstagramClone)| Firebase,Swift Package Manager|Atıl Samancıoğlu Udemy|
 
 
 
