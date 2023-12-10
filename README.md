@@ -1,7 +1,7 @@
  <!--
 # Current Challenge 1/100 - 29.09.2023
 -->
-# 👨🏻‍💻 Welcome to Learning Swift Challenge 
+#  Welcome to Learning Swift Challenge 
 
 This repository contains my work. I will be working on a new project or concept every day using the Swift programming language, with the additional goal of sharing my progress and knowledge with others.
 
