@@ -23,12 +23,6 @@ In this section, I will share the content I have written for the fundamentals of
 | Day 10| [File](https://tls.tc/9n5Y7)       |  classes and inheritance                              |
 | Day 11| [File](https://tls.tc/y3eFb)       |  protocols, extensions, and protocol extensions       |
 | Day 12| [File](https://tls.tc/U6ooT)       |  optionals, unwrapping, and typecasting               |
-
-
-# Swift Fundamentals Summary 
-
-| Day      | File                               | Subjects                                              |
-|:---------|------------------------------------|----------------------------------------------------------------------------------------------------|
 | Day 13   | [File](https://tls.tc/VTK68)       | Variables and Constants, Types of Data, Operators, String Interpolation, Arrays, Dictionaries, Conditional Statements, Loops, Switch Case|
 | Day 14   | [File](https://tls.tc/aZIOo)       | Functions, Optionals, Optional chaining, Enumaretion, Struct, Classes and Structs vs Classes                      |
 | Day 15   | [File](https://tls.tc/pviai)       | Properties, Static properties and methods, Access control, Polymorphism and typecasting, Closures                 |
