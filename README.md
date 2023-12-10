@@ -12,8 +12,7 @@ This repository contains my work. I will be working on a new project or concept 
 
 | Day   | File                         | Subjects                                              |
 | ------|------------------------------| ------------------------------------------------------|
-| Day 1  ✅| Variables, Simple Data Types, and String interpolation | <a href="https://github.com/salihkertik/365-day-of-code-with-swift/blob/main/Swift%20Day%201-15/Day1-Variables.md">File</a> |
-
+| Day 1 | 
 | Day   | [File](https://tls.tc/VlfCm) | Variables, Simple Data Types, and String Interpolation|
 | Day 2 | [File](https://tls.tc/k7S9t) | Arrays, Dictionaries, Sets, and Enums                  |
 | Day 3 | [File](https://tls.tc/RbjNc) | Operators and Conditions                               |
