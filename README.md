@@ -38,7 +38,7 @@ In this section, I will share the projects I am working on as I complete them.
 ## iOS 17 & Swift 5: Başlangıçtan İleri Seviyeye Mobil Uygulama | Atıl Samancıoğlu
 | Project   | Project Name       | File                                                                                                      | Subjects     |  
 |:----------|--------------------|-----------------------------------------------------------------------------------------------------------|--------------|
-| Project 1 | ChangeElon         | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%202-%20ChangeElon)          | Basic Skills |
+| Project 1 | ChangeElon         | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%202-%20ChangeElon)          | Basic Skills |
 | Project 2 | BasicCalculator    | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%201-%20Calculator)          | Basic Skills |
 | Project 3 | ProjectLayout      | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%203-%20ProjectLayout)       | Layout       |
 | Project 4 | ObjectWithCode     | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%204-%20ObjectWithCode)      | Code Design  |
