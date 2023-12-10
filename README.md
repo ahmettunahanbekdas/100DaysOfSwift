@@ -21,7 +21,7 @@ In this section, I will share the content I have written for the fundamentals of
 | Day 7 | [File](https://tls.tc/lIOgf) | Closures Part Two |
 | Day 8 | [File](https://tls.tc/NVeN2) | Structs, Properties, and Methods |
 | Day 9 | [File](https://tls.tc/AEoid) | Access Control, Static Properties, and Laziness |
-| Day 10| [File](https://tls.tc/9n5Y7) | Classes and Inheritance |
+| Day 10         | [File](https://tls.tc/9n5Y7) | Classes and Inheritance |
 | Day 11| [File](https://tls.tc/y3eFb) | Protocols, Extensions, and Protocol Extensions |
 | Day 12| [File](https://tls.tc/U6ooT) | Optionals, Unwrapping, and Typecasting |
 | Day 13| [File](https://tls.tc/VTK68) | Variables and Constants, Types of Data, Operators, String Interpolation, Arrays, Dictionaries, Conditional Statements, Loops, Switch Case |
