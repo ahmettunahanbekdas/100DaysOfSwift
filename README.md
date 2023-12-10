@@ -11,7 +11,7 @@ In this section, I will share the content I have written for the fundamentals of
  
 | Day   | File                               | Subjects                                              |
 |:------|------------------------------------|-------------------------------------------------------|
-| Day 1 | [File](https://tls.tc/VlfCm)       | variables, simple data types, and string interpolation|
+| Day 1 | [File](https://tls.tc/VlfCm)       | variables, simple data types, and string interpolation| 
 | Day 2 | [File](https://tls.tc/k7S9t)       | arrays, dictionaries, sets, and enums                 |
 | Day 3 | [File](https://tls.tc/RbjNc)       | operators and conditions                              |
 | Day 4 | [File](https://tls.tc/gCYhF)       | loops, loops, and more loops                          |
@@ -42,9 +42,9 @@ In this section, I will share the content I have written for the fundamentals of
 # Pojects Map
 In this section, I will share the projects I am working on as I complete them.
 
-| Project       | Project Name   | File                                                                                                      | Subjects     |
-|:----------|--------------------|-----------------------------------------------------------------------------------------------------------|--------------|
-| Project 1 | ChangeElon         | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%202-%20ChangeElon)          | Basic Skills |
+| Project   | Project Name       | File                                                                                                      | Subjects     |  Course      | 
+|:----------|--------------------|-----------------------------------------------------------------------------------------------------------|--------------|--------------|
+| Project 1 | ChangeElon         | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%202-%20ChangeElon)          | Basic Skills |  Atıl Samancıoğlu
 | Project 2 | BasicCalculator    | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%201-%20Calculator)          | Basic Skills |
 | Project 3 | ProjectLayout      | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%203-%20ProjectLayout)       | Layout       |
 | Project 4 | ObjectWithCode     | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%204-%20ObjectWithCode)      | Code Design  |
