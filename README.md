@@ -26,7 +26,8 @@ In this section, I will share the content I have written for the fundamentals of
 | Day 12| [File](https://tls.tc/U6ooT) | Optionals, Unwrapping, and Typecasting |
 | Day 13| [File](https://tls.tc/VTK68) | Variables and Constants, Types of Data, Operators, String Interpolation, Arrays, Dictionaries, Conditional Statements, Loops, Switch Case |
 | Day 14| [File](https://tls.tc/aZIOo) | Functions, Optionals, Optional Chaining, Enumeration, Struct, Classes, and Structs vs Classes |
-| Day 15| [File](https://tls.tc/pviai) | Properties, Static Properties and Meth
+| Day 15| [File](https://tls.tc/pviai) | Properties, Static Properties and Methods, Access Control, Polymorphism and Typecasting, Closures |
+
 
 
 
