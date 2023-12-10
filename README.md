@@ -39,8 +39,8 @@ In this section, I will share the content I have written for the fundamentals of
 
 
 
-# Pojects Map
-## iOS 17 & Swift 5: Başlangıçtan İleri Seviyeye Mobil Uygulama
+# Courses Pojects Map
+## iOS 17 & Swift 5: Başlangıçtan İleri Seviyeye Mobil Uygulama | Atıl Samancıoğlu
 
 
 In this section, I will share the projects I am working on as I complete them.
