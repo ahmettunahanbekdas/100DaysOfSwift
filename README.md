@@ -11,7 +11,6 @@ In this section, I will share the projects I am working on as I complete them.
 ## iOS 17 & Swift 5: Başlangıçtan İleri Seviyeye Mobil Uygulama | Atıl Samancıoğlu
 | Project   | Project Name       | File                                                                                                      | Subjects     |  
 |:----------|--------------------|-----------------------------------------------------------------------------------------------------------|--------------|
-
 | Project 1 | ChangeElon         | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%202-%20ChangeElon)          | Basic Skills |
 | Project 2 | BasicCalculator    | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%201-%20Calculator)          | Basic Skills |
 | Project 3 | ProjectLayout      | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%203-%20ProjectLayout)       | Layout       |
@@ -33,6 +32,7 @@ In this section, I will share the projects I am working on as I complete them.
 | Project 19 | Basic Weather App  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2019-%20BasicWeatherApp)| JSON, API, Location|
 | Project 20 | Basic Weather App  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2020-%20APIexample)| JSON, API|
 | Project 21 | Instagram Clone  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2021-%20BasicInstagramClone)| Firebase,Swift Package Manager|
+
 
 # Swift Fundamentals
 In this section, I will share the content I have written for the fundamentals of Swift with you.
