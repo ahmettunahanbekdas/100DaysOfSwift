@@ -11,7 +11,7 @@ In this section, I will share the content I have written for the fundamentals of
  
 | Day   | File                               | Subjects                                              |
 |:------|------------------------------------|-------------------------------------------------------|
-| Day 1 | [File](https://tls.tc/VlfCm)       | variables, simple data types, and string interpolation|
+| Day 1 | [File](https://tls.tc/VlfCm)       | variables, simple data types, and string interpolation| 
 | Day 2 | [File](https://tls.tc/k7S9t)       | arrays, dictionaries, sets, and enums                 |
 | Day 3 | [File](https://tls.tc/RbjNc)       | operators and conditions                              |
 | Day 4 | [File](https://tls.tc/gCYhF)       | loops, loops, and more loops                          |
@@ -42,7 +42,7 @@ In this section, I will share the content I have written for the fundamentals of
 # Pojects Map
 In this section, I will share the projects I am working on as I complete them.
 
-| Project       | Project Name   | File                                                                                                      | Subjects     |
+| Project   | Project Name       | File                                                                                                      | Subjects     |  
 |:----------|--------------------|-----------------------------------------------------------------------------------------------------------|--------------|
 | Project 1 | ChangeElon         | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%202-%20ChangeElon)          | Basic Skills |
 | Project 2 | BasicCalculator    | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%201-%20Calculator)          | Basic Skills |
@@ -61,11 +61,10 @@ In this section, I will share the projects I am working on as I complete them.
 | Project 15 | LibraryApp          | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2015-%20LibraryApp)| CoreData |
 | Project 16 | FoodsBook        | [File](https://github.com/ahmettunahanbekdas/100DaysOfSwift/tree/main/Project%2016-%20FoodsBook)| CoreData |
 | Project 17 | JourneyJot        | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2017-%20JourneyJot)| MapKit, CoreData |
-| Project 18 | Currency Converter  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2018-%20CurrencyConverter)| JSON, API |
+| Project 18 | Currency Converter  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2018-%20CurrencyConverter)| JSON, API 
 | Project 19 | Basic Weather App  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2019-%20BasicWeatherApp)| JSON, API, Location|
 | Project 20 | Basic Weather App  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2020-%20APIexample)| JSON, API|
 | Project 21 | Instagram Clone  | [File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2021-%20BasicInstagramClone)| Firebase,Swift Package Manager|
-
 
 
 
