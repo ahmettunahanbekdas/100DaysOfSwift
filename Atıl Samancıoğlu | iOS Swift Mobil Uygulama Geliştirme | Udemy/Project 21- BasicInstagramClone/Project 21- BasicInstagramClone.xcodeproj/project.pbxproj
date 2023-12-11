@@ -14,7 +14,6 @@
 		0E1DA5DE2B1E2D4F00F16D07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1DA5DC2B1E2D4F00F16D07 /* Main.storyboard */; };
 		0E1DA5E02B1E2D5000F16D07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E1DA5DF2B1E2D5000F16D07 /* Assets.xcassets */; };
 		0E1DA5E32B1E2D5000F16D07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1DA5E12B1E2D5000F16D07 /* LaunchScreen.storyboard */; };
-		0E1DA5EB2B1E2DD700F16D07 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E1DA5EA2B1E2DD700F16D07 /* GoogleService-Info.plist */; };
 		0E2011072B26018A00D187C1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0E2011062B26018A00D187C1 /* FirebaseAnalytics */; };
 		0E2011092B26018A00D187C1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0E2011082B26018A00D187C1 /* FirebaseAuth */; };
 		0E20110B2B26018A00D187C1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0E20110A2B26018A00D187C1 /* FirebaseFirestore */; };
@@ -23,6 +22,7 @@
 		0E5803C92B1E76D1007BFAA3 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5803C82B1E76D1007BFAA3 /* FeedViewController.swift */; };
 		0E5803CB2B1E76E2007BFAA3 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5803CA2B1E76E2007BFAA3 /* UploadViewController.swift */; };
 		0E5803CD2B1E76F6007BFAA3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5803CC2B1E76F6007BFAA3 /* SettingsViewController.swift */; };
+		0E5EEB962B26FC1400581E62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E5EEB952B26FC1400581E62 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +35,10 @@
 		0E1DA5DF2B1E2D5000F16D07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E1DA5E22B1E2D5000F16D07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E1DA5E42B1E2D5000F16D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E1DA5EA2B1E2DD700F16D07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0E5803C82B1E76D1007BFAA3 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0E5803CA2B1E76E2007BFAA3 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		0E5803CC2B1E76F6007BFAA3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0E5EEB952B26FC1400581E62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 				0E1DA5E12B1E2D5000F16D07 /* LaunchScreen.storyboard */,
 				0E1DA5DF2B1E2D5000F16D07 /* Assets.xcassets */,
 				0E1DA5E42B1E2D5000F16D07 /* Info.plist */,
-				0E1DA5EA2B1E2DD700F16D07 /* GoogleService-Info.plist */,
+				0E5EEB952B26FC1400581E62 /* GoogleService-Info.plist */,
 			);
 			path = "Project 21- BasicInstagramClone";
 			sourceTree = "<group>";
@@ -162,9 +162,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E1DA5E32B1E2D5000F16D07 /* LaunchScreen.storyboard in Resources */,
-				0E1DA5EB2B1E2DD700F16D07 /* GoogleService-Info.plist in Resources */,
 				0E1DA5E02B1E2D5000F16D07 /* Assets.xcassets in Resources */,
 				0E1DA5DE2B1E2D4F00F16D07 /* Main.storyboard in Resources */,
+				0E5EEB962B26FC1400581E62 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
