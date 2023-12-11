@@ -1,13 +1,11 @@
 //
 //  AppDelegate.swift
-//  Project 21- BasicInstagramClone
+//  Project 21- BasicsInstagramClone
 //
-//  Created by Ahmet Tunahan Bekdaş on 4.12.2023.
+//  Created by Ahmet Tunahan Bekdaş on 11.12.2023.
 //
 
 import UIKit
-import Firebase
-import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,12 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
         return true
     }
-    
-
-
 
     // MARK: UISceneSession Lifecycle
 
