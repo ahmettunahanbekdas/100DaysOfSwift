@@ -10,17 +10,21 @@ import Firebase
 
 class ViewController: UIViewController {
     
+    
+    
+    var usersName : String = ""
+    
     //MARK: - @IBOutlets
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    
     //MARK: - viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        passwordTextField.isSecureTextEntry = true
+
     }
     
     
@@ -47,7 +51,7 @@ class ViewController: UIViewController {
     
     @IBAction func signUpButton(_ sender: Any) {
         if emailTextField.text != "" && passwordTextField.text != "" {
-            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { authData, error in
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { [self] authData, error in
                 if error != nil {
                     self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
                 }else{

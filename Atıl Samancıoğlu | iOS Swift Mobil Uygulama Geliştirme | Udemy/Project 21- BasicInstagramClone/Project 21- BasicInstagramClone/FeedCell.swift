@@ -35,15 +35,11 @@ class FeedCell: UITableViewCell {
         print("Tapped Like")
         let fireStoreDataBase = Firestore.firestore()
         
-        
         if let likeCount = Int(likeCountLabel.text!){
             let likeStore =  ["like" : likeCount + 1] as! [String : Any]
             fireStoreDataBase.collection("Posts").document(documentIDLabel.text ?? "Error").setData(likeStore, merge: true)
             print(likeStore)
-
         }
-        
-        
     }
     
 }

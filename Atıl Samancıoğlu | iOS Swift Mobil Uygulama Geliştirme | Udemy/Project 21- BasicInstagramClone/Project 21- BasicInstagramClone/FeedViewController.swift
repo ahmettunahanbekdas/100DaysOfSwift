@@ -34,7 +34,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
-    
     //MARK: - getFireStoreData()
     
     func getFireStoreData() {
@@ -69,6 +68,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                         if let postImage = document.get("imageUrl") as? String{
                             self.userImageArray.append(postImage)
                         }
+                        
                     }
                     self.tableView.reloadData()
                 }

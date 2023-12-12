@@ -96,8 +96,9 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate , 
                         "postBy": Auth.auth().currentUser?.email ?? "",
                         "postComment": self.commentTextField.text ?? "",
                         "date": FieldValue.serverTimestamp(),
-                        "like": 0
-                    ]
+                        "like" : 0
+
+                    ] as [String:Any]
                     
                     firestoreReferance = firestoreDatabase.collection("Posts").addDocument(data: firestorePost, completion: { error in
                         if error != nil {
@@ -108,6 +109,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate , 
                     self.imageView.image = UIImage(named: "addPhoto")
                     self.commentTextField.text = ""
                     self.tabBarController?.selectedIndex = 1
+                    
                 }
             }
         }
