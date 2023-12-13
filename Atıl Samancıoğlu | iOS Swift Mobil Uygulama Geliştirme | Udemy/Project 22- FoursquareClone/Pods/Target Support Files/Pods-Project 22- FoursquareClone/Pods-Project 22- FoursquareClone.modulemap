@@ -1,0 +1,6 @@
+framework module Pods_Project_22__FoursquareClone {
+  umbrella header "Pods-Project 22- FoursquareClone-umbrella.h"
+
+  export *
+  module * { export * }
+}
