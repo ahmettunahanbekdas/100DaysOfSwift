@@ -32,7 +32,7 @@ In this section, I will share the projects I am working on as I complete them.
 | Project 19 | Basic Weather App  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2019-%20BasicWeatherApp)| JSON, API, Location|
 | Project 20 | Basic Weather App  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2020-%20APIexample)| JSON, API|
 | Project 21 | Instagram Clone  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2021-%20BasicInstagramClone)| Firebase,Swift Package Manager|
-| Project 21 | Foursquare | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2022-%20FoursquareClone)| Parse, Navigation, MapKit|
+| Project 22 | Foursquare | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2022-%20FoursquareClone)| Parse, Navigation, MapKit|
 
 
 # Swift Fundamentals
