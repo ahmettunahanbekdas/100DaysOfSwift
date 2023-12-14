@@ -13,6 +13,8 @@
 		0E418FE92B29C4EE001297D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E418FE72B29C4EE001297D2 /* Main.storyboard */; };
 		0E418FEB2B29C4EF001297D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E418FEA2B29C4EF001297D2 /* Assets.xcassets */; };
 		0E418FEE2B29C4EF001297D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E418FEC2B29C4EF001297D2 /* LaunchScreen.storyboard */; };
+		0E849F8A2B2B222F005B3F63 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E849F892B2B222F005B3F63 /* Places.swift */; };
+		0E849F8C2B2B37B8005B3F63 /* AddPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E849F8B2B2B37B8005B3F63 /* AddPlaces.swift */; };
 		F55425E9D3D7FB46C95478A8 /* Pods_Project_22__FoursquareClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A078536AFE3C158BD4938D01 /* Pods_Project_22__FoursquareClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		0E418FEA2B29C4EF001297D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E418FED2B29C4EF001297D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E418FEF2B29C4EF001297D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E849F892B2B222F005B3F63 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
+		0E849F8B2B2B37B8005B3F63 /* AddPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaces.swift; sourceTree = "<group>"; };
 		35DB11A729708E3D9285C2B0 /* Pods-Project 22- FoursquareClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project 22- FoursquareClone.release.xcconfig"; path = "Target Support Files/Pods-Project 22- FoursquareClone/Pods-Project 22- FoursquareClone.release.xcconfig"; sourceTree = "<group>"; };
 		3B909DEF53809AE864037481 /* Pods-Project 22- FoursquareClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project 22- FoursquareClone.debug.xcconfig"; path = "Target Support Files/Pods-Project 22- FoursquareClone/Pods-Project 22- FoursquareClone.debug.xcconfig"; sourceTree = "<group>"; };
 		A078536AFE3C158BD4938D01 /* Pods_Project_22__FoursquareClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_22__FoursquareClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				0E418FE52B29C4EE001297D2 /* LoginPage.swift */,
+				0E849F892B2B222F005B3F63 /* Places.swift */,
+				0E849F8B2B2B37B8005B3F63 /* AddPlaces.swift */,
 				0E418FE12B29C4EE001297D2 /* AppDelegate.swift */,
 				0E418FE32B29C4EE001297D2 /* SceneDelegate.swift */,
 				0E418FE72B29C4EE001297D2 /* Main.storyboard */,
@@ -206,9 +212,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E849F8C2B2B37B8005B3F63 /* AddPlaces.swift in Sources */,
 				0E418FE62B29C4EE001297D2 /* LoginPage.swift in Sources */,
 				0E418FE22B29C4EE001297D2 /* AppDelegate.swift in Sources */,
 				0E418FE42B29C4EE001297D2 /* SceneDelegate.swift in Sources */,
+				0E849F8A2B2B222F005B3F63 /* Places.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

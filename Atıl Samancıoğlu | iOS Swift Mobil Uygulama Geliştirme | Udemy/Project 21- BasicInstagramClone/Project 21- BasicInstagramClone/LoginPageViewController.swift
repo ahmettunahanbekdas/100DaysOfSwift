@@ -30,7 +30,7 @@ class LoginPageViewController : UIViewController {
     
     //MARK: - signInButton
     
-    @IBAction func signInButton(_ sender: Any) {
+     @IBAction func signInButton(_ sender: Any) {
         if emailTextField.text != "" && passwordTextField.text != "" {
             Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { authData, error in
                 if  error != nil {

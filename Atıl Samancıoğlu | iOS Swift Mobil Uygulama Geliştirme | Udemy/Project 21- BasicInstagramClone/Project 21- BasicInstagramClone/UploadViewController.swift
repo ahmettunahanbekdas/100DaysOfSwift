@@ -40,6 +40,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate , 
         present(imagePicker, animated: true, completion: nil)
     }
     
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickerImage = info[.originalImage] as? UIImage{
             imageView.image = pickerImage

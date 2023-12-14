@@ -21,6 +21,8 @@ class LoginPage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        
 /*
         let parseObject = PFObject(className: "Fruits")
         parseObject["name"] = "Orange"
@@ -60,7 +62,7 @@ class LoginPage: UIViewController {
                     self.makeAlert(title: "Error", message: error.localizedDescription)
                 } else {
                     // Giriş başarılı oldu, istediğin işlemleri gerçekleştir ve bir segue ile yönlendirme yapabilirsin.
-                    self.performSegue(withIdentifier: "toGo", sender: nil)
+                    self.performSegue(withIdentifier: " toPlaces", sender: nil)
                     print("Login Successful")
                     print("Welcome \(user?.username)")
                 }
@@ -87,7 +89,7 @@ class LoginPage: UIViewController {
                 if let error = error {
                     self.makeAlert(title: "Error", message: error.localizedDescription)
                 }else {
-                    self.performSegue(withIdentifier: "toGo", sender: nil)
+                    self.performSegue(withIdentifier: " toPlaces", sender: nil)
                     print("Succes")
                 }
             }
