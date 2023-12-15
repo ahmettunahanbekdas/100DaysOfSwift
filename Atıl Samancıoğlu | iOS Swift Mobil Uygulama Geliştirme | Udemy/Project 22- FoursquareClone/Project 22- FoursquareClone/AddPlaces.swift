@@ -9,6 +9,8 @@ import UIKit
 import Parse
 
 class AddPlaces: UIViewController, UIImagePickerControllerDelegate , UINavigationControllerDelegate {
+
+    // MARK: - @IBOutlet
     
     @IBOutlet weak var placeNameTextField: UITextField!
     @IBOutlet weak var placeTypeTextField: UITextField!
@@ -16,6 +18,7 @@ class AddPlaces: UIViewController, UIImagePickerControllerDelegate , UINavigatio
     @IBOutlet weak var placeImageView: UIImageView!
     
     
+    // MARK: - viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +29,10 @@ class AddPlaces: UIViewController, UIImagePickerControllerDelegate , UINavigatio
 
     }
     
+    // MARK: - nextButton
 
     @IBAction func nextButton(_ sender: Any) {
-        
+        /*
         let parseObject = PFObject(className: "Places")
         parseObject["placesName"] = placeNameTextField.text
         parseObject["placesType"] = placeTypeTextField.text
@@ -41,8 +45,14 @@ class AddPlaces: UIViewController, UIImagePickerControllerDelegate , UINavigatio
                 self.makeAlert(title: "Succes", message: "Added Places")
             }
         }
+         */
+        
+        performSegue(withIdentifier: "toMap", sender: nil)
+        
     }
     
+    // MARK: - tappedImage
+
     @objc func tappedImage() {
         print("tappedImage")
         let imagePicker = UIImagePickerController()

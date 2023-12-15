@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -182,11 +183,38 @@
                         <outlet property="placeImageView" destination="E5v-bw-IyT" id="RMS-Eg-WzX"/>
                         <outlet property="placeNameTextField" destination="POB-2k-ZvW" id="1jz-Dq-qVc"/>
                         <outlet property="placeTypeTextField" destination="YWN-ag-e2p" id="cv6-6L-z6q"/>
+                        <segue destination="om9-cY-kya" kind="show" identifier="toMap" id="Z3g-SI-bzP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cso-wq-qIN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3127.4809160305344" y="-2.1126760563380285"/>
+        </scene>
+        <!--Map View-->
+        <scene sceneID="9Zo-OA-9KZ">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="om9-cY-kya" customClass="MapView" customModule="Project_22__FoursquareClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z7D-eC-87q">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2OU-7s-P6C">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ohm-qV-F1m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="A5g-jx-Pv5"/>
+                    <connections>
+                        <outlet property="mapView" destination="2OU-7s-P6C" id="tZe-Q2-yjf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMk-5c-M5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3983.969465648855" y="-2.1126760563380285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1PG-5o-G5G">
