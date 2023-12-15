@@ -26,29 +26,15 @@ class AddPlaces: UIViewController, UIImagePickerControllerDelegate , UINavigatio
         let tappedImage = UITapGestureRecognizer.init(target: self, action: #selector(tappedImage))
         placeImageView.addGestureRecognizer(tappedImage)
         placeImageView.isUserInteractionEnabled = true
+        
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(title: "Save", style: UIBarButtonItem.Style.plain, target: self, action: #selector(toMap))
 
     }
     
     // MARK: - nextButton
 
-    @IBAction func nextButton(_ sender: Any) {
-        /*
-        let parseObject = PFObject(className: "Places")
-        parseObject["placesName"] = placeNameTextField.text
-        parseObject["placesType"] = placeTypeTextField.text
-        parseObject["placesComment"] = placeCommentTextField.text
-        
-        parseObject.saveInBackground { succes, error in
-            if error != nil {
-                self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
-            }else{
-                self.makeAlert(title: "Succes", message: "Added Places")
-            }
-        }
-         */
-        
+    @objc func toMap() {
         performSegue(withIdentifier: "toMap", sender: nil)
-        
     }
     
     // MARK: - tappedImage
