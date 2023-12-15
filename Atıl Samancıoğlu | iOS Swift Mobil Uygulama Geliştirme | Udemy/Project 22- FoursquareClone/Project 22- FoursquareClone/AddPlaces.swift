@@ -12,7 +12,7 @@ import Parse
 
 
 class AddPlaces: UIViewController, UIImagePickerControllerDelegate , UINavigationControllerDelegate {
-
+    
     // MARK: - @IBOutlet
     
     @IBOutlet weak var placeNameTextField: UITextField!
@@ -32,25 +32,35 @@ class AddPlaces: UIViewController, UIImagePickerControllerDelegate , UINavigatio
         
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(title: "Save", style: UIBarButtonItem.Style.plain, target: self, action: #selector(toMap))
         
-
+        
     }
     
     // MARK: - nextButton
-
+    
     @objc func toMap() {
-        performSegue(withIdentifier: "toMap", sender: nil)
         
-        let placesModel = PlacesModel.shared
+        if placeNameTextField.text != "" && placeCommentTextField.text != "" && placeTypeTextField.text != ""{
+            
+            if let chosenImage = placeImageView.image {
+                let placesModel = PlacesModel.sharedInstance
+                placesModel.placesName = placeNameTextField.text
+                placesModel.placesType = placeCommentTextField.text
+                placesModel.placesComment = placeCommentTextField.text
+                placesModel.placesImage = chosenImage
+                
+                performSegue(withIdentifier: "toMap", sender: nil)
+            } 
+            
+        }else {
+            makeAlert(title: "Error", message: "Please Enter Text Fields and Choose Image")
+        }
         
-        placesModel.placesName = placeNameTextField.text
-        placesModel.placesType = placeCommentTextField.text
-        placesModel.placesComment = placeCommentTextField.text
-        placesModel.placesImage = placeImageView
+        
         
     }
     
     // MARK: - tappedImage
-
+    
     @objc func chooseImage() {
         print("tappedImage")
         let imagePicker = UIImagePickerController()

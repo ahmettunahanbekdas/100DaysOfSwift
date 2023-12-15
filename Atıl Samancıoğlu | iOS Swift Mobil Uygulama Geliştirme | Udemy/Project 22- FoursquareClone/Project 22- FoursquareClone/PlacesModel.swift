@@ -10,12 +10,12 @@ import UIKit
 
 class PlacesModel {
     
-    static let shared = PlacesModel()
+    static let sharedInstance = PlacesModel()
     
     var placesName: String?
     var placesType: String?
     var placesComment: String?
-    var placesImage: UIImageView?
+    var placesImage = UIImage()
     
     private init(){}
 }

@@ -9,6 +9,7 @@ import UIKit
 import MapKit
 
 class DetailsPlaces: UIViewController {
+    // MARK: - @IBOutlet
 
     
     @IBOutlet weak var detailsImageView: UIImageView!
@@ -19,7 +20,8 @@ class DetailsPlaces: UIViewController {
     
     
     
-    
+    // MARK: - viewDidLoad
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
