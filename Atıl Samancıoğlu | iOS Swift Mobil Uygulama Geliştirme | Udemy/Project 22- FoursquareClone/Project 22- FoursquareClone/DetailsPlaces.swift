@@ -22,7 +22,6 @@ class DetailsPlaces: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         
     }

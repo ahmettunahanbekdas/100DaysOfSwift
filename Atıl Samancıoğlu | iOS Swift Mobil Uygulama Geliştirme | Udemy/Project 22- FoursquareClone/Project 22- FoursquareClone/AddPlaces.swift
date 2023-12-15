@@ -8,6 +8,9 @@
 import UIKit
 import Parse
 
+
+
+
 class AddPlaces: UIViewController, UIImagePickerControllerDelegate , UINavigationControllerDelegate {
 
     // MARK: - @IBOutlet
@@ -23,11 +26,12 @@ class AddPlaces: UIViewController, UIImagePickerControllerDelegate , UINavigatio
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tappedImage = UITapGestureRecognizer.init(target: self, action: #selector(tappedImage))
-        placeImageView.addGestureRecognizer(tappedImage)
         placeImageView.isUserInteractionEnabled = true
+        let tappedImage = UITapGestureRecognizer.init(target: self, action: #selector(chooseImage))
+        placeImageView.addGestureRecognizer(tappedImage)
         
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(title: "Save", style: UIBarButtonItem.Style.plain, target: self, action: #selector(toMap))
+        
 
     }
     
@@ -35,11 +39,19 @@ class AddPlaces: UIViewController, UIImagePickerControllerDelegate , UINavigatio
 
     @objc func toMap() {
         performSegue(withIdentifier: "toMap", sender: nil)
+        
+        let placesModel = PlacesModel.shared
+        
+        placesModel.placesName = placeNameTextField.text
+        placesModel.placesType = placeCommentTextField.text
+        placesModel.placesComment = placeCommentTextField.text
+        placesModel.placesImage = placeImageView
+        
     }
     
     // MARK: - tappedImage
 
-    @objc func tappedImage() {
+    @objc func chooseImage() {
         print("tappedImage")
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
@@ -49,7 +61,7 @@ class AddPlaces: UIViewController, UIImagePickerControllerDelegate , UINavigatio
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let pickerImage = info[.originalImage] as? UIImage{
+        if let pickerImage = info[.editedImage] as? UIImage{
             placeImageView.image = pickerImage
         }
         self.dismiss(animated: true)

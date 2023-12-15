@@ -32,16 +32,22 @@ class MapView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
         locationMenager.startUpdatingLocation()
         
         
+
+        
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(title: "Save", style: UIBarButtonItem.Style.plain, target: self, action: #selector(saveButton))
         
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(backButton))
         
+        
+        
+        
     }
-    
 
-    
     @objc func saveButton() {
-        print("Saved Locatios")
+        print("Saved Locations")
+        print(PlacesModel.shared.placesName!)
+
+
     }
     
     @objc func backButton() {
