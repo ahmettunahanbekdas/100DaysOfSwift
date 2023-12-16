@@ -30,12 +30,18 @@ class AddPlaces: UIViewController, UIImagePickerControllerDelegate , UINavigatio
         let tappedImage = UITapGestureRecognizer.init(target: self, action: #selector(chooseImage))
         placeImageView.addGestureRecognizer(tappedImage)
         
-        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(title: "Save", style: UIBarButtonItem.Style.plain, target: self, action: #selector(toMap))
+        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(backButton))
+        
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(title: "Next", style: UIBarButtonItem.Style.plain, target: self, action: #selector(toMap))
         
         
     }
     
     // MARK: - nextButton
+    
+    @objc func backButton() {
+       self.dismiss(animated: true, completion: nil)
+    }
     
     @objc func toMap() {
         

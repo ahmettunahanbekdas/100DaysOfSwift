@@ -16,6 +16,8 @@ class PlacesModel {
     var placesType: String?
     var placesComment: String?
     var placesImage = UIImage()
+    var placesLongitude: Double?
+    var placesLatitude: Double?
     
     private init(){}
 }

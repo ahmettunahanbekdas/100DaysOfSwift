@@ -64,7 +64,6 @@ class LoginPage: UIViewController {
                     // Giriş başarılı oldu, istediğin işlemleri gerçekleştir ve bir segue ile yönlendirme yapabilirsin.
                     self.performSegue(withIdentifier: " toPlaces", sender: nil)
                     print("Login Successful")
-                    print("Welcome \(user?.username)")
                 }
             }
         } else {

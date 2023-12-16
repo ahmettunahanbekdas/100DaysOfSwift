@@ -101,9 +101,9 @@
                     <navigationItem key="navigationItem" id="Sck-Qz-zj0"/>
                     <connections>
                         <outlet property="tableView" destination="e2L-qI-kyz" id="g18-2c-785"/>
-                        <segue destination="Ycr-rK-UeY" kind="presentation" identifier="toAddView" id="aag-dy-1ea"/>
+                        <segue destination="Ycr-rK-UeY" kind="presentation" identifier="toAddView" modalPresentationStyle="fullScreen" id="aag-dy-1ea"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toLoginPage" modalPresentationStyle="fullScreen" id="cEG-2S-bvi"/>
-                        <segue destination="3tt-Oa-e7o" kind="show" id="Xb4-wp-mas"/>
+                        <segue destination="3tt-Oa-e7o" kind="show" identifier="toDetailsPlaces" id="Xb4-wp-mas"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZA1-81-vDB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -163,36 +163,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jge-y2-7c3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2003.8167938931297" y="738.73239436619724"/>
+            <point key="canvasLocation" x="2005" y="775"/>
         </scene>
         <!--Add Places-->
         <scene sceneID="AAu-ZK-cV4">
             <objects>
                 <viewController id="Ge8-Qr-pne" customClass="AddPlaces" customModule="Project_22__FoursquareClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a8P-Zx-TNg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Place Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="POB-2k-ZvW">
-                                <rect key="frame" x="31" y="117" width="331" height="34"/>
+                                <rect key="frame" x="31" y="158" width="331" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Place Type" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YWN-ag-e2p">
-                                <rect key="frame" x="31" y="169" width="331" height="34"/>
+                                <rect key="frame" x="31" y="210" width="331" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Place Comment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ff2-J3-LC0">
-                                <rect key="frame" x="31" y="221" width="331" height="34"/>
+                                <rect key="frame" x="31" y="262" width="331" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="E5v-bw-IyT">
-                                <rect key="frame" x="38" y="340" width="316" height="300"/>
+                                <rect key="frame" x="38" y="381" width="316" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -210,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cso-wq-qIN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4054.1984732824426" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="4057" y="-2"/>
         </scene>
         <!--Map View-->
         <scene sceneID="9Zo-OA-9KZ">
@@ -232,17 +232,19 @@
                     <navigationItem key="navigationItem" id="A5g-jx-Pv5"/>
                     <connections>
                         <outlet property="mapView" destination="2OU-7s-P6C" id="tZe-Q2-yjf"/>
+                        <segue destination="0xu-JI-Gfe" kind="presentation" identifier="toTableView" modalPresentationStyle="fullScreen" id="qyx-su-FT3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMk-5c-M5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5835.8778625954192" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="5888" y="-2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1PG-5o-G5G">
             <objects>
                 <navigationController storyboardIdentifier="navigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="0xu-JI-Gfe" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="59p-0e-hQW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dzf-Gw-jss">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -282,7 +284,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="bKN-5a-kSu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hb2-QX-meW">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -295,6 +297,9 @@
             <point key="canvasLocation" x="3127.4809160305344" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qyx-su-FT3"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="addPhoto" width="500" height="500"/>
         <systemColor name="systemBackgroundColor">

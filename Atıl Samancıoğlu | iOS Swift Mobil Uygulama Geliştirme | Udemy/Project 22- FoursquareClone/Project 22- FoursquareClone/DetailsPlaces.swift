@@ -18,6 +18,9 @@ class DetailsPlaces: UIViewController {
     @IBOutlet weak var detailsPlaceComment: UILabel!
     @IBOutlet weak var detailsMapView: MKMapView!
     
+    var chosenPlaceID: String?
+    
+    
     
     
     // MARK: - viewDidLoad
@@ -25,6 +28,7 @@ class DetailsPlaces: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(chosenPlaceID!)
         
     }
     

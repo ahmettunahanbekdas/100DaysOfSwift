@@ -91,7 +91,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                         
                         let span = MKCoordinateSpan(latitudeDelta: 0.007, longitudeDelta: 0.007)
                         let region = MKCoordinateRegion(center: cordinate, span: span)
-                        mapView.setRegion(region, animated: true)
+                        mapView.setRegion(region, animated: true) 
                     }
                 }
             } catch {
@@ -106,7 +106,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 
     
     
-    // MARK: - CLLocationManagerDelegate Methods
+    // MARK: - locationManagec Methods
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if selectedName == "" {
             let locations = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
