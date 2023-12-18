@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import Parse
 
 class DetailsPlaces: UIViewController {
     // MARK: - @IBOutlet
@@ -27,8 +28,16 @@ class DetailsPlaces: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(chosenPlaceID!)
+        let query = PFQuery(className: "Place")
+        query.whereKey("objectId", equalTo: chosenPlaceID!)
+        query.findObjectsInBackground { object, error in
+            if error != nil {
+                self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
+            }else{
+                print(object!)
+            }
+        }
+         
         
     }
     

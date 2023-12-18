@@ -12,13 +12,13 @@ class Places: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
     
-    // MARK: - @IBOutlet
+    // MARK: - @IBOutlet and Variables
     
     @IBOutlet weak var tableView: UITableView!
     
     var placeNameArray = [String]()
     var placeIDArray = [String]()
-    var selectedID: String?
+    var selectedPlaceID: String?
     
     // MARK: - viewDidLoad
     
@@ -35,7 +35,8 @@ class Places: UIViewController, UITableViewDelegate, UITableViewDataSource {
             getData()
     }
     
-    
+    // MARK: - getData
+
     func getData(){
         let query = PFQuery(className: "Place")
         
@@ -65,13 +66,13 @@ class Places: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailsPlaces" {
             let destinationVC = segue.destination as! DetailsPlaces
-            destinationVC.chosenPlaceID = selectedID
+            destinationVC.chosenPlaceID = selectedPlaceID
         }
     }
     // MARK: - didSelectRowAt
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedID = placeIDArray[indexPath.row]
+        selectedPlaceID = placeIDArray[indexPath.row]
         performSegue(withIdentifier: "toDetailsPlaces", sender: nil)
     }
     
