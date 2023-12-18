@@ -21,6 +21,9 @@ class DetailsPlaces: UIViewController {
     
     var chosenPlaceID: String?
     
+    var chosenLatitude: Double?
+    var chosenLongitude: Double?
+    
     
     
     
@@ -28,19 +31,45 @@ class DetailsPlaces: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getPlaceData()
+    }
+    
+    
+    func getPlaceData() {
         let query = PFQuery(className: "Place")
         query.whereKey("objectId", equalTo: chosenPlaceID!)
-        query.findObjectsInBackground { object, error in
+        query.findObjectsInBackground { objects, error in
             if error != nil {
                 self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
             }else{
-                print(object!)
+                if objects != nil{
+                    let chosenPlaceObject = objects![0]
+                    
+                    if let placesName = chosenPlaceObject.object(forKey: "name") as? String {
+                        self.detailsPlaceName.text = placesName
+                    }
+                    if let placesType = chosenPlaceObject.object(forKey: "type") as? String {
+                        self.detailsPlaceType.text = placesType
+                    }
+                    if let placesComment = chosenPlaceObject.object(forKey: "comment") as? String {
+                        self.detailsPlaceComment.text = placesComment
+                    }
+                    if let placesDoubleLatitude = chosenPlaceObject.object(forKey: "latitude") as? Double {
+                        self.chosenLatitude = placesDoubleLatitude
+                    }
+                    if let placesDoubleLobgiude = chosenPlaceObject.object(forKey: "longitude") as? Double {
+                        self.chosenLongitude = placesDoubleLobgiude
+                    }
+                    if let imageData = chosenPlaceObject.object(forKey: "image") as? PFFileObject {
+                        imageData.getDataInBackground { data, error in
+                            if error == nil {
+                                self.detailsImageView.image = UIImage(data: data!)
+                            }
+                        }
+                    }
+                }
             }
         }
-         
-        
+
     }
-    
-
-
 }
