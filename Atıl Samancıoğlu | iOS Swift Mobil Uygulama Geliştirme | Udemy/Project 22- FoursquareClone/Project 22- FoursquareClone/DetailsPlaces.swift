@@ -9,9 +9,9 @@ import UIKit
 import MapKit
 import Parse
 
-class DetailsPlaces: UIViewController {
+class DetailsPlaces: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate {
     // MARK: - @IBOutlet
-
+    
     
     @IBOutlet weak var detailsImageView: UIImageView!
     @IBOutlet weak var detailsPlaceName: UILabel!
@@ -23,19 +23,24 @@ class DetailsPlaces: UIViewController {
     
     var chosenLatitude: Double?
     var chosenLongitude: Double?
+    var locationManager = CLLocationManager()
     
     
     
     
     // MARK: - viewDidLoad
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getPlaceData()
         
+        detailsMapView.delegate = self
+        locationManager.delegate = self
+        
+        
     }
     
-
+    
     
     func getPlaceData() {
         let query = PFQuery(className: "Place")
@@ -87,6 +92,48 @@ class DetailsPlaces: UIViewController {
                 self.detailsMapView.addAnnotation(annotation)
             }
         }
-
+    }
+    
+    
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        // Eğer annotation kullanıcının konumu ise, özel bir pin gösterilmez.
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        let resudeId = "myAnnotation"
+        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: resudeId) as? MKMarkerAnnotationView
+        
+        if pinView == nil {
+            pinView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: resudeId)
+            pinView?.canShowCallout = true
+            let button = UIButton(type: UIButton.ButtonType.detailDisclosure)
+            pinView?.rightCalloutAccessoryView = button
+            pinView?.tintColor = .systemBlue
+        
+        }else{
+            pinView?.annotation = annotation
+        }
+       return pinView
+    }
+    
+    
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let requsetLocations = CLLocation(latitude: chosenLatitude!, longitude: chosenLongitude!)
+        
+        CLGeocoder().reverseGeocodeLocation(requsetLocations) { placeMarks, error in
+            if let placeMarks = placeMarks {
+                if placeMarks.count > 0 {
+                    let newPlaceMark = MKPlacemark(placemark: placeMarks[0])
+                    let item = MKMapItem(placemark: newPlaceMark)
+                    item.name = self.detailsPlaceName.text
+                    
+                    let launchOptions = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
+                    item.openInMaps(launchOptions: launchOptions)
+                }
+            }
+        }
     }
 }
