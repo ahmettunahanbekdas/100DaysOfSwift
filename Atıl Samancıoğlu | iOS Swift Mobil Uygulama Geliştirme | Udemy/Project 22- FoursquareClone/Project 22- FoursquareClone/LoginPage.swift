@@ -47,7 +47,8 @@ class LoginPage: UIViewController {
             }
         }
  */
-        
+        passwordTextField.isSecureTextEntry = true
+
     }
     
     // MARK: - signInButton

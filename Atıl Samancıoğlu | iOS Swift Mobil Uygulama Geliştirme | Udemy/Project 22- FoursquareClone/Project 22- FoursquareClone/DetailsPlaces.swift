@@ -32,8 +32,10 @@ class DetailsPlaces: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getPlaceData()
+        
     }
     
+
     
     func getPlaceData() {
         let query = PFQuery(className: "Place")
@@ -48,7 +50,7 @@ class DetailsPlaces: UIViewController {
                     if let placesName = chosenPlaceObject.object(forKey: "name") as? String {
                         self.detailsPlaceName.text = placesName
                     }
-                    if let placesType = chosenPlaceObject.object(forKey: "type") as? String {
+                    if let placesType = chosenPlaceObject.object(forKey: "type") as? String {
                         self.detailsPlaceType.text = placesType
                     }
                     if let placesComment = chosenPlaceObject.object(forKey: "comment") as? String {
@@ -68,6 +70,21 @@ class DetailsPlaces: UIViewController {
                         }
                     }
                 }
+                
+                // MAPS
+                
+                let locations = CLLocationCoordinate2D(latitude: self.chosenLatitude!, longitude: self.chosenLongitude!)
+                
+                let span = MKCoordinateSpan(latitudeDelta: 0.035, longitudeDelta: 0.035)
+                
+                let region = MKCoordinateRegion(center: locations, span: span)
+                
+                self.detailsMapView.setRegion(region, animated: true)
+                
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = locations
+                annotation.title = self.detailsPlaceName.text
+                self.detailsMapView.addAnnotation(annotation)
             }
         }
 

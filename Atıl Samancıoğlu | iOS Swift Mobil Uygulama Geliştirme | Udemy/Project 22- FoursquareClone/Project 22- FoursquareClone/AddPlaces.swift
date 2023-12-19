@@ -50,7 +50,7 @@ class AddPlaces: UIViewController, UIImagePickerControllerDelegate , UINavigatio
             if let chosenImage = placeImageView.image {
                 let placesModel = PlacesModel.sharedInstance
                 placesModel.placesName = placeNameTextField.text
-                placesModel.placesType = placeCommentTextField.text
+                placesModel.placesType = placeTypeTextField.text
                 placesModel.placesComment = placeCommentTextField.text
                 placesModel.placesImage = chosenImage
                 
