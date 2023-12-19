@@ -111,7 +111,6 @@ class DetailsPlaces: UIViewController,MKMapViewDelegate, CLLocationManagerDelega
             let button = UIButton(type: UIButton.ButtonType.detailDisclosure)
             pinView?.rightCalloutAccessoryView = button
             pinView?.tintColor = .systemBlue
-        
         }else{
             pinView?.annotation = annotation
         }

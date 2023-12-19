@@ -115,7 +115,7 @@
             <objects>
                 <viewController id="3tt-Oa-e7o" customClass="DetailsPlaces" customModule="Project_22__FoursquareClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qHP-Em-u9e">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xve-PB-BjE">
@@ -298,7 +298,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aag-dy-1ea"/>
         <segue reference="qyx-su-FT3"/>
     </inferredMetricsTieBreakers>
     <resources>
