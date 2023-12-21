@@ -1,4 +1,9 @@
 # Basic Weather App
+
+
+- JSON, API
+- MapKit, Locations
+
 This application provides the current weather information of the user's location by obtaining their geographical coordinates.
 
 
