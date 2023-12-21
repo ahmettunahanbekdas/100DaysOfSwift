@@ -110,4 +110,49 @@ class Places: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    /*
+     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                // Tabloda silme işlemini gerçekleştir
+                placeNameArray.remove(at: indexPath.row)
+                placeIDArray.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+
+                // Parse veritabanından ilgili veriyi sil
+                if let placeIDToDelete = placeIDArray[safe: indexPath.row] {
+                    deletePlaceFromParse(placeID: placeIDToDelete)
+                }
+            }
+        }
+    
+    func deletePlaceFromParse(placeID: String) {
+           let query = PFQuery(className: "Place")
+           query.getObjectInBackground(withId: placeID) { object, error in
+               if error != nil {
+                   self.makeAlert(title: "Hata", message: error?.localizedDescription ?? "Hata")
+               } else {
+                   if let objectToDelete = object {
+                       objectToDelete.deleteInBackground { success, error in
+                           if success {
+                               // Silme işlemi başarılı
+                               print("Yer Parse üzerinden silindi.")
+                           } else if let error = error {
+                               // Silme işlemi başarısız
+                               self.makeAlert(title: "Hata", message: error.localizedDescription)
+                           }
+                       }
+                   }
+               }
+           }
+       }
+    
+}
+
+extension Collection {
+    subscript(safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+     */
+    
 }
