@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,28 +15,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xlE-ew-nil">
-                                <rect key="frame" x="42.666666666666657" y="87" width="308" height="342"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="342" id="csh-q2-qcV"/>
-                                    <constraint firstAttribute="width" constant="308" id="dCs-MP-SEx"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBc-8K-dYG">
-                                <rect key="frame" x="100" y="709" width="192" height="46"/>
+                                <rect key="frame" x="100" y="741" width="192" height="46"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="aek-4I-b3H"/>
+                                    <constraint firstAttribute="height" constant="46" id="rl2-nd-qFV"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Select Image"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Select Image">
+                                    <fontDescription key="titleFontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="changeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0nB-6M-mRG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NZ-FJ-MKg">
-                                <rect key="frame" x="0.0" y="546" width="393" height="127"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Black Red Swift Blade Logo-2" translatesAutoresizingMaskIntoConstraints="NO" id="xlE-ew-nil">
+                                <rect key="frame" x="42" y="255" width="308" height="342"/>
+                                <color key="tintColor" red="0.94117647058823528" green="0.59215686274509804" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Adsız tasarım" translatesAutoresizingMaskIntoConstraints="NO" id="Haj-mK-ZC0">
+                                <rect key="frame" x="96.666666666666671" y="59" width="199.66666666666663" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="oNJ-Df-e8N"/>
+                                    <constraint firstAttribute="height" constant="200" id="zhb-tG-gI0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NZ-FJ-MKg">
+                                <rect key="frame" x="0.0" y="572" width="393" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="E5I-HG-bwN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -45,16 +51,21 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.94117647410000005" green="0.59215688710000003" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="xlE-ew-nil" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="8iy-hi-fhx"/>
-                            <constraint firstItem="PBc-8K-dYG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="JHh-67-nX6"/>
-                            <constraint firstItem="PBc-8K-dYG" firstAttribute="top" secondItem="6NZ-FJ-MKg" secondAttribute="bottom" constant="97" id="PhI-7x-Tgd"/>
-                            <constraint firstItem="6NZ-FJ-MKg" firstAttribute="centerX" secondItem="PBc-8K-dYG" secondAttribute="centerX" id="SfR-6U-PLk"/>
-                            <constraint firstItem="xlE-ew-nil" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iYh-eC-Jex"/>
-                            <constraint firstItem="xlE-ew-nil" firstAttribute="trailing" secondItem="6NZ-FJ-MKg" secondAttribute="trailing" id="tBA-Yc-KMT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PBc-8K-dYG" secondAttribute="bottom" constant="63" id="yW5-zk-sgE"/>
-                            <constraint firstItem="xlE-ew-nil" firstAttribute="leading" secondItem="6NZ-FJ-MKg" secondAttribute="leading" id="zE8-PT-FOu"/>
+                            <constraint firstItem="xlE-ew-nil" firstAttribute="centerX" secondItem="6NZ-FJ-MKg" secondAttribute="centerX" id="96l-My-dSA"/>
+                            <constraint firstItem="Haj-mK-ZC0" firstAttribute="centerX" secondItem="xlE-ew-nil" secondAttribute="centerX" id="Hbe-YA-0R0"/>
+                            <constraint firstItem="Haj-mK-ZC0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96.666666666666686" id="JMb-Ck-Fz7"/>
+                            <constraint firstItem="PBc-8K-dYG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="X6D-Q3-7hK"/>
+                            <constraint firstItem="xlE-ew-nil" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XXO-oS-gbf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PBc-8K-dYG" secondAttribute="bottom" constant="31" id="asw-H4-db5"/>
+                            <constraint firstItem="Haj-mK-ZC0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="blT-Sf-EqS"/>
+                            <constraint firstItem="PBc-8K-dYG" firstAttribute="top" secondItem="6NZ-FJ-MKg" secondAttribute="bottom" constant="42" id="hIb-5R-XeF"/>
+                            <constraint firstItem="6NZ-FJ-MKg" firstAttribute="centerX" secondItem="PBc-8K-dYG" secondAttribute="centerX" id="hnt-lB-PPV"/>
+                            <constraint firstAttribute="trailing" secondItem="6NZ-FJ-MKg" secondAttribute="trailing" id="iBW-2H-DUb"/>
+                            <constraint firstItem="xlE-ew-nil" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="vLL-xU-DCf"/>
+                            <constraint firstItem="6NZ-FJ-MKg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vjE-ta-r7r"/>
+                            <constraint firstItem="xlE-ew-nil" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="196" id="wra-eU-NKV"/>
                         </constraints>
                     </view>
                     <connections>
@@ -68,8 +79,7 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="Adsız tasarım" width="500" height="500"/>
+        <image name="Black Red Swift Blade Logo-2" width="500" height="500"/>
     </resources>
 </document>
