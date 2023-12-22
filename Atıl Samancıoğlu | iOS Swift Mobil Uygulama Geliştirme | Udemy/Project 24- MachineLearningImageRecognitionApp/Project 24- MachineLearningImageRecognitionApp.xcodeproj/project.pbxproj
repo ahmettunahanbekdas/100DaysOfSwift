@@ -13,6 +13,7 @@
 		0E4B903E2B34E0DE00BB6F93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B903C2B34E0DE00BB6F93 /* Main.storyboard */; };
 		0E4B90402B34E0DF00BB6F93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B903F2B34E0DF00BB6F93 /* Assets.xcassets */; };
 		0E4B90432B34E0DF00BB6F93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B90412B34E0DF00BB6F93 /* LaunchScreen.storyboard */; };
+		0E4B904B2B34EBD400BB6F93 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B904A2B34EBD400BB6F93 /* MobileNetV2.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0E4B903F2B34E0DF00BB6F93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E4B90422B34E0DF00BB6F93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E4B90442B34E0DF00BB6F93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E4B904A2B34EBD400BB6F93 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				0E4B903C2B34E0DE00BB6F93 /* Main.storyboard */,
 				0E4B903F2B34E0DF00BB6F93 /* Assets.xcassets */,
 				0E4B90412B34E0DF00BB6F93 /* LaunchScreen.storyboard */,
+				0E4B904A2B34EBD400BB6F93 /* MobileNetV2.mlmodel */,
 				0E4B90442B34E0DF00BB6F93 /* Info.plist */,
 			);
 			path = "Project 24- MachineLearningImageRecognitionApp";
@@ -140,6 +143,7 @@
 			files = (
 				0E4B903B2B34E0DE00BB6F93 /* ViewController.swift in Sources */,
 				0E4B90372B34E0DE00BB6F93 /* AppDelegate.swift in Sources */,
+				0E4B904B2B34EBD400BB6F93 /* MobileNetV2.mlmodel in Sources */,
 				0E4B90392B34E0DE00BB6F93 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

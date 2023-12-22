@@ -29,13 +29,13 @@
                                     <constraint firstAttribute="height" constant="46" id="aek-4I-b3H"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Select Image"/>
                                 <connections>
                                     <action selector="changeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0nB-6M-mRG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NZ-FJ-MKg">
-                                <rect key="frame" x="42" y="546" width="308" height="66"/>
+                                <rect key="frame" x="42.666666666666657" y="546" width="308" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="oNJ-Df-e8N"/>
                                 </constraints>
