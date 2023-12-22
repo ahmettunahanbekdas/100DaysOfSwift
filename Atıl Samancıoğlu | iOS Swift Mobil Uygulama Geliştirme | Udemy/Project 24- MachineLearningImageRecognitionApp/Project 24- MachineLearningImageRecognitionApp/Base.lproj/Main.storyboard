@@ -34,8 +34,8 @@
                                     <action selector="changeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0nB-6M-mRG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NZ-FJ-MKg">
-                                <rect key="frame" x="42.666666666666657" y="546" width="308" height="66"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NZ-FJ-MKg">
+                                <rect key="frame" x="0.0" y="546" width="393" height="127"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="oNJ-Df-e8N"/>
                                 </constraints>

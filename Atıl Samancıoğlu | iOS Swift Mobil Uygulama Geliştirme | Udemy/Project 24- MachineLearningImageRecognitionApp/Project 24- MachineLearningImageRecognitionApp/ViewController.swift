@@ -39,26 +39,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: - changeButton() -> Kullanıcı resmi seçtikten sonra gerçekleşecek işlemler
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        var image = imageView.image
-        image = info[.originalImage] as? UIImage
-        self.dismiss(animated: true)
-        
-        
-        if let ciImage = CIImage(image: image!) {  // Kullanıcının seçtiği resmi CIImage tipine çevirmeyi dene
-            chosenImage = ciImage // Değiştirme tip dönüşümü gerçekleşirse chosenImage içersine koy
+        if let image = info[.originalImage] as? UIImage {
+            imageView.image = image
+            self.dismiss(animated: true)
+            
+            if let ciImage = CIImage(image: image) {
+                chosenImage = ciImage
+                recognizeImage(image: chosenImage)
+            }
         }
-        recognizeImage(image: chosenImage) // recognizeImage fonksiyonunu çağır
     }
     
     
     // MARK: - recognizeImage() -> Resim Recognizer İşlemi
     
-    // 1 Reques
+    // 1 Request
     // 2 Handler
 
     func recognizeImage(image:CIImage){
+        
         let MobilerNetConfig = MLModelConfiguration()
+        
         if let model = try? VNCoreMLModel(for: MobileNetV2(configuration: MobilerNetConfig).model){
+            
+            // 1 Request
             let request = VNCoreMLRequest(model: model) { vnRequest, error in
                 if let results = vnRequest.results as? [VNClassificationObservation]{
                     if results.count > 0 {
@@ -68,7 +72,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                             let cofideanceLevel = (topResult?.confidence ?? 0) * 100
                             self.resultLabel.text = "\(cofideanceLevel)% it's \(topResult?.identifier ?? "Error")"
                         }
+                        
                     }
+                }else{
+                    print(error?.localizedDescription ?? "Error Request")
+                }
+            }
+            
+            // 2 Handler
+            let handler = VNImageRequestHandler(ciImage: image)
+            DispatchQueue.global(qos: .userInteractive).async {
+                do{
+                    try handler.perform([request])
+                }catch{
+                    print(error.localizedDescription)
                 }
             }
         }
