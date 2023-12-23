@@ -52,9 +52,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     // MARK: - recognizeImage() -> Resim Recognizer İşlemi
-    
-    // 1 Request
-    // 2 Handler
 
     func recognizeImage(image:CIImage){
         
