@@ -40,10 +40,10 @@ In this section, I will share the content I have written for the fundamentals of
 
 | Day | File | Subjects |
 | --- | ---- | -------- |
-| Day1 | [File](https://tls.tc/VlfCm) | Variables, Simple Data Types, and String Interpolation|
-| Day2 | [File](https://tls.tc/k7S9t) | Arrays, Dictionaries, Sets, and Enums |
-| Day3 | [File](https://tls.tc/RbjNc) | Operators and Conditions |
-| Day4 | [File](https://tls.tc/gCYhF) | Loops, Loops, and More Loops |
+| Day1 | [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day2(%20arrays%2C%20dictionaries%2C%20sets%2C%20and%20enums).md) | Variables, Simple Data Types, and String Interpolation|
+| Day2 | [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day2(%20arrays%2C%20dictionaries%2C%20sets%2C%20and%20enums).md) | Arrays, Dictionaries, Sets, and Enums |
+| Day3 | [File]([https://tls.tc/RbjNc](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day3(operators%20and%20conditions).md)) | Operators and Conditions |
+| Day4 | [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day4(loops).md) | Loops, Loops, and More Loops |
 | Day5 | [File](https://tls.tc/lm7Rz) | Functions, Parameters, and Errors |
 | Day6 | [File](https://tls.tc/a472B) | Closures Part One |
 | Day7 | [File](https://tls.tc/lIOgf) | Closures Part Two |
