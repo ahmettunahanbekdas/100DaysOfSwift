@@ -44,17 +44,17 @@ In this section, I will share the content I have written for the fundamentals of
 | Day2 | [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day2(%20arrays%2C%20dictionaries%2C%20sets%2C%20and%20enums).md) | Arrays, Dictionaries, Sets, and Enums |
 | Day3 | [File]([https://tls.tc/RbjNc](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day3(operators%20and%20conditions).md)) | Operators and Conditions |
 | Day4 | [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day4(loops).md) | Loops, Loops, and More Loops |
-| Day5 | [File](https://tls.tc/lm7Rz) | Functions, Parameters, and Errors |
-| Day6 | [File](https://tls.tc/a472B) | Closures Part One |
-| Day7 | [File](https://tls.tc/lIOgf) | Closures Part Two |
-| Day8 | [File](https://tls.tc/NVeN2) | Structs, Properties, and Methods |
-| Day9 | [File](https://tls.tc/AEoid) | Access Control, Static Properties, and Laziness |
-| Day10| [File](https://tls.tc/9n5Y7) | Classes and Inheritance |
-| Day11| [File](https://tls.tc/y3eFb) | Protocols, Extensions, and Protocol Extensions |
-| Day12| [File](https://tls.tc/U6ooT) | Optionals, Unwrapping, and Typecasting |
-| Day13| [File](https://tls.tc/VTK68) | Variables and Constants, Types of Data, Operators, String Interpolation, Arrays, Dictionaries, Conditional Statements, Loops, Switch Case |
-| Day14| [File](https://tls.tc/aZIOo) | Functions, Optionals, Optional Chaining, Enumeration, Struct, Classes, and Structs vs Classes |
-| Day15| [File](https://tls.tc/pviai) | Properties, Static Properties and Methods, Access Control, Polymorphism and Typecasting, Closures |
+| Day5 | [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day5(functions%2C%20parameters%2C%20and%20errors).md) | Functions, Parameters, and Errors |
+| Day6 | [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day6(closures%20part%20one).md) | Closures Part One |
+| Day7 | [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day7(closures%20part%20two).md) | Closures Part Two |
+| Day8 | [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day8(struct%20part%20one).md) | Structs, Properties, and Methods |
+| Day9 | [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day9(structs%20part%20two%20).md) | Access Control, Static Properties, and Laziness |
+| Day10| [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day9(structs%20part%20two%20).md) | Classes and Inheritance |
+| Day11| [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day11(protocols%2C%20extensions%2C%20and%20protocol%20extensions).md) | Protocols, Extensions, and Protocol Extensions |
+| Day12| [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day12(optionals%2C%20unwrapping%2C%20and%20typecasting).md) | Optionals, Unwrapping, and Typecasting |
+| Day13| [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day13(Summary1).md) | Variables and Constants, Types of Data, Operators, String Interpolation, Arrays, Dictionaries, Conditional Statements, Loops, Switch Case |
+| Day14| [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day14(Summary2).md) | Functions, Optionals, Optional Chaining, Enumeration, Struct, Classes, and Structs vs Classes |
+| Day15| [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day15(Summary3).md) | Properties, Static Properties and Methods, Access Control, Polymorphism and Typecasting, Closures |
 
 
 
