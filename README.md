@@ -64,4 +64,3 @@ I share every day of the challenge on my [Twitter](https://twitter.com/tunahanbe
 
 Visit my [Medium Account](https://medium.com/@tunahanbekdas) 
 
-<img src="https://c.tenor.com/sWEUdV5LQdkAAAAC/yes-apple.gif">
