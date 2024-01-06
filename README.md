@@ -61,6 +61,5 @@ In this section, I will share the content I have written for the fundamentals of
 
 
 I share every day of the challenge on my [Twitter](https://twitter.com/tunahanbekdass) account. If you want to join this challenge and become a colleague, you can send a message.
-
 Visit my [Medium Account](https://medium.com/@tunahanbekdas) 
 
