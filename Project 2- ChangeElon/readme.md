@@ -1,4 +1,4 @@
-# Change Elon 🚀
+# Change Elon 
 
 In this app, we change Elon's emotion by clicking the button
 
