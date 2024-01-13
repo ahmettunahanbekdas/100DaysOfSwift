@@ -1,11 +1,11 @@
  <!--
 # Current Challenge 1/100 - 29.09.2023
 -->
-# 👨🏻‍💻 Welcome to Learning Swift Challenge ⚒️
+# 👨🏻‍💻 Welcome to Learning Swift Challenge 
 
 This repository contains my work. I will be working on a new project or concept every day using the Swift programming language, with the additional goal of sharing my progress and knowledge with others.
 
-# Courses Pojects Map
+# ⚙️ Courses Pojects Map 
 In this section, I will share the projects I am working on as I complete them.
 
 | Project   | Project Name       | Project File                                                                                                      | Subjects     |  
@@ -39,7 +39,7 @@ In this section, I will share the projects I am working on as I complete them.
 
 
 
-# Swift Fundamentals
+# 📖 Swift Fundamentals
 In this section, I will share the content I have written for the fundamentals of Swift with you.
 
 | Day | File | Subjects |
@@ -62,8 +62,6 @@ In this section, I will share the content I have written for the fundamentals of
 
 
 
-
-
+# 🫡 Connect With Me
 I share every day of the challenge on my [Twitter](https://twitter.com/tunahanbekdass) account. If you want to join this challenge and become a colleague, you can send a message.
 Visit my [Medium Account](https://medium.com/@tunahanbekdas) 
-
