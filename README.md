@@ -33,6 +33,10 @@ In this section, I will share the projects I am working on as I complete them.
 | Project 21 | Instagram Clone  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2021-%20BasicInstagramClone)| Firebase,Swift Package Manager|
 | Project 22 | Foursquare Clone | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2022-%20FoursquareClone)| Parse, Navigation, MapKit|
 | Project 23 | Singleton Example | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2023-%20SingletonExample)| Singleton|
+| Project 24 | MachineLearningImageRecognitionApp | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2024-%20MachineLearningImageRecognitionApp)| ML|
+
+
+
 
 
 # Swift Fundamentals
