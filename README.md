@@ -123,7 +123,13 @@ In this section, I will share the projects I am working on as I complete them.
     - Description: Understand and implement the Singleton design pattern.
 
 24. **MachineLearningImageRecognitionApp**
-    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2024-%20MachineLearningImage
+    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2024-%20MachineLearningImage)
+    - Subjects: ML
+    - Description: This project delves into the captivating realm of machine learning, utilizing Core ML in Swift to analyze and identify objects within images through real-time                     image classification.
+       
+
+
+
 
 
 
