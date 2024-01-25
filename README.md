@@ -11,28 +11,28 @@ In this section, I will share the projects I am working on as I complete them.
 | Project   | Project Name       | Project File                                                                                                      | Subjects     |  
 |:----------|--------------------|-----------------------------------------------------------------------------------------------------------|--------------|
 | Project 1 | ChangeElon         | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%201-%20Calculator)          | Basic Skills |
-| Project 2 | BasicCalculator    | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%201-%20Calculator)          | Basic Skills |
-| Project 3 | ProjectLayout      | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day3(operators%20and%20conditions).md)       | Layout       |
-| Project 4 | ObjectWithCode     | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%204-%20ObjectWithCode)      | Code Design  |
-| Project 5 | BirthdayNoteTaker  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%205-%20BirthdayNoteTaker)   | User Defaults|
-| Project 6 | SegueApp           | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%206-%20SegueApp)            | Segue        |
-| Project 7 | AlertProject       | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%207-%20AlertProject)        | Alert        |
-| Project 8 | SegueApp           | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%208-%20GestureRecognizerApp)| GestureRecognizer|
-| Project 9 | TimerApp           | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%209-%20Timer%20Project)     | Timer |
-| Project 10 | CatchElonGame     | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2010-%20CatchElon)          | Timer, User Defaults, Alert, GestureRecognizer|
-| Project 11 | Historian Book           | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2011-%20HistorianBook%20)| TableView, Alert, Segue|
-| Project 12 | Commander Book    | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2012-%20CommanderBook)| TableView|
-| Project 13 | CustomTableView         | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2013-%20CustomTableView)| CustomTableView |
-| Project 14 | Friends Book           | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2014-%20FriendsBook)| CustomTableView |
-| Project 15 | LibraryApp          | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2015-%20LibraryApp)| CoreData |
-| Project 16 | FoodsBook        | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2016-%20FoodsBook)| CoreData |
-| Project 17 | JourneyJot        | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2017-%20JourneyJot)| MapKit, CoreData |
-| Project 18 | Currency Converter  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2018-%20CurrencyConverter)| JSON, API 
-| Project 19 | Basic Weather App  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2019-%20BasicWeatherApp)| JSON, API, Location|
-| Project 20 | API Example  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2020-%20APIexample)| JSON, API|
-| Project 21 | Instagram Clone  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2021-%20BasicInstagramClone)| Firebase,Swift Package Manager|
-| Project 22 | Foursquare Clone | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2022-%20FoursquareClone)| Parse, Navigation, MapKit|
-| Project 23 | Singleton Example | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%2023-%20SingletonExample)| Singleton|
+| Project 2 | BasicCalculator    | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%202-%20ChangeElon)          | Basic Skills |
+| Project 3 | ProjectLayout      | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%203-%20ProjectLayout)       | Layout       |
+| Project 4 | ObjectWithCode     | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%204-%20ObjectWithCode)      | Code Design  |
+| Project 5 | BirthdayNoteTaker  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%205-%20BirthdayNoteTaker)   | User Defaults|
+| Project 6 | SegueApp           | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%206-%20SegueApp)            | Segue        |
+| Project 7 | AlertProject       | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%207-%20AlertProject)        | Alert        |
+| Project 8 | SegueApp           | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%208-%20GestureRecognizerApp)| GestureRecognizer|
+| Project 9 | TimerApp           | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%209-%20Timer%20Project)     | Timer |
+| Project 10 | CatchElonGame     | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2010-%20CatchElon)          | Timer, User Defaults, Alert, GestureRecognizer|
+| Project 11 | Historian Book           | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2011-%20HistorianBook%20)| TableView, Alert, Segue|
+| Project 12 | Commander Book    | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2012-%20CommanderBook)| TableView|
+| Project 13 | CustomTableView         | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2013-%20CustomTableView)| CustomTableView |
+| Project 14 | Friends Book           | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2014-%20FriendsBook)| CustomTableView |
+| Project 15 | LibraryApp          | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2015-%20LibraryApp)| CoreData |
+| Project 16 | FoodsBook        | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2016-%20FoodsBook)| CoreData |
+| Project 17 | JourneyJot        | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2017-%20JourneyJot)| MapKit, CoreData |
+| Project 18 | Currency Converter  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2018-%20CurrencyConverter)| JSON, API 
+| Project 19 | Basic Weather App  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2019-%20BasicWeatherApp)| JSON, API, Location|
+| Project 20 | API Example  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2020-%20APIexample)| JSON, API|
+| Project 21 | Instagram Clone  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2021-%20BasicInstagramClone)| Firebase,Swift Package Manager|
+| Project 22 | Foursquare Clone | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2022-%20FoursquareClone)| Parse, Navigation, MapKit|
+| Project 23 | Singleton Example | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2023-%20SingletonExample)| Singleton|
 | Project 24 | MachineLearningImageRecognitionApp | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2024-%20MachineLearningImageRecognitionApp)| ML|
 
 
