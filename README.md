@@ -10,7 +10,7 @@ In this section, I will share the projects I am working on as I complete them.
 
 | Project   | Project Name       | Project File                                                                                                      | Subjects     |  
 |:----------|--------------------|-----------------------------------------------------------------------------------------------------------|--------------|
-| Project 1 | ChangeElon         | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%202-%20ChangeElon)          | Basic Skills |
+| Project 1 | ChangeElon         | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%201-%20Calculator)          | Basic Skills |
 | Project 2 | BasicCalculator    | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%201-%20Calculator)          | Basic Skills |
 | Project 3 | ProjectLayout      | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day3(operators%20and%20conditions).md)       | Layout       |
 | Project 4 | ObjectWithCode     | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Atıl%20Samancıoğlu%20%7C%20iOS%20Swift%20Mobil%20Uygulama%20Geliştirme%20%7C%20Udemy/Project%204-%20ObjectWithCode)      | Code Design  |
