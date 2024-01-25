@@ -7,34 +7,123 @@ This repository contains my work. I will be working on a new project or concept 
 
 # ⚙️ Courses Pojects Map 
 In this section, I will share the projects I am working on as I complete them.
+1. **ChangeElon**
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%201-%20ChangeElon)
+   - Subjects: Basic Skills
+   - Description: A project focused on basic skills in Swift development.
 
-| Project   | Project Name       | Project File                                                                                                      | Subjects     |  
-|:----------|--------------------|-----------------------------------------------------------------------------------------------------------|--------------|
-| Project 1 | ChangeElon         | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%201-%20Calculator)          | Basic Skills |
-| Project 2 | BasicCalculator    | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%202-%20ChangeElon)          | Basic Skills |
-| Project 3 | ProjectLayout      | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%203-%20ProjectLayout)       | Layout       |
-| Project 4 | ObjectWithCode     | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%204-%20ObjectWithCode)      | Code Design  |
-| Project 5 | BirthdayNoteTaker  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%205-%20BirthdayNoteTaker)   | User Defaults|
-| Project 6 | SegueApp           | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%206-%20SegueApp)            | Segue        |
-| Project 7 | AlertProject       | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%207-%20AlertProject)        | Alert        |
-| Project 8 | SegueApp           | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%208-%20GestureRecognizerApp)| GestureRecognizer|
-| Project 9 | TimerApp           | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%209-%20Timer%20Project)     | Timer |
-| Project 10 | CatchElonGame     | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2010-%20CatchElon)          | Timer, User Defaults, Alert, GestureRecognizer|
-| Project 11 | Historian Book           | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2011-%20HistorianBook%20)| TableView, Alert, Segue|
-| Project 12 | Commander Book    | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2012-%20CommanderBook)| TableView|
-| Project 13 | CustomTableView         | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2013-%20CustomTableView)| CustomTableView |
-| Project 14 | Friends Book           | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2014-%20FriendsBook)| CustomTableView |
-| Project 15 | LibraryApp          | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2015-%20LibraryApp)| CoreData |
-| Project 16 | FoodsBook        | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2016-%20FoodsBook)| CoreData |
-| Project 17 | JourneyJot        | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2017-%20JourneyJot)| MapKit, CoreData |
-| Project 18 | Currency Converter  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2018-%20CurrencyConverter)| JSON, API 
-| Project 19 | Basic Weather App  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2019-%20BasicWeatherApp)| JSON, API, Location|
-| Project 20 | API Example  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2020-%20APIexample)| JSON, API|
-| Project 21 | Instagram Clone  | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2021-%20BasicInstagramClone)| Firebase,Swift Package Manager|
-| Project 22 | Foursquare Clone | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2022-%20FoursquareClone)| Parse, Navigation, MapKit|
-| Project 23 | Singleton Example | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2023-%20SingletonExample)| Singleton|
-| Project 24 | MachineLearningImageRecognitionApp | [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2024-%20MachineLearningImageRecognitionApp)| ML|
+2. **BasicCalculator**
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%202-%20BasicCalculator)
+   - Subjects: Basic Skills
+   - Description: A simple calculator application to practice basic Swift concepts.
 
+3. **ProjectLayout**
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%203-%20ProjectLayout)
+   - Subjects: Layout
+   - Description: Learn about laying out elements in a Swift application.
+
+4. **ObjectWithCode**
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%204-%20ObjectWithCode)
+   - Subjects: Code Design
+   - Description: Explore Swift code design by working with objects.
+
+5. **BirthdayNoteTaker**
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%205-%20BirthdayNoteTaker)
+   - Subjects: User Defaults
+   - Description: Create a simple note-taking app using User Defaults.
+
+6. **SegueApp**
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%206-%20SegueApp)
+   - Subjects: Segue
+   - Description: Understand and implement Segues in a Swift app.
+
+7. **AlertProject**
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%207-%20AlertProject)
+   - Subjects: Alert
+   - Description: Learn how to use and handle alerts in a Swift application.
+
+8. **GestureRecognizerApp**
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%208-%20GestureRecognizerApp)
+   - Subjects: GestureRecognizer
+   - Description: Implement gesture recognizers for user interactions.
+
+9. **TimerApp**
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%209-%20Timer%20Project)
+   - Subjects: Timer
+   - Description: Build an app that involves the use of timers in Swift.
+
+10. **CatchElonGame**
+    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2010-%20CatchElon)
+    - Subjects: Timer, User Defaults, Alert, GestureRecognizer
+    - Description: Develop a game featuring Elon Musk that incorporates various Swift concepts.
+
+11. **Historian Book**
+    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2011-%20HistorianBook%20)
+    - Subjects: TableView, Alert, Segue
+    - Description: Create a book management app with table views and segues.
+
+12. **Commander Book**
+    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2012-%20CommanderBook)
+    - Subjects: TableView
+    - Description: Build a book management app using table views.
+
+13. **CustomTableView**
+    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2013-%20CustomTableView)
+    - Subjects: CustomTableView
+    - Description: Implement custom table views in a Swift app.
+
+14. **Friends Book**
+    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2014-%20FriendsBook)
+    - Subjects: CustomTableView
+    - Description: Develop a friend management app using custom table views.
+
+15. **LibraryApp**
+    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2015-%20LibraryApp)
+    - Subjects: CoreData
+    - Description: Learn and implement CoreData in a library management app.
+
+16. **FoodsBook**
+    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2016-%20FoodsBook)
+    - Subjects: CoreData
+    - Description: Create a food management app with CoreData integration.
+
+17. **JourneyJot**
+    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2017-%20JourneyJot)
+    - Subjects: MapKit, CoreData
+    - Description: Build a travel journal app with map integration using MapKit and CoreData.
+
+18. **Currency Converter**
+    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2018-%20CurrencyConverter)
+    - Subjects: JSON, API
+    - Description: Create a currency converter app using JSON and API.
+
+19. **Basic Weather App**
+    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2019-%20BasicWeatherApp)
+    - Subjects: JSON, API, Location
+    - Description: Develop a basic weather app with JSON, API, and location services.
+
+20. **API Example**
+    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2020-%20APIexample)
+    - Subjects: JSON, API
+    - Description: Explore and implement API usage in a Swift app.
+
+21. **Instagram Clone**
+    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2021-%20BasicInstagramClone)
+    - Subjects: Firebase, Swift Package Manager
+    - Description: Build a basic Instagram clone using Firebase and Swift Package Manager.
+
+22. **Foursquare Clone**
+    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2022-%20FoursquareClone)
+    - Subjects: Parse, Navigation, MapKit
+    - Description: Create a Foursquare clone with Parse integration, navigation, and MapKit.
+
+23. **Singleton Example**
+    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2023-%20SingletonExample)
+    - Subjects: Singleton
+    - Description: Understand and implement the Singleton design pattern.
+
+24. **MachineLearningImageRecognitionApp**
+    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2024-%20MachineLearningImage
 
 
 
