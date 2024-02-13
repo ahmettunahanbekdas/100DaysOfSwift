@@ -6,7 +6,7 @@ This repository contains my work. I will be working on a new project or concept 
 # ⚙️ Courses Pojects Map 
 In this section, I will share the projects I am working on as I complete them.
 1. **ChangeElon**
-   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%201-%20ChangeElon)
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%202-%20ChangeElon)
    - Subjects: Basic Skills
    - Description: A project focused on basic skills in Swift development.
 
