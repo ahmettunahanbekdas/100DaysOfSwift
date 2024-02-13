@@ -11,7 +11,7 @@ In this section, I will share the projects I am working on as I complete them.
    - Description: A project focused on basic skills in Swift development.
 
 2. **BasicCalculator**
-   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%202-%20BasicCalculator)
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%201-%20Calculator)
    - Subjects: Basic Skills
    - Description: A simple calculator application to practice basic Swift concepts.
 
