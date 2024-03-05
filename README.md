@@ -147,5 +147,5 @@ In this section, I will share the content I have written for the fundamentals of
 | Day15| [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day15(Summary3).md) | Properties, Static Properties and Methods, Access Control, Polymorphism and Typecasting, Closures |
 
 # 🫡 Connect With Me
-I share every day of the challenge on my [(X)Twitter](https://twitter.com/tunahanbekdass) account. If you want to join this challenge and become a colleague, you can send a message.
+I share every day of the challenge on my [X(Twitter)](https://twitter.com/tunahanbekdass) account. If you want to join this challenge and become a colleague, you can send a message.
 Visit my [Medium Account](https://medium.com/@tunahanbekdas) 
