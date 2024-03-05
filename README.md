@@ -125,13 +125,6 @@ In this section, I will share the projects I am working on as I complete them.
     - Subjects: ML
     - Description: This project delves into the captivating realm of machine learning, utilizing Core ML in Swift to analyze and identify objects within images through real-time                     image classification.
        
-
-
-
-
-
-
-
 # 📖 Swift Fundamentals
 In this section, I will share the content I have written for the fundamentals of Swift with you.
 
@@ -153,8 +146,6 @@ In this section, I will share the content I have written for the fundamentals of
 | Day14| [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day14(Summary2).md) | Functions, Optionals, Optional Chaining, Enumeration, Struct, Classes, and Structs vs Classes |
 | Day15| [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day15(Summary3).md) | Properties, Static Properties and Methods, Access Control, Polymorphism and Typecasting, Closures |
 
-
-
 # 🫡 Connect With Me
-I share every day of the challenge on my [Twitter](https://twitter.com/tunahanbekdass) account. If you want to join this challenge and become a colleague, you can send a message.
+I share every day of the challenge on my [(X)Twitter](https://twitter.com/tunahanbekdass) account. If you want to join this challenge and become a colleague, you can send a message.
 Visit my [Medium Account](https://medium.com/@tunahanbekdas) 
