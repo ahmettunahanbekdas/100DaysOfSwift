@@ -10,77 +10,77 @@ In this section, I will share the projects I am working on as I complete them.
    - Subjects: Basic Skills
    - Description: A project focused on basic skills in Swift development.
 
-2. **BasicCalculator**
+### 2. **BasicCalculator**
    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%201-%20Calculator)
    - Subjects: Basic Skills
    - Description: A simple calculator application to practice basic Swift concepts.
 
-3. **ProjectLayout**
+### 3. **ProjectLayout**
    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%203-%20ProjectLayout)
    - Subjects: Layout
    - Description: Learn about laying out elements in a Swift application.
 
-4. **ObjectWithCode**
+### 4. **ObjectWithCode**
    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%204-%20ObjectWithCode)
    - Subjects: Code Design
    - Description: Explore Swift code design by working with objects.
 
-5. **BirthdayNoteTaker**
+### 5. **BirthdayNoteTaker**
    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%205-%20BirthdayNoteTaker)
    - Subjects: User Defaults
    - Description: Create a simple note-taking app using User Defaults.
 
-6. **SegueApp**
+### 6. **SegueApp**
    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%206-%20SegueApp)
    - Subjects: Segue
    - Description: Understand and implement Segues in a Swift app.
 
-7. **AlertProject**
+### 7. **AlertProject**
    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%207-%20AlertProject)
    - Subjects: Alert
    - Description: Learn how to use and handle alerts in a Swift application.
 
-8. **GestureRecognizerApp**
+### 8. **GestureRecognizerApp**
    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%208-%20GestureRecognizerApp)
    - Subjects: GestureRecognizer
    - Description: Implement gesture recognizers for user interactions.
 
-9. **TimerApp**
+### 9. **TimerApp**
    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%209-%20Timer%20Project)
    - Subjects: Timer
    - Description: Build an app that involves the use of timers in Swift.
 
-10. **CatchElonGame**
+### 10. **CatchElonGame**
     - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2010-%20CatchElon)
     - Subjects: Timer, User Defaults, Alert, GestureRecognizer
     - Description: Develop a game featuring Elon Musk that incorporates various Swift concepts.
 
-11. **Historian Book**
+### 11. **Historian Book**
     - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2011-%20HistorianBook%20)
     - Subjects: TableView, Alert, Segue
     - Description: Create a book management app with table views and segues.
 
-12. **Commander Book**
+### 12. **Commander Book**
     - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2012-%20CommanderBook)
     - Subjects: TableView
     - Description: Build a book management app using table views.
 
-13. **CustomTableView**
+### 13. **CustomTableView**
     - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2013-%20CustomTableView)
     - Subjects: CustomTableView
     - Description: Implement custom table views in a Swift app.
 
-14. **Friends Book**
+### 14. **Friends Book**
     - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2014-%20FriendsBook)
     - Subjects: CustomTableView
     - Description: Develop a friend management app using custom table views.
 
-15. **LibraryApp**
+### 15. **LibraryApp**
     - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2015-%20LibraryApp)
     - Subjects: CoreData
     - Description: Learn and implement CoreData in a library management app.
 
-16. **FoodsBook**
+### 16. **FoodsBook**
     - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2016-%20FoodsBook)
     - Subjects: CoreData
     - Description: Create a food management app with CoreData integration.
