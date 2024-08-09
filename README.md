@@ -85,9 +85,9 @@ In this section, I will share the projects I am working on as I complete them.
    - Description: Create a food management app with CoreData integration.
 
 ### 17. **JourneyJot**
-    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2017-%20JourneyJot)
-    - Subjects: MapKit, CoreData
-    - Description: Build a travel journal app with map integration using MapKit and CoreData.
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2017-%20JourneyJot)
+   - Subjects: MapKit, CoreData
+   - Description: Build a travel journal app with map integration using MapKit and CoreData.
 
 ### 18. **Currency Converter**
    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2018-%20CurrencyConverter)
