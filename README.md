@@ -1,6 +1,5 @@
 
 # 👨🏻‍💻 Welcome to Learning Swift Challenge 
-
 This repository contains my work. I will be working on a new project or concept every day using the Swift programming language, with the additional goal of sharing my progress and knowledge with others.
 
 # ⚙️ Courses Pojects Map 
@@ -50,84 +49,83 @@ In this section, I will share the projects I am working on as I complete them.
    - Subjects: Timer
    - Description: Build an app that involves the use of timers in Swift.
 
-### 10. **CatchElonGame**
-    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2010-%20CatchElon)
-    - Subjects: Timer, User Defaults, Alert, GestureRecognizer
-    - Description: Develop a game featuring Elon Musk that incorporates various Swift concepts.
+### 10. CatchElonGame
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2010-%20CatchElon)
+   - Subjects: Timer, User Defaults, Alert, GestureRecognizer
+   - Description: Develop a game featuring Elon Musk that incorporates various Swift concepts.
 
 ### 11. **Historian Book**
-    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2011-%20HistorianBook%20)
-    - Subjects: TableView, Alert, Segue
-    - Description: Create a book management app with table views and segues.
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2011-%20HistorianBook%20)
+   - Subjects: TableView, Alert, Segue
+   - Description: Create a book management app with table views and segues.
 
 ### 12. **Commander Book**
-    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2012-%20CommanderBook)
-    - Subjects: TableView
-    - Description: Build a book management app using table views.
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2012-%20CommanderBook)
+   - Subjects: TableView
+   - Description: Build a book management app using table views.
 
 ### 13. **CustomTableView**
-    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2013-%20CustomTableView)
-    - Subjects: CustomTableView
-    - Description: Implement custom table views in a Swift app.
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2013-%20CustomTableView)
+   - Subjects: CustomTableView
+   - Description: Implement custom table views in a Swift app.
 
 ### 14. **Friends Book**
-    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2014-%20FriendsBook)
-    - Subjects: CustomTableView
-    - Description: Develop a friend management app using custom table views.
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2014-%20FriendsBook)
+   - Subjects: CustomTableView
+   - Description: Develop a friend management app using custom table views.
 
 ### 15. **LibraryApp**
-    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2015-%20LibraryApp)
-    - Subjects: CoreData
-    - Description: Learn and implement CoreData in a library management app.
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2015-%20LibraryApp)
+   - Subjects: CoreData
+   - Description: Learn and implement CoreData in a library management app.
 
 ### 16. **FoodsBook**
-    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2016-%20FoodsBook)
-    - Subjects: CoreData
-    - Description: Create a food management app with CoreData integration.
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2016-%20FoodsBook)
+   - Subjects: CoreData
+   - Description: Create a food management app with CoreData integration.
 
-17. **JourneyJot**
+### 17. **JourneyJot**
     - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2017-%20JourneyJot)
     - Subjects: MapKit, CoreData
     - Description: Build a travel journal app with map integration using MapKit and CoreData.
 
-18. **Currency Converter**
-    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2018-%20CurrencyConverter)
-    - Subjects: JSON, API
-    - Description: Create a currency converter app using JSON and API.
+### 18. **Currency Converter**
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2018-%20CurrencyConverter)
+   - Subjects: JSON, API
+   - Description: Create a currency converter app using JSON and API.
 
-19. **Basic Weather App**
-    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2019-%20BasicWeatherApp)
-    - Subjects: JSON, API, Location
-    - Description: Develop a basic weather app with JSON, API, and location services.
+### 19. **Basic Weather App**
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2019-%20BasicWeatherApp)
+   - Subjects: JSON, API, Location
+   - Description: Develop a basic weather app with JSON, API, and location services.
 
-20. **API Example**
-    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2020-%20APIexample)
-    - Subjects: JSON, API
-    - Description: Explore and implement API usage in a Swift app.
+### 20. **API Example**
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2020-%20APIexample)
+   - Subjects: JSON, API
+   - Description: Explore and implement API usage in a Swift app.
 
-21. **Instagram Clone**
-    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2021-%20BasicInstagramClone)
-    - Subjects: Firebase, Swift Package Manager
-    - Description: Build a basic Instagram clone using Firebase and Swift Package Manager.
+### 21. **Instagram Clone**
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2021-%20BasicInstagramClone)
+   - Subjects: Firebase, Swift Package Manager
+   - Description: Build a basic Instagram clone using Firebase and Swift Package Manager.
 
-22. **Foursquare Clone**
-    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2022-%20FoursquareClone)
-    - Subjects: Parse, Navigation, MapKit
-    - Description: Create a Foursquare clone with Parse integration, navigation, and MapKit.
+### 22. **Foursquare Clone**
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2022-%20FoursquareClone)
+   - Subjects: Parse, Navigation, MapKit
+   - Description: Create a Foursquare clone with Parse integration, navigation, and MapKit.
 
-23. **Singleton Example**
-    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2023-%20SingletonExample)
-    - Subjects: Singleton
-    - Description: Understand and implement the Singleton design pattern.
+### 23. **Singleton Example**
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2023-%20SingletonExample)
+   - Subjects: Singleton
+   - Description: Understand and implement the Singleton design pattern.
 
-24. **MachineLearningImageRecognitionApp**
-    - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2024-%20MachineLearningImage)
-    - Subjects: ML
-    - Description: This project delves into the captivating realm of machine learning, utilizing Core ML in Swift to analyze and identify objects within images through real-time                     image classification.
+### 24. **MachineLearningImageRecognitionApp**
+   - [Project File](https://github.com/ahmettunahanbekdas/LearningSwift/tree/main/Project%2024-%20MachineLearningImage)
+   - Subjects: ML
+   - Description: This project delves into the captivating realm of machine learning, utilizing Core ML in Swift to analyze and identify objects within images through real-time                     image classification.
        
 # 📖 Swift Fundamentals
 In this section, I will share the content I have written for the fundamentals of Swift with you.
-
 | Day | File | Subjects |
 | --- | ---- | -------- |
 | Day1 | [File](https://github.com/ahmettunahanbekdas/LearningSwift/blob/main/Introduction%20to%20Swift/Day2(%20arrays%2C%20dictionaries%2C%20sets%2C%20and%20enums).md) | Variables, Simple Data Types, and String Interpolation|
